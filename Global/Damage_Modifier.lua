@@ -7,6 +7,8 @@
 --	end
 --end
  
+local LichIncreaseConstant = 1.3
+
 local function BolsterAdjust(x)
 	return (1 + 5.5 * x) / 6 * 0.99 ^ ((2 - x) * 40)
 end
@@ -403,6 +405,8 @@ local BolsterMul = Game.BolsterAmount / 100
 local Result = 0
 local BlessTweak = 0 
 local invisadd = 0
+local MinotaurPhysMul = 1
+local mnpIncrease = 1
 if ByPlayer then
 	ac = Player:GetAccuracy()
 	nt = Player:GetIntellect()
@@ -420,10 +424,16 @@ if ByPlayer then
 		local sk,mas = SplitSkill(Player:GetSkill(const.Skills.Stealing))
 		invisadd = invisadd - (mas * 5 + sk)
 	end
+	if Player.Face == 20 or Player.Face == 21 then
+		MinotaurPhysMul = 1.3
+	end
+	if Player.Face == 26 or Player.Face == 27 then
+		mnpIncrease = LichIncreaseConstant
+	end
 end
 mnp = math.max(nt, pe)
 local acpenalty = ac * 0.25 - 0.000125 * ac * ac
-local nppenalty = mnp * 0.18 - 0.00009 * mnp * mnp
+local nppenalty = (mnp * 0.18 - 0.00009 * mnp * mnp) * mnpIncrease
 local dayofprotectionad = 0
 if Monster.SpellBuffs[const.MonsterBuff.DayOfProtection].ExpireTime >= Game.Time then
 	dayofprotectionad = 70
@@ -464,7 +474,7 @@ if DamageKind == const.Damage.Phys then
 	end
 	ar = ar + Monster.PhysResistance
 	
-	Result = math.ceil(Damage * (0.99 ^ (ar))) * (1 + InfeAdd)
+	Result = math.ceil(Damage * (0.99 ^ (ar))) * (1 + InfeAdd) * MinotaurPhysMul
 	if Monster.PhysResistance > 10000 then
 		Result = 0
 	end
@@ -1176,6 +1186,30 @@ elseif t.Stat == const.Stats.MindResistance then
 		t.Result = t.Result - math.min(vars.PartyResistanceDecrease.Power, 100)
 	end
 end
+if t.Player.Class >= 76 and t.Player.Class <= 83 and t.Stat >= const.Stats.Might and t.Stat <= const.Stats.Luck then -- Ranger Bonus
+		
+	local sk,mas = SplitSkill(t.Player:GetSkill(const.Skills.Stealing))
+	local incre = mas * 0.5 + sk * 0.1
+	local weapon_sk, weapon_mas = SplitSkill(t.Player.Skills[const.Skills.Axe])
+	local bow_sk, bow_mas = SplitSkill(t.Player.Skills[const.Skills.Bow])
+	local magic_sk, magic_mas = SplitSkill(t.Player.Skills[const.Skills.Fire])
+	for j=const.Skills.Air,const.Skills.Dark do
+		local tmpsk,tmpmas = SplitSkill(t.Player.Skills[j])
+		if tmpsk > magic_sk then
+			magic_sk = tmpsk
+		end
+	end
+	local armor_sk, armor_mas = SplitSkill(t.Player.Skills[const.Skills.Shield])
+	for j=const.Skills.Leather,const.Skills.Plate do
+		local tmpsk,tmpmas = SplitSkill(t.Player.Skills[j])
+		if tmpsk > armor_sk then
+			armor_sk = tmpsk
+		end
+	end
+	local min_sk = math.min(weapon_sk, bow_sk, magic_sk, armor_sk)
+	
+	t.Result = t.Result + math.floor(min_sk * incre)
+end
 end
 
 
@@ -1184,39 +1218,42 @@ end
 
 
 function events.CalcStatBonusBySkills(t)
-if t.Stat == const.Stats.SP then -- ħ��ֵ
-local nt= t.Player:GetIntellect()
-local pe= t.Player:GetPersonality()
-mnp = math.max(nt,pe)
-t.Result = t.Result * (1 + mnp * 0.01)
-end
+	if t.Stat == const.Stats.SP then -- ħ��ֵ
+		local nt= t.Player:GetIntellect()
+		local pe= t.Player:GetPersonality()
+		mnp = math.max(nt,pe)
+		if t.Player.Face == 26 or t.Player.Face == 27 then
+			mnp = mnp * LichIncreaseConstant
+		end
+		t.Result = t.Result * (1 + mnp * 0.01)
+	end
 end
 
 ---------------------------------
 
 function events.CalcStatBonusByItems(t)
-if t.Stat == const.Stats.SP then -- ħ��ֵ
-t.Result = t.Result * 10
-end
+	if t.Stat == const.Stats.SP then -- ħ��ֵ
+		t.Result = t.Result * 10
+	end
 end
 
 ---------------------------------
 
 
 function events.CalcStatBonusBySkills(t)
-if t.Stat == const.Stats.HP then -- Ѫ��
-local en= t.Player:GetEndurance()
-local sk,mas = SplitSkill(t.Player:GetSkill(const.Skills.Bodybuilding))
-t.Result = t.Result * (1 + en * 0.01) + Game.Classes.HPFactor[t.Player.Class] * sk * mas;
-end
+	if t.Stat == const.Stats.HP then -- Ѫ��
+		local en= t.Player:GetEndurance()
+		local sk,mas = SplitSkill(t.Player:GetSkill(const.Skills.Bodybuilding))
+		t.Result = t.Result * (1 + en * 0.01) + Game.Classes.HPFactor[t.Player.Class] * sk * mas;
+	end
 end
 
 ---------------------------------
 
 function events.CalcStatBonusByItems(t)
-if t.Stat == const.Stats.HP then -- Ѫ��
-t.Result = t.Result * 10
-end
+	if t.Stat == const.Stats.HP then -- Ѫ��
+		t.Result = t.Result * 10
+	end
 end
 
 ---------------------------------
@@ -1257,6 +1294,7 @@ end
 
 function events.CalcStatBonusBySkills(t)
 	if t.Stat == const.Stats.ArmorClass then -- ����
+
 		local it = t.Player:GetActiveItem(const.ItemSlot.Armor)
 		local it2 = t.Player:GetActiveItem(const.ItemSlot.ExtraHand)
 		if it and it:T().Skill == const.Skills.Leather then
