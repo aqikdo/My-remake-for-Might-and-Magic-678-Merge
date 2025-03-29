@@ -217,10 +217,16 @@ evt.PotionEffects[52] = function(IsDrunk, Target, Power, ItemId)
 	end
 end
 
--- Essence of Intellect
+-- Potion of Raising Dead
 evt.PotionEffects[53] = function(IsDrunk, Target, Power, ItemId)
 	if IsDrunk then
-		return EssenseOf(Target, "IntellectBase", "MightBase", ItemId)
+		if Target.Dead ~= 0 then
+			Target.HP = 1
+			Target.SP = 0
+			Target.Dead = 0
+			Target:SetRecoveryDelayRaw(const.Minute * 10)
+			Target.Weak = Game.Time
+		end
 	end
 end
 

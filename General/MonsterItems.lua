@@ -457,21 +457,17 @@ local function MonsterBuffsAdjust()
 				local Effect = 0
 				local Time = 0 
 				if mon.SpellBuffs[const.MonsterBuff.Enslave].Skill == 3 then
-					Effect = 100
-					Time = const.Minute
+					Time = const.Minute / 6
 				elseif mon.SpellBuffs[const.MonsterBuff.Enslave].Skill == 4 then
-					Effect = 200
-					Time = const.Minute * 5
+					Time = const.Minute / 3
 				end
 				for i,v in mon.SpellBuffs do
 					v.ExpireTime = 0
 					v.Power = 0
 					v.Skill = 0
 				end
-				mon.SpellBuffs[const.MonsterBuff.Hammerhands].ExpireTime = Game.Time + Time
-				mon.SpellBuffs[const.MonsterBuff.Hammerhands].Power = Effect
-				mon.SpellBuffs[const.MonsterBuff.Fate].ExpireTime = Game.Time + Time
-				mon.SpellBuffs[const.MonsterBuff.Fate].Power = Effect
+				mon.SpellBuffs[const.MonsterBuff.Slow].ExpireTime = Game.Time + Time
+				mon.SpellBuffs[const.MonsterBuff.Slow].Power = 20
 			end
 		end
 		

@@ -208,6 +208,19 @@ function events.PlayerAttacked(t,attacker) --���﹥������ ��
 				t.Handled = true
 				return
 			end
+
+			local it = t.Player:GetActiveItem(const.ItemSlot.MainHand)
+			if it and it:T().Skill == const.Skills.Staff then
+				local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Staff))
+				if mas == 4 and (100 + sk * 2) >= math.random(1000) then
+					local dmg = CalcRealDamageM(math.random(t.Player:GetMeleeDamageMin(),t.Player:GetMeleeDamageMax()), const.Damage.Phys, true, t.Player, attacker.Monster)
+					attacker.Monster.HP = math.max(0, attacker.Monster.HP - dmg)
+					attacker.Monster:GotHit(4)
+					t.Handled = true
+					return
+				end
+			end
+
 			local dmg = mattack.DamageDiceCount * mattack.DamageDiceSides / 2
 			if attacker.Monster.SpellBuffs[const.MonsterBuff.Heroism].ExpireTime > Game.Time then
 				dmg = dmg * 1.5
@@ -226,6 +239,7 @@ function events.PlayerAttacked(t,attacker) --���﹥������ ��
 				dmg = math.random(math.ceil(dmg * 0.75 * magicmul), math.ceil(dmg * 1.25 * magicmul))
 				evt.DamagePlayer(t.PlayerSlot,mattack.Type, dmg)
 			end
+			
 			t.Handled = true
 		elseif attacker.Object.Spell == 0 then
 			if t.Player.SpellBuffs[const.PlayerBuff.Misform].ExpireTime >= Game.Time then
@@ -282,6 +296,17 @@ function events.PlayerAttacked(t,attacker) --���﹥������ ��
 			end
 			if attacker.Object.Spell == 26 then
 				vars.SlowExpireTime = math.max((vars.SlowExpireTime or 0), Game.Time + 250)
+			end
+			if attacker.Object.Spell == 41 then
+				
+				local sk,mas = SplitSkill(attacker.Object.SpellSkill) --BUG????
+				--Message(tostring(sk).." "..tostring(mas))
+				for i,pl in Party do
+					evt.DamagePlayer(i,const.Damage.Earth,sk * math.random(4,7))
+				end
+				--evt.DamagePlayer(0,const.Damage.Earth,sk * math.random(4,7))
+				attacker.Object.SpellSkill = 0
+				t.Handled = true
 			end
 		end
 		if (not attacker.Object) or attacker.Object.Spell == 0 then
@@ -340,7 +365,9 @@ function events.PlayerAttacked(t,attacker) --���﹥������ ��
 			end
 		end
 	elseif (not attacker.Player) and attacker.Object and attacker.Object.Spell ~= 0 then
-		attacker.Object.SpellSkill = JoinSkill(999,4)
+		if attacker.Object.SpellSkill > 0 then
+			attacker.Object.SpellSkill = JoinSkill(999,4)
+		end
 	end
 	
 end
@@ -385,11 +412,6 @@ vars.PlayerResistances[tpl][t.Resistance] = t.Result
 --Message(tostring(t.Result) .. " " .. tostring(t.Resistance))
 end
 
----------------------------------
-local function GetDist(t,x,y,z)
-	local px, py, pz  = XYZ(t)
-	return math.sqrt((px-x)^2 + (py-y)^2 + (pz-z)^2)
-end
 
 ---------------------------------
 
@@ -624,7 +646,7 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 			end
 		end
 		if attacker.Monster.Id == 97 or attacker.Monster.Id == 98 or attacker.Monster.Id == 99 or attacker.Monster.Ally == 9999 or attacker.Monster.SpellBuffs[const.MonsterBuff.Enslave].ExpireTime > Game.Time or attacker.Monster.SpellBuffs[const.MonsterBuff.Berserk].ExpireTime > Game.Time then
-			if attacker.Monster.ShowHostile ~= true and GetDist(t.Monster,Party.X,Party.Y,Party.Z) >= 10000 then
+			if attacker.Monster.ShowHostile ~= true and GetDist(t.Monster,Party) >= 10000 then
 				attacker.Monster.HP = 0
 			end
 		end
@@ -711,7 +733,7 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 				local sk,mas = attacker.Object.SpellSkill,attacker.Object.SpellMastery
 				if mas >= 4 then
 					for _,mon in Map.Monsters do
-						if mon ~= t.Monster and GetDist(t.Monster,mon.X,mon.Y,mon.Z) <= 250 and mon.HP > 0 then
+						if mon ~= t.Monster and GetDist(t.Monster,mon) <= 250 and mon.HP > 0 then
 							local dmg = CalcRealDamageM(sk * math.random(4,8) + 11, const.Damage.Mind, true, attacker.Player, mon)
 							mon.HP = math.max(mon.HP - dmg, 0)
 							mon:GotHit(4)
@@ -825,23 +847,37 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 					local sk0,mas0 = SplitSkill(attacker.Player.Skills[const.Skills.Mace])
 					local sk,mas = SplitSkill(attacker.Player:GetSkill(const.Skills.Mace)) -- A terrible way to remove automatic casted stun
 					attacker.Player.Skills[const.Skills.Mace] = JoinSkill(sk0,math.min(2,mas0))
-					if mas > 2 then
-						dmg = CalcRealDamageM(sk * (mas-2), const.Damage.Phys, true, attacker.Player, t.Monster)
-						t.Monster.HP = math.max(0, t.Monster.HP - dmg)
-					end
+					
 					if mas == 3 then
-						if sk >= math.random(1,100) then
-							t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime = Game.Time + const.Minute / 60 * sk
+						if 10 >= math.random(1,100) then
+							dmg = 100
+							t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime = Game.Time + const.Minute
 							t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].Skill = 5
-							t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].Power = 20
+							t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].Power = 50
 						end
 					elseif mas == 4 then
-						if sk >= math.random(1,100) then
-							t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime = Game.Time + const.Minute / 60 * sk
+						if 10 >= math.random(1,100) then
+							for i,v in Map.Monsters do
+								if v~=t.Monster and GetDist(t.Monster,v) <= 250 then
+									local tmpdmg = CalcRealDamageM(100, const.Damage.Phys, true, attacker.Player, v)
+									v.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime = Game.Time + const.Minute
+									v.SpellBuffs[const.MonsterBuff.DamageHalved].Skill = 5
+									v.SpellBuffs[const.MonsterBuff.DamageHalved].Power = 50
+									v.HP = math.max(0, v.HP - tmpdmg)
+									v:GotHit(4)
+								end
+							end
+							dmg = CalcRealDamageM(100, const.Damage.Phys, true, attacker.Player, t.Monster)
+							t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime = Game.Time + const.Minute
 							t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].Skill = 5
-							t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].Power = 40
+							t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].Power = 50
 						end
 					end
+					if mas > 2 then
+						dmg = dmg + CalcRealDamageM(sk * (mas-2), const.Damage.Phys, true, attacker.Player, t.Monster)
+						t.Monster.HP = math.max(0, t.Monster.HP - dmg)
+					end
+					
 					Sleep(1)
 					attacker.Player.Skills[const.Skills.Mace] = JoinSkill(sk0,mas0)
 				elseif it and it:T().Skill == const.Skills.Staff then
@@ -850,22 +886,90 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 					local sk1,mas1 = SplitSkill(attacker.Player:GetSkill(const.Skills.Unarmed))
 					
 					attacker.Player.Skills[const.Skills.Staff] = JoinSkill(sk0,math.min(2,mas0))
-					if mas > 2 then
-						local orgdmg = sk * (mas-2) * 0.5
-						if mas == 4 then
-							orgdmg = orgdmg + sk1 * math.max(0, mas1 - 1)
-						end
-						dmg = CalcRealDamageM(orgdmg, const.Damage.Phys, true, attacker.Player, t.Monster)
-						t.Monster.HP = math.max(0, t.Monster.HP - dmg)
-					end
 					if mas >= 3 then
 						if sk >= math.random(1,1000) and t.Monster.SpellBuffs[const.MonsterBuff.Paralyze].ExpireTime < Game.Time then
 							t.Monster.SpellBuffs[const.MonsterBuff.Paralyze].ExpireTime = Game.Time + const.Minute
 							t.Monster.SpellBuffs[const.MonsterBuff.Paralyze].Power = 1
 						end
+						if t.Monster.SpellBuffs[const.MonsterBuff.Paralyze].ExpireTime >= Game.Time then
+							dmg = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), const.Damage.Phys, true, attacker.Player, t.Monster) * 0.5
+						end
+						local orgdmg = sk * (mas-2) * 0.5
+						if mas == 4 then
+							orgdmg = orgdmg + sk1 * math.max(0, mas1 - 1)
+						end
+						dmg = dmg + CalcRealDamageM(orgdmg, const.Damage.Phys, true, attacker.Player, t.Monster)
+						t.Monster.HP = math.max(0, t.Monster.HP - dmg)
 					end
 					Sleep(1)
 					attacker.Player.Skills[const.Skills.Staff] = JoinSkill(sk0,mas0)
+				elseif it and it:T().Skill == const.Skills.Spear then
+					local sk,mas = SplitSkill(attacker.Player:GetSkill(const.Skills.Spear)) -- A terrible way to remove automatic casted stun
+					local function get_line_dist(Party, mon1, mon2, min_error)
+						local x1,y1,z1 = XYZ(Party)
+						local x2,y2,z2 = XYZ(mon1)
+						local x3,y3,z3 = XYZ(mon2)
+						local disa = ((x2-x1) ^ 2 + (y2-y1) ^ 2 + (z2-z1) ^ 2) ^ 0.5
+						local disb = ((x3-x1) ^ 2 + (y3-y1) ^ 2 + (z3-z1) ^ 2) ^ 0.5
+						local disc = ((x3-x2) ^ 2 + (y3-y2) ^ 2 + (z3-z2) ^ 2) ^ 0.5
+						local half_p = (disa + disb + disc) / 2
+						local AreaS = ((half_p - disa) * (half_p - disb) * (half_p - disc) * half_p) ^ 0.5
+						local dish = AreaS * 2 / disa
+						if dish < min_error and (disa ^ 2 + disb ^ 2 > disc ^ 2) then
+							return (disb ^ 2 - dish ^ 2) ^ 0.5
+						else
+							return 99999
+						end
+					end
+					if mas >= 2 and mas <= 3 then
+						local mindist = 10000
+						local mindistmon = nil
+						for i,v in Map.Monsters do
+							if v ~= t.Monster then
+								local tmpdist = get_line_dist(Party, t.Monster, v, 50) 
+								if tmpdist < mindist then
+									mindist = tmpdist
+									mindistmon = v
+								end
+							end
+						end
+						if mindist <= 300 then
+							dmg = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), const.Damage.Phys, true, attacker.Player, mindistmon)
+							mindistmon.HP = math.max(0, mindistmon.HP - dmg)
+							mindistmon:GotHit(4)
+						end
+					elseif mas == 4 then
+						local mindist = 10000
+						local secmindist = 10000
+						local mindistmon = nil
+						local secmindistmon = nil
+						for i,v in Map.Monsters do
+							if v ~= t.Monster then
+								local tmpdist = get_line_dist(Party, t.Monster, v, 50) 
+								if tmpdist < mindist then
+									secmindist = mindist
+									secmindistmon = mindistmon
+									mindist = tmpdist
+									mindistmon = v
+								elseif tmpdist < secmindist then
+									secmindist = tmpdist
+									secmindistmon = v
+								end
+							end
+						end
+						if mindist <= 600 then
+							dmg = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), const.Damage.Phys, true, attacker.Player, mindistmon)
+							mindistmon.HP = math.max(0, mindistmon.HP - dmg)
+							mindistmon:GotHit(4)
+						end
+						if secmindist <= 600 then
+							local tmpdmg = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), const.Damage.Phys, true, attacker.Player, secmindistmon)
+							secmindistmon.HP = math.max(0, secmindistmon.HP - tmpdmg)
+							dmg = dmg + tmpdmg
+							secmindistmon:GotHit(4)
+						end
+					end
+					
 				elseif (not it) then
 					if attacker.Player.Class >= 28 and attacker.Player.Class <= 35 then --Dragon
 						local sk,mas = SplitSkill(attacker.Player:GetSkill(const.Skills.DragonAbility))
@@ -889,10 +993,18 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 				end
 				if it and (it:T().Skill == const.Skills.Sword or it:T().Skill == const.Skills.Dagger or it:T().Skill == const.Skills.Axe or it:T().Skill == const.Skills.Staff or it:T().Skill == const.Skills.Spear or it:T().Skill == const.Skills.Mace) then
 					if attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill >= 1 then
-						local dmg1 = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), (vars.HammerhandDamageType or const.Damage.Body), true, attacker.Player, t.Monster) * (0.04 + attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Power * 0.001)
-						t.Monster.HP = math.max(0, t.Monster.HP - dmg1)
-						attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill = attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill - 1
-						dmg = dmg + dmg1
+						if it:T().Skill == const.Skills.Staff then
+							local dmg1 = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), (vars.HammerhandDamageType or const.Damage.Body), true, attacker.Player, t.Monster) * (0.1 + attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Power * 0.0025)
+							t.Monster.HP = math.max(0, t.Monster.HP - dmg1)
+							attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill = attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill - 1
+							dmg = dmg + dmg1
+						else
+							local dmg1 = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), (vars.HammerhandDamageType or const.Damage.Body), true, attacker.Player, t.Monster) * (0.04 + attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Power * 0.001)
+							t.Monster.HP = math.max(0, t.Monster.HP - dmg1)
+							attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill = attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill - 1
+							dmg = dmg + dmg1
+						end
+						
 					end
 				end
 				PrintDamageAdd(dmg)
@@ -1364,10 +1476,10 @@ function events.CalcStatBonusBySkills(t)
 		local it = t.Player:GetActiveItem(const.ItemSlot.MainHand)
 		if it and it:T().Skill == const.Skills.Sword then
 			local mi= t.Player:GetMight()
-			if mas >= const.Expert then
-				t.Result = t.Result + 10
-			end
 			t.Result = t.Result + mi*0.6 + sk*mas/2 + CalcDmgByAM(sk1,mas1) + sk*sk*0.2
+			if mas >= const.Expert then
+				t.Result = t.Result * 1.05
+			end
 			if it:T().EquipStat == 1 then
 				t.Result = t.Result + math.max(0,mi*1.2)
 			else
@@ -1389,10 +1501,13 @@ function events.CalcStatBonusBySkills(t)
 		local it = t.Player:GetActiveItem(const.ItemSlot.MainHand)
 		if it and it:T().Skill == const.Skills.Dagger then
 			local mi= t.Player:GetMight()
-			if mas >= const.Master then
-				t.Result = t.Result + 10
+			t.Result = t.Result + mi*0.5 + sk*mas*0.5/1.2 + CalcDmgByAM(sk1,mas1) + sk*sk*0.2/1.2
+			if mas >= const.GM then
+				t.Result = t.Result - sk
 			end
-			t.Result = t.Result + mi*0.6 + sk*mas/2 + CalcDmgByAM(sk1,mas1) + sk*sk*0.2
+			if mas >= const.Master then
+				t.Result = t.Result * 1.25
+			end
 			local it2 = t.Player:GetActiveItem(const.ItemSlot.ExtraHand)
 			if it2 and (it2:T().Skill == const.Skills.Sword or it2:T().Skill == const.Skills.Dagger) then
 				local sk2, mas2 = SplitSkill(t.Player:GetSkill(it2:T().Skill))
@@ -1410,10 +1525,13 @@ function events.CalcStatBonusBySkills(t)
 		local it = t.Player:GetActiveItem(const.ItemSlot.MainHand)
 		if it and it:T().Skill == const.Skills.Axe then
 			local mi= t.Player:GetMight()
-			if mas >= const.Expert then
-				t.Result = t.Result + 10
-			end
 			t.Result = t.Result + mi*0.72 + sk*mas*0.6 + CalcDmgByAM(sk1,mas1) + sk*sk*0.24
+			if mas >= const.Master then
+				t.Result = t.Result - sk
+			end
+			if mas >= const.Expert then
+				t.Result = t.Result + mi*0.1
+			end
 			if it:T().EquipStat == 1 then
 				t.Result = t.Result + mi*1.44
 			else
@@ -1422,6 +1540,9 @@ function events.CalcStatBonusBySkills(t)
 					local sk2, mas2 = SplitSkill(t.Player:GetSkill(it2:T().Skill))
 					t.Result = t.Result + sk2*mas2/2 + CalcDmgByAM(sk1,mas1) + sk2*sk2*0.2
 				end
+			end
+			if mas >= const.Master then
+				t.Result = t.Result * 1.2
 			end
 		end
 	end

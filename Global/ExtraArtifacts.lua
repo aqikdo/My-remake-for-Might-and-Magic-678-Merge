@@ -508,6 +508,9 @@ if it and it:T().Skill == const.Skills.Sword then
 	local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Sword))
 	local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
 	t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25 + 23
+	if mas >= 2 then
+		t.Result = t.Result + 5
+	end
 elseif it and it:T().Skill == const.Skills.Dagger then
 	local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Dagger))
 	local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
@@ -515,7 +518,7 @@ elseif it and it:T().Skill == const.Skills.Dagger then
 elseif it and it:T().Skill == const.Skills.Axe then
 	local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Axe))
 	local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
-	t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25
+	t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25 - 18
 elseif it and it:T().Skill == const.Skills.Staff then
 	local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Staff))
 	local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
@@ -1750,7 +1753,7 @@ OnHitEffects[2025] = {
 	Special = function(t)
 		local Skill, Mas = SpellPowerByItemSkill(t.Player, t.Item)
 		--evt.CastSpell(6, Mas, Skill, t.Monster.X,t.Monster.Y,t.Monster.Z+50, t.Monster.X,t.Monster.Y,t.Monster.Z)
-		CastSpellTowardsMonster(6, Skill, Mas, t.Monster)
+		CastSpellTowardsMonster(6, 0, 0, t.Monster)
 	end}
 
 -- Ullyses
