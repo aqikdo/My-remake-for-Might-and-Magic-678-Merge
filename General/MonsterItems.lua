@@ -707,8 +707,47 @@ local function SpellBuffExtraTimer()
 	end
 
 	for _,pl in Party do
+		if pl.Dead ~= 0 or pl.Eradicated ~= 0 then
+			pl.HP = math.min(pl.HP, 0)
+			pl.SP = 0
+		end
 		if pl.SpellBuffs[const.PlayerBuff.Hammerhands].ExpireTime > Game.Time then
 			pl.SpellBuffs[const.PlayerBuff.Hammerhands].ExpireTime = 0
+			--pl.SpellBuffs[const.PlayerBuff.Hammerhands].Power = pl.SpellBuffs[const.PlayerBuff.Hammerhands].Skill
+		end
+		if pl.SpellBuffs[const.PlayerBuff.Fate].ExpireTime > Game.Time and pl.SpellBuffs[const.PlayerBuff.Fate].Skill ~= 0 then
+			--Message(tostring(pl.SpellBuffs[const.PlayerBuff.Fate].Skill).." "..tostring(pl.SpellBuffs[const.PlayerBuff.Fate].Power))
+			local curHP = pl.HP
+			local curSP = pl.SP
+			local FullHP = pl:GetFullHP()
+			local FullSP = pl:GetFullSP()
+			if pl.Dead ~= 0 or pl.Eradicated ~= 0 or pl.HP <= 0 then
+				curHP = 0
+				curSP = 0
+				FullHP = 0
+				FullSP = 0
+			end
+			vars.Invincible = Game.Time + pl.SpellBuffs[const.PlayerBuff.Fate].Power * 0.2 * const.Minute / 60
+			local RecHP = curHP * 2 + FullHP * (pl.SpellBuffs[const.PlayerBuff.Fate].Power * 0.002)
+			local RecSP = curSP * 2 + FullSP * (pl.SpellBuffs[const.PlayerBuff.Fate].Power * 0.002)
+			pl.Eradicated = Game.Time
+			for i,v in pl.SpellBuffs do
+				v.ExpireTime = 0
+			end
+			pl.HP = 0
+			pl.SP = 0
+			local cnt=0
+			for i,v in Party do
+				if v.Dead == 0 and v.Eradicated == 0 then
+					cnt = cnt + 1
+				end
+			end
+			for i,v in Party do
+				if v.Dead == 0 and v.Eradicated == 0 then
+					v.HP = math.min(v.HP + RecHP / cnt, v:GetFullHP())
+					v.SP = math.min(v.SP + RecSP / cnt, v:GetFullSP())
+				end
+			end
 			--pl.SpellBuffs[const.PlayerBuff.Hammerhands].Power = pl.SpellBuffs[const.PlayerBuff.Hammerhands].Skill
 		end
 		if pl.SpellBuffs[const.PlayerBuff.Glamour].ExpireTime > Game.Time then
@@ -725,7 +764,7 @@ local function SpellBuffExtraTimer()
 		end
 	end
 	
-	if Party.SpellBuffs[const.PartyBuff.Immolation].ExpireTime > Game.Time + const.Minute * 20 then
+	if Party.SpellBuffs[const.PartyBuff.Immolation].ExpireTime > Game.Time + const.Minute * 10 then
 		--[[
 		Party.SpellBuffs[const.PartyBuff.Immolation].ExpireTime = Game.Time + const.Minute * 5
 		local Player = Party[vars.PlayerCastImmolation]
@@ -748,14 +787,22 @@ local function SpellBuffExtraTimer()
 			Party.SpellBuffs[const.PartyBuff.Immolation].Power = math.ceil(Party.SpellBuffs[const.PartyBuff.Immolation].Power * totalpenalty)
 		end
 		]]--
-		Party.SpellBuffs[const.PartyBuff.Immolation].ExpireTime = Game.Time + const.Minute * 15
-		if Party.SpellBuffs[const.PartyBuff.Immolation].Skill <= 2 then
-			Party.SpellBuffs[const.PartyBuff.Immolation].Power = math.ceil(Party.SpellBuffs[const.PartyBuff.Immolation].Power * 2)
-		elseif Party.SpellBuffs[const.PartyBuff.Immolation].Skill <= 3 then
-			Party.SpellBuffs[const.PartyBuff.Immolation].Power = math.ceil(Party.SpellBuffs[const.PartyBuff.Immolation].Power * 2.5)
+		if vars.ImmolationOn then
+			vars.ImmolationOn = nil
+			Party.SpellBuffs[const.PartyBuff.Immolation].ExpireTime = Game.Time
 		else
-			Party.SpellBuffs[const.PartyBuff.Immolation].Power = math.ceil(Party.SpellBuffs[const.PartyBuff.Immolation].Power * 3)
+			vars.ImmolationOn = true
+			Party.SpellBuffs[const.PartyBuff.Immolation].ExpireTime = Game.Time + const.Minute * 5
+			if Party.SpellBuffs[const.PartyBuff.Immolation].Skill <= 2 then
+				Party.SpellBuffs[const.PartyBuff.Immolation].Power = math.ceil(Party.SpellBuffs[const.PartyBuff.Immolation].Power * 4)
+			elseif Party.SpellBuffs[const.PartyBuff.Immolation].Skill <= 3 then
+				Party.SpellBuffs[const.PartyBuff.Immolation].Power = math.ceil(Party.SpellBuffs[const.PartyBuff.Immolation].Power * 5)
+			else
+				Party.SpellBuffs[const.PartyBuff.Immolation].Power = math.ceil(Party.SpellBuffs[const.PartyBuff.Immolation].Power * 6)
+			end
 		end
+	elseif Party.SpellBuffs[const.PartyBuff.Immolation].ExpireTime > Game.Time then
+		Party.SpellBuffs[const.PartyBuff.Immolation].ExpireTime = Game.Time + const.Minute * 5
 	end
 
 	for _,pl in Party do
@@ -799,7 +846,7 @@ local function SpellBuffExtraTimer()
 		local OriginalRecoveryAmount = (vars.SouldrinkerAttackCount * 7 + 25) * vars.SouldrinkerAttackCount / 5
 		vars.SouldrinkerAttackCount = 0
 		for i,pl in Party do
-			if pl.Dead == 0 then
+			if pl.Dead == 0 and pl.Eradicated == 0 then
 				if pl:IsConscious() then
 					pl.HP = math.min(pl.HP + RecoveryAmount - OriginalRecoveryAmount,pl:GetFullHP())
 				else
@@ -902,6 +949,21 @@ local function ManaRegeneration()
 	end
 end
 
+local function SpellOnCostMana()
+	if Party.SpellBuffs[const.PartyBuff.Immolation].ExpireTime > Game.Time then
+		local plid = vars.PlayerCastImmolation
+		if plid then
+			local pl = Party[plid]
+			local maxsp = pl:GetFullSP()
+			pl.SP = math.max(pl.SP - maxsp * 0.005 - 10, 0)
+			if pl.SP == 0 then
+				Party.SpellBuffs[const.PartyBuff.Immolation].ExpireTime = Game.Time
+				vars.PlayerCastImmolation = nil
+			end
+		end
+	end
+end
+
 local function HealthRegeneration()
 	for i,v in Party do
 		if v.Dead == 0 and v.Eradicated == 0 then
@@ -949,7 +1011,7 @@ local function FatigueTimer()
 		for i,v in Party do
 			local maxsp = v:GetFullSP()
 			local maxhp = v:GetFullHP()
-			if v.Dead == 0 then
+			if v.Dead == 0 and v.Eradicated == 0 then
 				v.SP = math.max(v.SP - math.max(1, maxsp * 0.01), 0)
 				v.HP = v.HP - math.max(1, maxhp * 0.01)
 			end
@@ -1009,13 +1071,14 @@ function events.AfterLoadMap()
 --	Timer(MonsterHasteTimer, 10, false)
 	Timer(SummonMonsterAdjust, const.Minute/8, false)
 	Timer(ManaRegeneration, const.Minute/8, false)
+	Timer(SpellOnCostMana, const.Minute/4, false)
 	Timer(HealthRegeneration, const.Minute/4, false)
 	Timer(FatigueTimer, const.Minute/4, false)
 	Timer(PoisonTimer, const.Minute/8, false)
 	Timer(StuckDetect, const.Minute/8, false)
 	Timer(ArmageddonTimer, const.Minute/8, false)
 	Timer(MonsterBuffsAdjust, 4, false)
-	Timer(ImmolationTimer, const.Minute, false)
+	--Timer(ImmolationTimer, const.Minute, false)
 	Timer(NegRegen, const.Minute * 4, false)
 	Timer(MonsterRandomWalk, const.Minute / 4, false)
 	Timer(DragonMissileTimer, 1, false)

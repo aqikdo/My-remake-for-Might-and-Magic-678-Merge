@@ -220,7 +220,7 @@ end
 
 function events.MonsterCastSpell(t)
 	-- Enslave
-	if t.Spell == 66 and t.Monster.ShowAsHostile == true then
+	if t.Spell == 66 and t.Monster.ShowAsHostile == true and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		t.CallDefault(7, t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
@@ -259,7 +259,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	-- Berserk
-	if t.Spell == 62 and t.Monster.ShowAsHostile == true then
+	if t.Spell == 62 and t.Monster.ShowAsHostile == true and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		t.ObjectType = 1010
 		--t.CallDefault(2)
@@ -276,7 +276,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	-- Day of protection
-	if t.Spell == 85 then
+	if t.Spell == 85 and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
 		local x,y,z = XYZ(t.Monster)
 		local Mon = t.Monster
@@ -325,7 +325,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	-- Hour of Power
-	if t.Spell == 86 then
+	if t.Spell == 86 and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
 		local x,y,z = XYZ(t.Monster)
 		local Mon = t.Monster
@@ -353,7 +353,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	-- Heroism
-	if t.Spell == 51 then
+	if t.Spell == 51 and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
 		local x,y,z = XYZ(t.Monster)
 		local Mon = t.Monster
@@ -371,7 +371,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	-- Bless
-	if t.Spell == 46 then
+	if t.Spell == 46 and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
 		local x,y,z = XYZ(t.Monster)
 		local Mon = t.Monster
@@ -389,7 +389,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	--StoneSkin
-	if t.Spell == 38 then
+	if t.Spell == 38 and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
 		local x,y,z = XYZ(t.Monster)
 		local Mon = t.Monster
@@ -408,7 +408,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	--Shield
-	if t.Spell == 17 then
+	if t.Spell == 17 and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
 		local x,y,z = XYZ(t.Monster)
 		local Mon = t.Monster
@@ -427,7 +427,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	--PainReflection
-	if t.Spell == 95 then
+	if t.Spell == 95 and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
 		local x,y,z = XYZ(t.Monster)
@@ -447,7 +447,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	-- Shared Life
-	if t.Spell == 54 then
+	if t.Spell == 54 and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
 		local x,y,z = XYZ(t.Monster)
@@ -469,7 +469,7 @@ function events.MonsterCastSpell(t)
 	end
 
 	-- Slash
-	if t.Spell == 52 then
+	if t.Spell == 52 and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
 		local Mon = t.Monster
@@ -483,7 +483,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	--Lloyd's Beacon
-	if t.Spell == 33 and t.Monster.ShowAsHostile == true then
+	if t.Spell == 33 and t.Monster.ShowAsHostile == true and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		if not vars.LloydEffectTime then
 			vars.LloydEffectTime = 0
@@ -511,7 +511,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	--Dark Grasp
-	if t.Spell == 96 and t.Monster.ShowAsHostile == true then
+	if t.Spell == 96 and t.Monster.ShowAsHostile == true and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		if (not vars.DarkGraspExpireTime) or vars.DarkGraspExpireTime < Game.Time then
 			vars.DarkGraspExpireTime = Game.Time + 1000
@@ -526,7 +526,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	--Slow
-	if t.Spell == 35 then
+	if t.Spell == 35 and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		vars.SlowExpireTime = Game.Time + 2000
 		vars.SwiftPotionBuffTime = 0
@@ -540,7 +540,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	--Stun
-	if t.Spell == 34 then
+	if t.Spell == 34 and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		t.ObjectType = Game.SpellObjId[34]
 		t.CallDefault(2)
@@ -560,7 +560,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	--Reanimate
-	if t.Spell == 89 and t.Monster.ShowAsHostile == true and t.Monster.Ally ~= 9999 then
+	if t.Spell == 89 and t.Monster.ShowAsHostile == true and t.Monster.Ally ~= 9999 and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
 		local x,y,z = XYZ(t.Monster)
@@ -608,7 +608,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	--PrismaticLight
-	if t.Spell == 84 and t.Monster.ShowAsHostile == true then
+	if t.Spell == 84 and t.Monster.ShowAsHostile == true and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)	
 		if GetDist(t.Monster,Party.X,Party.Y,Party.Z) <= 5000 then
@@ -627,6 +627,7 @@ function events.MonsterCastSpell(t)
 		if GetDist(t.Monster,Party.X,Party.Y,Party.Z) <= 5000 then
 			for i,pl in Party do
 				pl.SpellBuffs[const.PlayerBuff.Fate].ExpireTime = Game.Time + 2500
+				pl.SpellBuffs[const.PlayerBuff.Fate].Skill = 0
 				evt.DamagePlayer(i, const.Damage.Light, Skill)
 			end
 			vars.MonsterAttackTime = Game.Time
@@ -635,7 +636,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	--Dispel Magic
-	if t.Spell == 80 and t.Monster.ShowAsHostile == true then
+	if t.Spell == 80 and t.Monster.ShowAsHostile == true and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		for i,pl in Party do
 			pl.MightBonus = 0
@@ -674,7 +675,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	--SummonElemental
-	if t.Spell == 82 and t.Monster.ShowAsHostile == true then
+	if t.Spell == 82 and t.Monster.ShowAsHostile == true and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		if t.Monster.NameId == 193 then
 			local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)	
@@ -715,7 +716,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	--Lightning Ball
-	if t.Spell == 16 and t.Monster.ShowAsHostile == true then
+	if t.Spell == 16 and t.Monster.ShowAsHostile == true and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		t.ObjectType = 12014
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
@@ -723,7 +724,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	--Curse
-	if t.Spell == 64 and t.Monster.ShowAsHostile == true then
+	if t.Spell == 64 and t.Monster.ShowAsHostile == true and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
 		local cond = math.random(0, 3)
@@ -770,7 +771,7 @@ function events.MonsterCastSpell(t)
 	end
 	
 	--Invisible
-	if t.Spell == 19 and t.Monster.ShowAsHostile == true then
+	if t.Spell == 19 and t.Monster.ShowAsHostile == true and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		if t.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime > Game.Time and t.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].Power >= 1000 then
 			t.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime = Game.Time + const.Year

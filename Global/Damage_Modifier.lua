@@ -209,6 +209,14 @@ function events.PlayerAttacked(t,attacker) --���﹥������ ��
 				return
 			end
 
+			if Party.SpellBuffs[const.PartyBuff.Immolation].ExpireTime >= Game.Time and vars.PlayerCastImmolation then
+				attacker.Monster.SpellBuffs[const.MonsterBuff.Hammerhands].Power = math.max(attacker.Monster.SpellBuffs[const.MonsterBuff.Hammerhands].Power, Party.SpellBuffs[const.PartyBuff.Immolation].Power)
+				attacker.Monster.SpellBuffs[const.MonsterBuff.Hammerhands].ExpireTime = Game.Time + const.Minute * 10
+				local dmg = CalcRealDamageM(Party.SpellBuffs[const.PartyBuff.Immolation].Power, const.Damage.Fire, true, Party[vars.PlayerCastImmolation], attacker.Monster)
+				attacker.Monster.HP = math.max(0, attacker.Monster.HP - dmg)
+				attacker.Monster:GotHit(4)
+			end
+
 			local it = t.Player:GetActiveItem(const.ItemSlot.MainHand)
 			if it and it:T().Skill == const.Skills.Staff then
 				local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Staff))
@@ -565,6 +573,9 @@ end
 
 local function CalcRealDamage(Player,Damage,DamageKind)
 --Message(tostring(Damage).." "..tostring(DamageKind))
+if vars.Invincible and vars.Invincible > Game.Time then
+	return 0
+end
 if vars.InvisibleStrike and vars.InvisibleStrike >= Game.Time then
 	Damage = Damage * vars.InvisibleStrikeMul
 end
@@ -636,7 +647,7 @@ end
 function events.MonsterAttacked(t,attacker) --���ﱻ���� 
 	if attacker.MonsterIndex then
 		vars.PlayerAttackTime = Game.Time
-		vars.LastCastSpell = Game.Time
+		--vars.LastCastSpell = Game.Time
 		if t.Monster.Active == true then
 			local dmg = attacker.Monster.Attack1.DamageDiceSides * attacker.Monster.Attack1.DamageDiceCount * 0.5
 			t.Monster.HP = math.max(0, t.Monster.HP - dmg)	
@@ -652,6 +663,7 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 		end
 		if (t.Monster.SpellBuffs[const.MonsterBuff.Summoned].ExpireTime >= Game.Time and (t.Monster.Id == 97 or t.Monster.Id == 98 or t.Monster.Id == 99)) or (t.Monster.Ally == 9999 and t.Monster.ShowAsHostile == false) then
 			vars.MonsterAttackTime = Game.Time
+			vars.LastCastSpell = Game.Time
 			vars.StuckDetected = 0
 		end
 		t.Handled = true
