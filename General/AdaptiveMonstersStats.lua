@@ -256,13 +256,13 @@ local DefensiveSpells = {
 {89,95,96}		-- dark
 }
 
-local SpellDamageMul = {[0] = 0,5.0, 3.4, 3.0, 3.0, 5.0, 1.5, 1.8, 1.8, 0.8, 1.5, 1.8, 
+SpellDamageMul = 	   {[0] = 0,5.0, 3.4, 3.0, 3.0, 5.0, 1.5, 1.8, 1.8, 0.8, 1.5, 1.8, 
 								5.0, 5.0, 3.0, 3.0, 1.2, 2.0, 3.6, 1.8, 1.5, 1.5, 1.0,
 								5.0, 2.5, 3.0, 2.8, 2.0, 2.0, 2.2, 1.8, 1.5, 2.5, 1.5,
 								5.0, 5.0, 3.0, 1.6, 2.0, 1.3, 1.8, 1.0, 1.5, 1.5, 1.0,
 								5.0, 5.0, 3.0, 3.0, 2.0, 2.0, 1.8, 1.1, 1.5, 3.5, 1.0,
 								5.0, 5.0, 3.0, 2.4, 2.0, 2.0, 1.6, 1.8, 1.5, 1.4, 1.0,
-								5.0, 3.0, 3.0, 2.9, 2.0, 2.0, 1.8, 1.8, 1.5, 3.0, 2.0,
+								2.0, 3.0, 3.0, 2.9, 2.0, 2.0, 1.8, 1.8, 1.5, 3.0, 2.0,
 								3.0, 1.8, 1.8, 1.5, 2.0, 1.2, 1.8, 1.0, 1.0, 1.2, 0.8,
 								4.0, 3.2, 1.8, 1.5, 1.6, 1.2, 1.0, 0.4, 0.5, 0.8, 0.8}
 
@@ -272,15 +272,17 @@ local MagicMulByStyle   = {[0] = 0.40, 0.40, 0.52, 0.66, 1.0}
 local SpRateMulByStyle  = {[0] = 1.20, 1.20, 1.60, 2.00, 1.0}
 local SpeedMulByStyle   = {[0] = 1.00, 0.90, 1.35, 0.90, 1.0}
 local SpMasMulByStyle   = {[0] = 2   , 2   , 3   , 4   , 1  }
-local ArmorResAddbyStyle= {[0] = 0   , 40  , 0   , 0   , 0  }
+local ArmorResAddbyStyle= {[0] = 0   , 30  , 0   , 0   , 0  }
 
-local MagicMulByBoost   = {[0] = 1.00, 1.00, 1.00, 2.00, 1.0}
+MagicMulByBoost   		= {[0] = 1.00, 1.00, 1.00, 2.00, 1.0}
 local SpRateMulByBoost  = {[0] = 1.00, 1.00, 1.00, 2.00, 1.0}
-local DamageMulByBoost 	= {[0] = 2.00, 1.00, 1.00, 1.00, 1.0}
+DamageMulByBoost 		= {[0] = 2.00, 1.00, 1.00, 1.00, 1.0}
 local ArmorResAddbyBoost= {[0] = 0   , 50  , 0   , 0   , 0  }
 
-ReanimateHP				= {[0] = 1.00, 0.25}
-ReanimateDmg			= {[0] = 1.00, 0.80}
+--ReanimateHP			= {[0] = 1.00, 0.25}
+--ReanimateDmg			= {[0] = 1.00, 0.80}
+ReanimateHP				= {[0] = 1.00, 0.50}
+ReanimateDmg			= {[0] = 1.00, 0.50}
 ReanimateSpeed			= {[0] = 1.00, 0}
 
 local MonsterBodyRadius = {[388] =  90, [389] = 100, [390] = 110,
@@ -639,7 +641,7 @@ function PrepareMapMon(mon)
 			mon.Spell = GenMonSpell1(mon, MonSettings, BolStep, 0)
 		end
 --		if mon.Elite~=0 then
---			mon.Spell = 41
+			mon.Spell = 67
 --		end
 		if Game.Map.Name == "elemw.odm" then
 			mon.Spell = 26
@@ -651,7 +653,12 @@ function PrepareMapMon(mon)
 		local sk,mas = SplitSkill(TxtMon.SpellSkill)
 		
 		mon.SpellChance		= min(TxtMon.SpellChance * (1 + mon.Elite) * SpRateMulByBoost[mon.BoostType], math.min(60, 15 * (SpRateMulByStyle[Style] ^ 2) * SpRateMulByBoost[mon.BoostType]))
-		mon.SpellSkill 		= JoinSkill(math.min(math.max(1, sk * (1 + mon.Elite) * SpellDamageMul[mon.Spell] * (MonsterEliteDamage[mon.NameId] or 1) * MagicMulByBoost[mon.BoostType]), 1000), mas)
+	--	mon.SpellSkill 		= JoinSkill(math.min(math.max(1, sk * (1 + mon.Elite) * SpellDamageMul[mon.Spell] * (MonsterEliteDamage[mon.NameId] or 1) * MagicMulByBoost[mon.BoostType]), 1000) , mas)
+		if IsReanimated == 1 then
+			mon.SpellSkill = JoinSkill(math.min(math.max(1, sk * (1 + mon.Elite) * SpellDamageMul[mon.Spell] * (MonsterEliteDamage[mon.NameId] or 1) * MagicMulByBoost[mon.BoostType]) * ReanimateDmg[1], 1000), mas)
+		else
+			mon.SpellSkill = JoinSkill(math.min(math.max(1, sk * (1 + mon.Elite) * SpellDamageMul[mon.Spell] * (MonsterEliteDamage[mon.NameId] or 1) * MagicMulByBoost[mon.BoostType]), 1000) , mas)
+		end
 	--	mon.SpellChance     = 0
 		
 		if mon.Spell2 == 0 or FixRandom(mon, 173, 337, 347, 6)<=5 then
@@ -665,8 +672,13 @@ function PrepareMapMon(mon)
 		
 		sk,mas = SplitSkill(TxtMon.Spell2Skill)
 		
-		mon.Spell2Chance	= min(TxtMon.Spell2Chance * (1 + mon.Elite) * SpRateMulByBoost[mon.BoostType], math.min(100, 25 * (SpRateMulByStyle[Style] ^ 2) * (SpRateMulByBoost[mon.BoostType] ^ 2)))
-		mon.Spell2Skill 	= JoinSkill(math.min(math.max(1, sk * (1 + mon.Elite) * SpellDamageMul[mon.Spell2] * (MonsterEliteDamage[mon.NameId] or 1)* MagicMulByBoost[mon.BoostType]), 1000), mas)
+		mon.Spell2Chance	= min(TxtMon.Spell2Chance * (1 + mon.Elite) * SpRateMulByBoost[mon.BoostType], math.min(100, 25 * (SpRateMulByStyle[Style] ^ 2) * SpRateMulByBoost[mon.BoostType]))
+	--	mon.Spell2Skill 	= JoinSkill(math.min(math.max(1, sk * (1 + mon.Elite) * SpellDamageMul[mon.Spell2] * (MonsterEliteDamage[mon.NameId] or 1) * MagicMulByBoost[mon.BoostType]), 1000), mas)
+		if IsReanimated == 1 then
+			mon.Spell2Skill = JoinSkill(math.min(math.max(1, sk * (1 + mon.Elite) * SpellDamageMul[mon.Spell2] * (MonsterEliteDamage[mon.NameId] or 1) * MagicMulByBoost[mon.BoostType]) * ReanimateDmg[1], 1000), mas)
+		else
+			mon.Spell2Skill = JoinSkill(math.min(math.max(1, sk * (1 + mon.Elite) * SpellDamageMul[mon.Spell2] * (MonsterEliteDamage[mon.NameId] or 1) * MagicMulByBoost[mon.BoostType]), 1000) , mas)
+		end
 	--	mon.Spell2Chance    = 0
 		if mon.Spell == mon.Spell2 then
 			mon.SpellChance = mon.SpellChance + mon.Spell2Chance * (100 - mon.SpellChance) / 100

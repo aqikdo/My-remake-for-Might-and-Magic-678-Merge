@@ -192,6 +192,23 @@ function events.MonsterCastSpellM(t)
 			end
 		end
 	end
+	if t.Spell == 67 then
+		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
+		local Heal = 10 + 5 *Skill
+		local x,y,z = XYZ(t.Monster)
+		local Mon = t.Monster
+		local count = 0
+		for i,v in Map.Monsters do
+			if MonCanBeHealed(v, Mon) then
+				v.HP = math.min(v.HP + Heal, v.FullHP)
+				Game.ShowMonsterBuffAnim(i)
+				count = count + 1
+				if count >= 5 then
+					break
+				end
+			end
+		end
+	end
 --	t.Monster.Velocity = t.Monster.Velocity * 2
 --	t.Monster.X = Party.X + math.cos(math.random() * 6.28) * 200
 --	t.Monster.Y = Party.Y + math.sin(math.random() * 6.28) * 200

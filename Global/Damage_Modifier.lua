@@ -6,7 +6,17 @@
 --		timelist[math.floor(Game.Time / 128)] = true
 --	end
 --end
- 
+
+local MonsterSpellDamage=  {[0] = 0,0.0, 4.5, 0.0, 0.0, 0.0, 3.5, 5.5, 0.0, 2.0, 5.0,10.5, 
+									0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 4.5, 0.0, 5.5, 0.0, 2.0,
+									0.0, 2.5, 0.0, 5.5, 0.0, 0.0, 8.0, 0.0, 0.0, 3.5,10.0,
+									0.0, 0.0, 0.0,23.0, 0.0,12.0, 0.0, 5.5, 0.0,40.0, 0.0,
+									0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.0, 0.0, 0.0, 0.0,
+									0.0, 0.0, 0.0, 6.0, 0.0, 0.0, 4.0, 0.0, 0.0,12.5, 0.0,
+									0.0, 0.0, 0.0, 2.5, 0.0, 0.0, 0.0, 0.0, 0.0, 5.5, 0.0,
+									5.5, 9.5, 0.0, 0.0, 0.0, 0.0, 5.0, 0.0, 0.0,10.5, 0.0,
+									0.0, 5.5, 0.0, 0.0, 3.5, 0.0, 0.0, 0.0,13.0, 0.0,10.0}
+									
 local LichIncreaseConstant = 1.3
 
 local function BolsterAdjust(x)
@@ -90,6 +100,30 @@ local function PrintDamageAdd2(dmg, Lastdeal)
 			end
 			if fl == 2 then
 				Game.StatusMessage = str
+			end
+		end
+	end
+end
+
+local function DamageMonster(mon, dmg, hit_animation)
+	if mon.HP > 0 then
+		mon.HP = math.max(0, mon.HP - dmg)
+		if mon.HP == 0 then
+			local cnt = 0
+			for i,v in Party do
+				if v:IsConscious() then
+					cnt = cnt + 1
+				end
+			end
+			local exp = mon.Experience / cnt
+			for i,v in Party do
+				if v:IsConscious() then
+					v.Experience = v.Experience + exp * (1 + v:GetLearningTotalSkill() / 100)
+				end
+			end
+		else
+			if hit_animation then
+				mon:GotHit(4)
 			end
 		end
 	end
@@ -649,8 +683,22 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 		vars.PlayerAttackTime = Game.Time
 		--vars.LastCastSpell = Game.Time
 		if t.Monster.Active == true then
-			local dmg = attacker.Monster.Attack1.DamageDiceSides * attacker.Monster.Attack1.DamageDiceCount * 0.5
-			t.Monster.HP = math.max(0, t.Monster.HP - dmg)	
+			if attacker.Object and attacker.Object.Spell ~= 0 then
+				local sk,mas = SplitSkill(attacker.Object.SpellSkill)
+				local spell = attacker.Object.Spell
+				local dmg = sk * MonsterSpellDamage[spell] * 2 * math.random(40,60) / 50
+				if t.Monster.PhysResistance < 10000 then
+					dmg = dmg * (0.99 ^ t.Monster.PhysResistance)
+				end
+				t.Monster.HP = math.max(0, t.Monster.HP - dmg)	
+			else
+				local dmg = attacker.Monster.Attack1.DamageDiceSides * attacker.Monster.Attack1.DamageDiceCount * 0.5 * math.random(40,60) / 50
+				dmg = dmg * (0.99 ^ t.Monster.PhysResistance)
+				if t.Monster.PhysResistance < 10000 then
+					dmg = dmg * (0.99 ^ t.Monster.PhysResistance)
+				end
+				t.Monster.HP = math.max(0, t.Monster.HP - dmg)	
+			end
 		else
 			if attacker.Monster.Id == 97 or attacker.Monster.Id == 98 or attacker.Monster.Id == 99 or attacker.Monster.Ally == 9999 or attacker.Monster.SpellBuffs[const.MonsterBuff.Enslave].ExpireTime > Game.Time or attacker.Monster.SpellBuffs[const.MonsterBuff.Berserk].ExpireTime > Game.Time then
 				attacker.Monster.HP = 0
@@ -735,7 +783,7 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 						end
 						dmg = dmg + dmgadd
 					end
-					t.Monster.HP = math.max(0, t.Monster.HP - dmg)
+					DamageMonster(t.Monster, dmg, false)
 					PrintDamageAdd2(dmg)
 				end
 			end
@@ -747,8 +795,7 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 					for _,mon in Map.Monsters do
 						if mon ~= t.Monster and GetDist(t.Monster,mon) <= 250 and mon.HP > 0 then
 							local dmg = CalcRealDamageM(sk * math.random(4,8) + 11, const.Damage.Mind, true, attacker.Player, mon)
-							mon.HP = math.max(mon.HP - dmg, 0)
-							mon:GotHit(4)
+							DamageMonster(mon, dmg, true)
 						end
 					end
 				end
@@ -801,7 +848,7 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 				if dmg == 0 then
 					t.Handled = true
 				else
-					t.Monster.HP = math.max(0, t.Monster.HP - dmg)
+					DamageMonster(t.Monster, dmg, false)
 					PrintDamageAdd(dmg)
 				end
 			elseif attacker.Object.Spell == 111 then --There's a bug. lifedrain is 111 instead of 113
@@ -809,7 +856,7 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 				local oridmg = attacker.Player:GetFullHP() * 0.05 * (mas + 1)
 				local dmg = CalcRealDamageM(oridmg, const.Damage.Body, true, attacker.Player, t.Monster)
 				--attacker.Player.HP = math.min(attacker.Player.HP + math.min(oridmg, t.Monster.HP), attacker.Player:GetFullHP())
-				t.Monster.HP = math.max(0, t.Monster.HP - dmg)
+				DamageMonster(t.Monster, dmg, false)
 				local regen = math.round(oridmg / 200)
 				for _,pl in Party do
 					pl.SpellBuffs[const.PlayerBuff.Regeneration].Power = regen
@@ -830,7 +877,7 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 						if it.Number == 569 then
 							dmg = dmg * 1.5
 						end
-						t.Monster.HP = math.max(0, t.Monster.HP - dmg)
+						DamageMonster(t.Monster, dmg, false)
 						attacker.Player.HP = math.min(attacker.Player:GetFullHP(), attacker.Player.HP + dmg * 0.25)
 					end
 				elseif it and it:T().Skill == const.Skills.Axe then
@@ -875,8 +922,7 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 									v.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime = Game.Time + const.Minute
 									v.SpellBuffs[const.MonsterBuff.DamageHalved].Skill = 5
 									v.SpellBuffs[const.MonsterBuff.DamageHalved].Power = 50
-									v.HP = math.max(0, v.HP - tmpdmg)
-									v:GotHit(4)
+									DamageMonster(v, tmpdmg, true)
 								end
 							end
 							dmg = CalcRealDamageM(100, const.Damage.Phys, true, attacker.Player, t.Monster)
@@ -887,7 +933,7 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 					end
 					if mas > 2 then
 						dmg = dmg + CalcRealDamageM(sk * (mas-2), const.Damage.Phys, true, attacker.Player, t.Monster)
-						t.Monster.HP = math.max(0, t.Monster.HP - dmg)
+						DamageMonster(t.Monster, dmg, false)
 					end
 					
 					Sleep(1)
@@ -911,7 +957,7 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 							orgdmg = orgdmg + sk1 * math.max(0, mas1 - 1)
 						end
 						dmg = dmg + CalcRealDamageM(orgdmg, const.Damage.Phys, true, attacker.Player, t.Monster)
-						t.Monster.HP = math.max(0, t.Monster.HP - dmg)
+						DamageMonster(t.Monster, dmg, false)
 					end
 					Sleep(1)
 					attacker.Player.Skills[const.Skills.Staff] = JoinSkill(sk0,mas0)
@@ -947,8 +993,7 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 						end
 						if mindist <= 300 then
 							dmg = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), const.Damage.Phys, true, attacker.Player, mindistmon)
-							mindistmon.HP = math.max(0, mindistmon.HP - dmg)
-							mindistmon:GotHit(4)
+							DamageMonster(mindistmon, dmg, true)
 						end
 					elseif mas == 4 then
 						local mindist = 10000
@@ -971,14 +1016,11 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 						end
 						if mindist <= 600 then
 							dmg = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), const.Damage.Phys, true, attacker.Player, mindistmon)
-							mindistmon.HP = math.max(0, mindistmon.HP - dmg)
-							mindistmon:GotHit(4)
+							DamageMonster(mindistmon, dmg, true)
 						end
 						if secmindist <= 600 then
 							local tmpdmg = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), const.Damage.Phys, true, attacker.Player, secmindistmon)
-							secmindistmon.HP = math.max(0, secmindistmon.HP - tmpdmg)
-							dmg = dmg + tmpdmg
-							secmindistmon:GotHit(4)
+							DamageMonster(secmindistmon, tmpdmg, true)
 						end
 					end
 					
@@ -992,13 +1034,13 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 						if dmg == 0 then
 							t.Handled = true
 						else
-							t.Monster.HP = math.max(0, t.Monster.HP - dmg)
+							DamageMonster(t.Monster, dmg, false)
 							--PrintDamageAdd(dmg)
 						end
 					else
 						if attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill >= 1 then
 							dmg = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), (vars.HammerhandDamageType or const.Damage.Body), true, attacker.Player, t.Monster) * (0.1 + attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Power * 0.0025)
-							t.Monster.HP = math.max(0, t.Monster.HP - dmg)
+							DamageMonster(t.Monster, dmg, false)
 							attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill = attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill - 1
 						end
 					end
@@ -1007,12 +1049,12 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 					if attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill >= 1 then
 						if it:T().Skill == const.Skills.Staff then
 							local dmg1 = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), (vars.HammerhandDamageType or const.Damage.Body), true, attacker.Player, t.Monster) * (0.1 + attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Power * 0.0025)
-							t.Monster.HP = math.max(0, t.Monster.HP - dmg1)
+							DamageMonster(t.Monster, dmg1, false)
 							attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill = attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill - 1
 							dmg = dmg + dmg1
 						else
 							local dmg1 = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), (vars.HammerhandDamageType or const.Damage.Body), true, attacker.Player, t.Monster) * (0.04 + attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Power * 0.001)
-							t.Monster.HP = math.max(0, t.Monster.HP - dmg1)
+							DamageMonster(t.Monster, dmg1, false)
 							attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill = attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill - 1
 							dmg = dmg + dmg1
 						end

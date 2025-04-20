@@ -291,7 +291,17 @@ local function SummonMonsterAdjust()
 	local cnt2 = 0
 	local AnimateList = {}
 	local nomon = 1
+	local MinSpeedReduce = 1
 	for i,mon in Map.Monsters do
+		if Map:IsOutdoor() and mon.ShowAsHostile == true and mon.HP > 0 and GetDist(mon,Party.X,Party.Y,Party.Z) <= 25000 * ((mon.Level / GetOverallPartyLevel()) ^ 2) and Game.UseMonsterBolster == true and (Party.EnemyDetectorRed or Party.EnemyDetectorYellow) then
+			Party.SpellBuffs[const.PartyBuff.Invisibility].ExpireTime = 0
+			Party.SpellBuffs[const.PartyBuff.Fly].ExpireTime = 0
+			Party.SpellBuffs[const.PartyBuff.WaterWalk].ExpireTime = 0
+			MinSpeedReduce = math.max(math.min(GetOverallPartyLevel() / mon.Level, MinSpeedReduce), 0.5)
+		end
+		if vars.LastCastSpell == nil or Game.Time - vars.LastCastSpell >= const.Minute * 5 and Game.UseMonsterBolster == true then
+			mon.HP = mon.FullHP
+		end
 		local TxtMon = Game.MonstersTxt[mon.Id]
 		if mon.ShowAsHostile == true and mon.Active == true and GetDist(mon,Party.X,Party.Y,Party.Z) < 5000 then
 			nomon = 0
@@ -346,8 +356,12 @@ local function SummonMonsterAdjust()
 				if mon.HP > mon.FullHP then
 					mon.HP = mon.FullHP
 				end
-				SetAttackMaxDamage2(mon, mon.Attack1, math.ceil(TxtMon.Attack1.DamageDiceSides) * TxtMon.Attack1.DamageDiceCount * (1 + mon.Elite) * (MonsterEliteDamage[mon.NameId] or 1) * ReanimateDmg[1])
-				SetAttackMaxDamage2(mon, mon.Attack2, math.ceil(TxtMon.Attack2.DamageDiceSides) * TxtMon.Attack2.DamageDiceCount * (1 + mon.Elite) * (MonsterEliteDamage[mon.NameId] or 1) * ReanimateDmg[1])
+				SetAttackMaxDamage2(mon, mon.Attack1, math.ceil(TxtMon.Attack1.DamageDiceSides) * TxtMon.Attack1.DamageDiceCount * (1 + mon.Elite) * (MonsterEliteDamage[mon.NameId] or 1) * ReanimateDmg[1] * DamageMulByBoost[mon.BoostType])
+				SetAttackMaxDamage2(mon, mon.Attack2, math.ceil(TxtMon.Attack2.DamageDiceSides) * TxtMon.Attack2.DamageDiceCount * (1 + mon.Elite) * (MonsterEliteDamage[mon.NameId] or 1) * ReanimateDmg[1] * DamageMulByBoost[mon.BoostType])
+				local sk,mas = SplitSkill(TxtMon.SpellSkill)
+				mon.SpellSkill = JoinSkill(math.min(math.max(1, sk * (1 + mon.Elite) * SpellDamageMul[mon.Spell] * (MonsterEliteDamage[mon.NameId] or 1) * MagicMulByBoost[mon.BoostType]) * ReanimateDmg[1], 1000), mas)
+				sk,mas = SplitSkill(TxtMon.Spell2Skill)
+				mon.Spell2Skill = JoinSkill(math.min(math.max(1, sk * (1 + mon.Elite) * SpellDamageMul[mon.Spell2] * (MonsterEliteDamage[mon.NameId] or 1) * MagicMulByBoost[mon.BoostType]) * ReanimateDmg[1], 1000), mas)
 				if vars.LastCastSpell == nil or Game.Time - vars.LastCastSpell >= const.Minute * 5 then
 					mon.HP = mon.FullHP
 				end
@@ -385,6 +399,7 @@ local function SummonMonsterAdjust()
 	if nomon == 1 then
 		vars.LastCastSpell = Game.Time - const.Minute * 5
 	end
+	vars.PartySpeedReduceByMonster = MinSpeedReduce
 end
 
 local function MonsterBuffsAdjust()
@@ -523,7 +538,7 @@ end
 
 local function MonsterRandomWalk()
 	for i,mon in Map.Monsters do
-		if mon.Active == true and mon.VelocityX == 0 and mon.VelocityY == 0 and mon.VelocityZ == 0 and math.random(1,50) == 1 then
+		if mon.Active == true and mon.VelocityX == 0 and mon.VelocityY == 0 and mon.VelocityZ == 0 and math.random(1,50) == 1 and mon.Ally ~= 9999 and mon.SpellBuffs[const.MonsterBuff.Summoned].ExpireTime < Game.Time then
 			mon.SpellBuffs[const.MonsterBuff.Charm].ExpireTime = Game.Time + const.Minute * 2
 		end
 	end
@@ -678,6 +693,9 @@ local function SpellBuffExtraTimer()
 		if vars.SlowExpireTime and vars.SlowExpireTime >= Game.Time then
 			Spd = Spd * 0.4
 		end
+		if vars.PartySpeedReduceByMonster then
+			Spd = Spd * vars.PartySpeedReduceByMonster
+		end
 		if vars.SwiftPotionBuffTime and vars.SwiftPotionBuffTime >= Game.Time then
 			Spd = Spd * 1.2
 		end
@@ -717,11 +735,11 @@ local function SpellBuffExtraTimer()
 		end
 		if pl.SpellBuffs[const.PlayerBuff.Fate].ExpireTime > Game.Time and pl.SpellBuffs[const.PlayerBuff.Fate].Skill ~= 0 then
 			--Message(tostring(pl.SpellBuffs[const.PlayerBuff.Fate].Skill).." "..tostring(pl.SpellBuffs[const.PlayerBuff.Fate].Power))
-			local curHP = pl.HP
-			local curSP = pl.SP
+			local curHP = math.max(pl.HP, 0)
+			local curSP = math.max(pl.SP, 0)
 			local FullHP = pl:GetFullHP()
 			local FullSP = pl:GetFullSP()
-			if pl.Dead ~= 0 or pl.Eradicated ~= 0 or pl.HP <= 0 then
+			if pl.Dead ~= 0 or pl.Eradicated ~= 0 then
 				curHP = 0
 				curSP = 0
 				FullHP = 0
