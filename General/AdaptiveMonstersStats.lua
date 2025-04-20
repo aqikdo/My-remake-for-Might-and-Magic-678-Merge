@@ -251,7 +251,7 @@ local DefensiveSpells = {
 {34,35,38},		-- earth
 {46,64,51,54},	-- spirit
 {66},			-- mind
-{68,77},		-- body
+{68,67},		-- body
 {80,85,86},		-- light
 {89,95,96}		-- dark
 }
@@ -641,7 +641,7 @@ function PrepareMapMon(mon)
 			mon.Spell = GenMonSpell1(mon, MonSettings, BolStep, 0)
 		end
 --		if mon.Elite~=0 then
-			mon.Spell = 67
+--			mon.Spell = 67
 --		end
 		if Game.Map.Name == "elemw.odm" then
 			mon.Spell = 26
