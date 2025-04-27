@@ -1,0 +1,28 @@
+Target	Stat	Formula	Notes
+def	HP	HP*(1+BolsterMul*5.5)	"Target" values: 
+def	AC	max(AC*(1+BolsterMul*6)-20*BolsterMul,0)	def - default for all kinds of monsters, used if there are no special one.
+def	MoveSpeed	MoveSpeed*(1+BolsterMul/2)	*Number of monster kind* - used only for selected kind of monsters. Kind of monsters - same number as in Hostile.txt from EnglishT.lod
+def	MaxDamage	MaxDamage*(1+BolsterMul*4)	
+def	SpellSkill	SpellSkill*(1+BolsterMul*5)	"Stat" values: HP, AC, MoveSpeed, MinDamage, MaxDamage, SpellSkill, SpellMastery, AllowNewSpell, 
+AllowSummons
+def	SpellMastery	SpellMastery	
+def	AllowNewSpell	MapSettings.Spells and MonSettings.Spells	"Formula" accept any expressions with lua syntax, quick reference:
+def	AllowSummons	MapSettings.Summons and MonSettings.Summons	+; -; *; /; ^; sqrt(x); min(...); max(...); random(x[, y])
+def	AllowReplicate	MapSettings.Summons and MonSettings.Replicate and PartyLevel/MonsterLevel > 2	Result of execution "Formula" should be number for all stats, except "AllowNewSpells", "AllowSummons".
+76	HP	HP*(1+BolsterMul*8)	If "Formula" is pure math expression, "return" can be omitted.
+76	MaxDamage	MaxDamage*(1+BolsterMul*5)	
+			Variables:
+			PartyLevel - average party level
+			MonsterLevel - average level of monster's "family" (three monsters of same kind)
+			TotalEquipCost - total value of items equiped by party
+			HP - original monster's max amount of hitpoints
+			BoostedHP - HP afteer boost.
+			AC - original monster's armor class
+			MonsterHeight - height of monster from MonList.txt
+			MaxDamage - dices*sides of original monster
+			SpellSkill
+			SpellMastery
+			BolsterMul - value from game settings divided by 100 
+			MonsterPower - 1, 2 or 3.
+			MonSettings - values from "Bolster - monsters.txt"
+			MapSettings - values from "Bolster - maps.txt"

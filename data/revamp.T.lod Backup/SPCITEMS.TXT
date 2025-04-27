@@ -1,0 +1,150 @@
+Special Bonuses by Group																			
+
+Bonus Stat	Name Add	W1	W2	Miss	Arm	Shld	Helm	Belt	Cape	Gaunt	Boot	Ring	Amul	Value	Lvl	Description fo special Bonuses and values			
+
+ +10 to all Resistances.	of Protection	0	0	0	10	10	10	0	10	0	0	10	10	1000	B	(+10) on all four resistances			
+ +10 to all Seven Statistics.	of The Gods	5	5	5	10	10	10	10	10	10	10	10	10	3000	D	(+10) on all 7 stats			
+Explosive Impact!	of Carnage	0	0	10	0	0	0	0	0	0	0	0	0	5000	D	"projectile explodes (fireball radius,dmg=weapdmg)"			
+Adds 3-4 points of Cold damage.	of Cold	20	20	20	0	0	0	0	0	0	0	0	0	500	A	(3-4) cold damage			
+Adds 6-8 points of Cold damage.	of Frost	20	20	20	0	0	0	0	0	0	0	0	0	1000	C	(6-8) cold damage			
+Adds 9-12 points of Cold damage.	of Ice	20	20	20	0	0	0	0	0	0	0	0	0	2000	D	(9-12) cold damage			
+Adds 2-5 points of Electrical damage.	of Sparks	20	20	20	0	0	0	0	0	0	0	0	0	500	A	(2-5) elec damage			
+Adds 4-10 points of Electrical damage.	of Lightning	20	20	20	0	0	0	0	0	0	0	0	0	1000	C	(4-10) elec damage			
+Adds 6-15 points of Electrical damage.	of Thunderbolts	20	20	20	0	0	0	0	0	0	0	0	0	2000	D	(6-15) elec damage			
+Adds 1-6 points of Fire damage.	of Fire	20	20	20	0	0	0	0	0	0	0	0	0	500	A	(1-6) fire damage			
+Adds 2-12 points of Fire damage.	of Flame	20	20	20	0	0	0	0	0	0	0	0	0	1000	C	(2-12) fire damage			
+Adds 3-18 points of Fire damage.	of Infernos	20	20	20	0	0	0	0	0	0	0	0	0	2000	D	(3-18) fire damage			
+Adds 5 points of Body damage.	of Poison	20	20	20	0	0	0	0	0	0	0	0	0	500	A	(5) pois damage
+Adds 8 points of Body damage.	of Venom	20	20	20	0	0	0	0	0	0	0	0	0	1000	C	(8) pois damage
+Adds 12 points of Body damage.	of Acid	20	20	20	0	0	0	0	0	0	0	0	0	2000	D	(12) pois damage
+Drain Hit Points from target.	Vampiric	5	5	5	0	0	0	0	0	0	0	0	0	X 2	D	Heal 20% of damage done on attack
+Increases rate of Recovery.	of Recovery	0	0	0	0	0	0	0	0	0	0	0	0	200	B	(-10) pts on recovery from being hit
+Wearer resistant to Diseases.	of Immunity	0	0	0	10	10	10	10	10	0	0	10	10	1000	C	Immune to desease condition
+Wearer resistant to Insanity.	of Sanity	0	0	0	5	5	5	5	5	0	0	5	5	1000	C	immune to insanity condition
+Wearer resistant to Paralysis.	of Freedom	0	0	0	10	10	10	10	10	0	0	10	10	2000	D	immune to paralize condition
+Wearer resistant to Poison.	of Antidotes	0	0	0	10	10	10	10	10	0	0	10	10	1000	C	immune to poison condition
+Wearer resistant to Sleep.	of Alarms	0	0	0	10	10	10	10	10	0	0	10	10	500	B	immune to sleep condition
+Wearer resistant to Stone.	of The Medusa	0	0	0	5	5	5	5	5	0	0	5	5	2000	D	immune to stone condition
+Increased Knockback.	of Force	0	0	0	0	0	0	0	0	0	0	0	0	500	A	Increase knockback effect (X10)
+ +5 Level.	of Power	2	2	2	2	2	2	2	2	2	2	2	2	2500	D	(+5) char level
+Increases effect of all Air spells.	of Air Magic	0	0	0	0	0	0	0	0	0	0	10	10	2000	D	50% increase of spell effect and duration
+Increases effect of all Body spells.	of Body Magic	0	0	0	0	0	0	0	0	0	0	10	10	2000	D	50% increase of spell effect and duration
+Increases effect of all Dark spells.	of Dark Magic	0	0	0	0	0	0	0	0	0	0	10	10	2000	D	50% increase of spell effect and duration
+Increases effect of all Earth spells.	of Earth Magic	0	0	0	0	0	0	0	0	0	0	10	10	2000	D	50% increase of spell effect and duration
+Increases effect of all Fire spells.	of Fire Magic	0	0	0	0	0	0	0	0	0	0	10	10	2000	D	50% increase of spell effect and duration
+Increases effect of all Light spells.	of Light Magic	0	0	0	0	0	0	0	0	0	0	10	10	2000	D	50% increase of spell effect and duration
+Increases effect of all Mind spells.	of Mind Magic	0	0	0	0	0	0	0	0	0	0	10	10	2000	D	50% increase of spell effect and duration
+Increases effect of all Spirit spells.	of Spirit Magic	0	0	0	0	0	0	0	0	0	0	10	10	2000	D	50% increase of spell effect and duration
+Increases effect of all Water spells.	of Water Magic	0	0	0	0	0	0	0	0	0	0	10	10	2000	D	50% increase of spell effect and duration
+Increases chance of Disarming.	of Thievery	0	0	0	0	0	0	0	0	0	0	0	0	2000	B	double chance to perform lockpick and steal skill
+Half damage from all missile attacks.	of Shielding	0	0	0	25	30	0	0	20	0	0	5	5	1000	B	(1/2)dmg from all missle attacks (not cumulative)
+Regenerate Hit points over time.	of Regeneration	0	0	0	10	0	0	10	10	0	0	10	10	1000	B	"Regenerate 1hp/x while walking, etc"
+Regenerate Spell points over time.	of Mana	0	0	0	10	0	10	10	10	10	0	10	10	1000	B	"Regenerate 1sp/x while walking, etc"
+Double Damage vs. Ogres	Ogre Slaying	20	20	20	0	0	0	0	0	0	0	0	0	X 2	A	"X 2 damage vs Ogres, Ogre Magi, Trolls, Troll Peasants, and Cyclops"
+Double damage vs Dragons	Dragon Slaying	20	20	20	0	0	0	0	0	0	0	0	0	X 2	A	X 2 damage vs all dragons
+Drain Hit Points from target and Increased Weapon speed.	of Darkness	5	5	5	0	0	0	0	0	0	0	0	0	X 3	D	"(-20) pts on weapon speed, Vampiric"
+" +1 to Seven Stats, HP, SP, Armor, Resistances."	of Doom	10	10	10	10	10	10	10	10	10	10	10	10	750	B	"(+1) 7stats,hpts,spts,AC,4 resistances"
+" +10 to Endurance, Armor, Hit points."	of Earth	10	10	10	10	10	10	10	10	10	10	10	10	2000	D	"End (+10), AC (+10), HP (+10)"
+ +10 Hit points and Regenerate Hit points over time.	of Life	0	0	0	10	10	10	10	10	10	10	10	10	2000	D	"HP (+10), Regen hpts"
+ +5 Speed and Accuracy.	Rogues'	10	10	10	5	5	5	10	20	20	20	10	10	500	A	"Speed (+5), Acc (+5)"
+Adds 10-20 points of Fire damage and +25 Might.	of The Dragon	10	10	10	0	0	0	0	0	0	0	0	0	3000	D	"(10-20) Fire damage, Might (+25)"
+ +10 Spell points and Regenerate Spell points over time.	of The Eclipse	0	0	0	0	0	0	10	10	5	10	10	10	2000	D	"SP (+10), Regen spts"
+ +15 Endurance and +5 Armor.	of The Golem	5	5	5	20	20	10	10	10	10	10	10	10	1500	C	"End (+15), AC (+5)"
+ +10 Intellect and Luck.	of The Moon	5	5	5	10	10	20	10	10	10	10	10	10	1000	C	"Luck (+10), Int (+10)"
+ +30 Fire Resistance and Regenerate Hit points over time.	of The Phoenix	0	0	0	20	20	20	0	0	0	0	0	0	3000	D	"Fire Res (+30), Regen hpts"
+" +10 Spell points, Speed, Intellect."	of The Sky	5	5	5	10	10	20	10	10	10	10	10	10	2500	D	"Int (+10), Spd (+10), SP (+10)"
+ +10 Endurance and Accuracy.	of The Stars	5	5	5	10	10	10	10	20	20	10	10	10	1000	C	"End (+10), Acc (+10)"
+ +10 Might and Personality.	of The Sun	5	5	5	10	10	10	10	20	20	10	10	10	1000	C	"Might(+10), Per (+10)"
+ +15 Endurance and Regenerate Hit points over time.	of The Troll	5	5	5	20	20	10	10	10	10	10	10	10	1500	C	"End (+15), Regen hpts"
+ +15 Luck and Regenerate Spell points over time.	of The Unicorn	5	5	5	10	10	20	10	10	10	10	10	10	1500	C	"Luck (+15), Regen spts"
+ +5 Might and Endurance.	Warriors'	5	5	5	10	10	10	10	10	10	10	10	10	500	A	"Might (+5), End (+5)"
+ +5 Intellect and Personality.	Wizards'	5	5	5	5	5	5	10	10	10	10	10	10	500	A	"Intelect (+5), Per (+5)"
+Increased Value.	Antique	10	10	10	10	10	10	0	0	10	0	10	10	X 10	B	Gold value increased
+Increased Weapon speed.	Swift	25	25	25	0	0	0	0	0	0	0	0	0	X 2	B	(-20) pts on weapon speed
++3 Unarmed and Dodging skills.	Monks'	0	0	0	0	0	0	0	0	0	0	0	0	1500	C	+3 to Dodging and Unarmed skill
++3 Stealing and Disarm skills.	Thieves'	0	0	0	0	0	0	0	0	0	0	0	0	1500	B	+3 to Stealing and Disarm skill
++3 ID Item and ID Monster skills.	of Identifying	0	0	0	0	0	0	5	5	0	5	10	15	1500	A	+3 to ID Monster and ID Item skill
+Double Damage vs. Elementals.	Elemental Slaying	20	20	20	0	0	0	0	0	0	0	0	0	x2	A	"x2 damage vs Fire, Earth, Water, and Air elementals"
+Double Damage vs. Undead.	Undead Slaying	20	20	20	0	0	0	0	0	0	0	0	0	x2	B	"x2 damage on Liches, Vampires, Zombies, Skeletons, Ghosts, and Wights"
+Double Damage vs. Titans.	Of David	0	0	0	0	0	0	0	0	0	0	0	0	x2	A	x2 damage on all Titans
+Regenerate Spell points and Hit points over time.	of Plenty	0	0	0	10	0	5	10	10	5	0	10	10	2500	C	"Regenerate 1 hp/x and 1 sp/x while walking, etc."
+Adds 5 points of Body damage and +2 Disarm skill.	Assassins'	20	20	20	0	0	0	0	0	0	0	0	0	1000	B	(5) pois damage and +2 Disarm skill
+Adds 6-8 points of Cold damage and +5 Armor Class.	Barbarians'	20	20	20	0	0	0	0	0	0	0	0	0	1500	C	(6-8) cold damage and +5 AC
++20 Air Resistance and Shielding.	of the Storm	0	0	0	20	20	20	0	0	0	0	0	0	1500	C	+20 Air Resistance and 1/2 damage from missile attacks
++10 Water Resistance and +2 Alchemy skill.	of the Ocean	0	0	0	20	20	20	0	0	0	0	0	0	1000	B	+10 Water Resistance and +2 Alchemy skill
+Prevents damage from drowning.	of Water Walking	0	0	0	5	5	5	5	5	0	15	5	5	1500	C	Character with item takes no damage from drowning
+Prevents damage from falling.	of Feather Falling	0	0	0	5	0	0	5	5	0	5	15	5	1000	B	Character with item takes no damage from falling
+Throws sparks into enemy.	of Sparking	0	0	0	0	0	0	0	0	0	0	0	0	x2	B	Throws sparks into enemy.
+Double damage vs. Demons.	Demon Slaying	0	0	0	0	0	0	0	0	0	0	0	0	x2	A	"x2 damage vs all Demons."
+Double Damage vs. Elves.	Elf Slaying	0	0	0	0	0	0	0	0	0	0	0	0	x2	A	"x2 damage on all Elf Archers, Elf Spearmen, Elf peasants (male and female)."
+Double Damage vs. Goblins.	Goblin Slaying	0	0	0	0	0	0	0	0	0	0	0	0	x2	A	"x2 damage on all Goblins."
+Double Damage vs. Dwarves.	Dwarf Slaying	0	0	0	0	0	0	0	0	0	0	0	0	x2	A	"x2 damage on all Dwarves."
+Double Damage vs. Humans.	Human Slaying	0	0	0	0	0	0	0	0	0	0	0	0	x2	A	"x2 damage on all Humans."
+Double Damage vs. Sea Monsters.	of Sea Hunting	0	0	0	0	0	0	0	0	0	0	0	0	x2	A	"x2 damage on all Swimming monsters."
+Adds 10-20 points of Fire damage.	of Fire Strike	0	0	0	0	0	0	0	0	0	0	0	0	2500	D	(10-20) Fire damage
+Adds 10-20 points of Air damage.	of Air Strike	0	0	0	0	0	0	0	0	0	0	0	0	2500	D	(10-20) Air damage
+Adds 10-20 points of Water damage.	of Water Strike	0	0	0	0	0	0	0	0	0	0	0	0	2500	D	(10-20) Water damage
+Adds 10-20 points of Earth damage.	of Earth Strike	0	0	0	0	0	0	0	0	0	0	0	0	2500	D	(10-20) Earth damage
+Adds 10-20 points of Spirit damage.	of Spirit Strike	0	0	0	0	0	0	0	0	0	0	0	0	2500	D	(10-20) Spirit damage
+Adds 10-20 points of Mind damage.	of Mind Strike	0	0	0	0	0	0	0	0	0	0	0	0	2500	D	(10-20) Mind damage
+Adds 10-20 points of Body damage.	of Body Strike	0	0	0	0	0	0	0	0	0	0	0	0	2500	D	(10-20) Body damage
+Adds 10-20 points of Light damage.	of Light Strike	0	0	0	0	0	0	0	0	0	0	0	0	2500	D	(10-20) Light damage
+Adds 10-20 points of Dark damage.	of Dark Strike	0	0	0	0	0	0	0	0	0	0	0	0	2500	D	(10-20) Dark damage
+Slightly increases weapon speed	of Alacrity	0	0	0	0	0	0	0	0	0	0	0	0	1000	B	(-10) pts on weapon speed
+Adds 4-10 points of Earth damage.	of Earth Bite	0	0	0	0	0	0	0	0	0	0	0	0	1000	C	(4-10) Earth damage
+Adds 4-10 points of Spirit damage.	of Spirit Bite	0	0	0	0	0	0	0	0	0	0	0	0	1000	C	(4-10) Spirit damage
+Adds 4-10 points of Mind damage.	of Mind Bite	0	0	0	0	0	0	0	0	0	0	0	0	1000	C	(4-10) Mind damage
+Adds 4-10 points of Light damage.	of Light Bite	0	0	0	0	0	0	0	0	0	0	0	0	1000	C	(4-10) Light damage
+Adds 4-10 points of Dark damage.	of Dark Bite	0	0	0	0	0	0	0	0	0	0	0	0	1000	C	(4-10) Dark damage
+Adds 6-15 points of Earth damage.	of Earth Blow	0	0	0	0	0	0	0	0	0	0	0	0	2000	D	(6-15) Earth damage
+Adds 6-15 points of Spirit damage.	of Spirit Blow	0	0	0	0	0	0	0	0	0	0	0	0	2000	D	(6-15) Spirit damage
+Adds 6-15 points of Mind damage.	of Mind Blow	0	0	0	0	0	0	0	0	0	0	0	0	2000	D	(6-15) Mind damage
+Adds 6-15 points of Light damage.	of Light Blow	0	0	0	0	0	0	0	0	0	0	0	0	2000	D	(6-15) Light damage
+Adds 6-15 points of Dark damage.	of Dark Blow	0	0	0	0	0	0	0	0	0	0	0	0	2000	D	(6-15) Dark damage
+Increases Staff Mastery	of Staff Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Staff Mastery
+Increases Sword Mastery	of Sword Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Sword Mastery
+Increases Dagger Mastery	of Dagger Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Dagger Mastery
+Increases Axe Mastery	of Axe Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Axe Mastery
+Increases Spear Mastery	of Spear Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Spear Mastery
+Increases Bow Mastery	of Bow Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Bow Mastery
+Increases Mace Mastery	of Mace Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Mace Mastery
+Increases Blaster Mastery	of Blaster Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Blaster Mastery
+Increases Shield Mastery	of Shield Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Shield Mastery
+Increases Leather Mastery	of Leather Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Leather Mastery
+Increases Chain Mastery	of Chain Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Chain Mastery
+Increases Plate Mastery	of Plate Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Plate Mastery
+Increases Fire Mastery	of Fire Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Fire Mastery
+Increases Air Mastery	of Air Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Air Mastery
+Increases Water Mastery	of Water Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Water Mastery
+Increases Earth Mastery	of Earth Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Earth Mastery
+Increases Spirit Mastery	of Spirit Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Spirit Mastery
+Increases Mind Mastery	of Mind Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Mind Mastery
+Increases Body Mastery	of Body Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Body Mastery
+Increases Light Mastery	of Light Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Light Mastery
+Increases Dark Mastery	of Dark Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Dark Mastery
+Increases Dark Elf Ability Mastery	of Dark Elf Ability	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Dark Elf Ability Mastery
+Increases Vampire Ability Mastery	of Vampire Ability	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Vampire Ability Mastery
+Increases Dragon Ability Mastery	of Dragon Ability	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Dragon Ability Mastery
+Increases Identify Item Mastery	of Identify Item Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Identify Item Mastery
+Increases Merchant Mastery	of Merchant Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Merchant Mastery
+Increases Repair Mastery	of Repair Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Repair Mastery
+Increases Bodybuilding Mastery	of Bodybuilding Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Bodybuilding Mastery
+Increases Meditation Mastery	of Meditation Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Meditation Mastery
+Increases Perception Mastery	of Perception Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Perception Mastery
+Increases Regeneration Mastery	of Regeneration Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Regeneration Mastery
+Increases Disarm Traps Mastery	of Disarm Traps Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Disarm Traps Mastery
+Increases Dodging Mastery	of Dodging Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Dodging Mastery
+Increases Unarmed Mastery	of Unarmed Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Unarmed Mastery
+Increases Identify Monster Mastery	of Identify Monster Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Identify Monster Mastery
+Increases Armsmaster Mastery	of Armsmaster Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Armsmaster Mastery
+Increases Stealing Mastery	of Stealing Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Stealing Mastery
+Increases Alchemy Mastery	of Alchemy Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Alchemy Mastery
+Increases Learning Mastery	of Learning Mastery	0	0	0	0	0	0	0	0	0	0	0	0	3000	D	Increases Learning Mastery
+
+		505	505	505	345	315	310	245	305	200	185	375	370			
+
+Treasure Level	If treasure Level = 3 add all A and B															
+A= 3 to 4	If treasure Level = 4 add all A and B and C
+B= 3 to 5	If treasure Level = 5 add al B and C and D
+C= 4 to 5	If treasure Level = 6 add all D
+D= 5 to 6	

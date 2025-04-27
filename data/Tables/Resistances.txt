@@ -1,0 +1,76 @@
+#	Race	RaceName	Class	ClassName	Resistance	Value
+1	0	Human	-1	-	7	0
+2	0	Human	-1	-	8	0
+5	1	Undead Human	-1	-	7	25
+6	1	Undead Human	-1	-	8	25
+9	2	Vampire Human	-1	-	7	25
+11	4	Ghost Human	-1	-	7	75
+12	4	Ghost Human	-1	-	8	75
+15	5	Dark Elf	-1	-	0	5
+16	5	Dark Elf	-1	-	1	5
+17	5	Dark Elf	-1	-	2	5
+18	5	Dark Elf	-1	-	3	5
+23	6	Undead Dark Elf	-1	-	7	50
+24	6	Undead Dark Elf	-1	-	8	50
+27	7	Vampire Dark Elf	-1	-	7	25
+29	9	Ghost Dark Elf	-1	-	7	50
+30	9	Ghost Dark Elf	-1	-	8	50
+31	10	Minotaur	-1	-	0	15
+32	10	Minotaur	-1	-	1	15
+33	10	Minotaur	-1	-	2	15
+34	10	Minotaur	-1	-	3	15
+35	10	Minotaur	-1	-	7	15
+36	10	Minotaur	-1	-	8	15
+39	11	Undead Minotaur	-1	-	7	150
+40	11	Undead Minotaur	-1	-	8	150
+43	12	Vampire Minotaur	-1	-	7	150
+45	15	Troll	-1	-	0	40
+46	15	Troll	-1	-	1	40
+49	15	Troll	-1	-	2	40
+50	15	Troll	-1	-	3	40
+53	16	Undead Troll	-1	-	7	150
+54	16	Undead Troll	-1	-	8	150
+57	17	Vampire Troll	-1	-	7	100
+59	19	Ghost Troll	-1	-	7	150
+60	19	Ghost Troll	-1	-	8	150
+63	20	Dragon	-1	-	0	50
+64	20	Dragon	-1	-	1	50
+65	20	Dragon	-1	-	2	50
+66	20	Dragon	-1	-	3	50
+67	20	Dragon	-1	-	6	50
+68	20	Dragon	-1	-	7	50
+69	20	Dragon	-1	-	8	50
+77	21	Undead Dragon	-1	-	7	65000
+78	21	Undead Dragon	-1	-	8	65000
+81	22	Vampire Dragon	-1	-	7	65000
+83	24	Ghost Dragon	-1	-	7	65000
+84	24	Ghost Dragon	-1	-	8	65000
+85	25	Elf	-1	-	0	5
+86	25	Elf	-1	-	1	5
+87	25	Elf	-1	-	2	5
+88	25	Elf	-1	-	3	5
+89	26	Undead Elf	-1	-	7	50
+90	26	Undead Elf	-1	-	8	50
+93	27	Vampire Elf	-1	-	7	25
+95	30	Goblin	-1	-	0	10
+96	30	Goblin	-1	-	1	10
+99	30	Goblin	-1	-	2	10
+100	30	Goblin	-1	-	3	10
+103	31	Undead Goblin	-1	-	7	75
+104	31	Undead Goblin	-1	-	8	75
+107	32	Vampire Goblin	-1	-	7	50
+109	34	Ghost Goblin	-1	-	7	75
+110	34	Ghost Goblin	-1	-	8	75
+111	35	Dwarf	-1	-	0	25
+112	35	Dwarf	-1	-	1	25
+113	35	Dwarf	-1	-	2	25
+114	35	Dwarf	-1	-	3	25
+115	36	Undead Dwarf	-1	-	0	5
+116	36	Undead Dwarf	-1	-	1	5
+117	36	Undead Dwarf	-1	-	2	5
+118	36	Undead Dwarf	-1	-	3	5
+119	36	Undead Dwarf	-1	-	7	75
+120	36	Undead Dwarf	-1	-	8	75
+121	37	Vampire Dwarf	-1	-	7	50
+123	39	Ghost Dwarf	-1	-	7	75
+124	39	Ghost Dwarf	-1	-	8	75

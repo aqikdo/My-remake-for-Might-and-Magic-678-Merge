@@ -1,0 +1,1804 @@
+#	Topic	Requires	Notes	Text #	Owner(s)	Owner #
+1	 ´ó ÔÖ ±ä	0		1. S'ton	S'ton	
+2	 ³µ ¶Ó Áì Ðä	0		2. S'ton	S'ton	
+3	 À× ¸ñ ÄÇ µÄ º£ µÁ	0		3. S'ton	S'ton	
+4	 ´ó ÔÖ ±ä	0		4. S'ton	Dadeross	
+5	 º£ µÁ	0		5. Dadeross	Dadeross	
+6	 ³µ ¶Ó	0		6. Dadeross	Dadeross	
+7	 ´ó ÔÖ ±ä	0		7. Brekish Onefang	Brekish Onefang	
+8	 ÑÒ Ê¯ ´« ËÍ ÃÅ	0		8. Brekish Onefang	Brekish Onefang	
+9	 ·Ñ µÂ Èð ¿Ë ¡¤ Ëþ Á¦ Ã× ¶û	0		9. Brekish Onefang	Brekish Onefang	
+10	 ÑÒ Ê¯ ´« ËÍ ÃÅ	0		10. Brekish Onefang	Fredrick Talimere	
+11	 ´ó ÔÖ ±ä	0		11. Fredrick Talimere	Fredrick Talimere	
+12	 ÄÜ Ô´ Ö® Ê¯	0		12. Fredrick Talimere	Fredrick Talimere	
+13	 ·Ï Ãí	0		13. Fredrick Talimere	Fredrick Talimere	
+14	 ÈÎ Îñ	0		14. Rohtnax	Rohtnax	James
+15	 ÑÒ Ê¯ ´« ËÍ ÃÅ	0		15. Rohtnax	Rohtnax	James
+16	 ·Ñ µÂ Èð ¿Ë ¡¤ Ëþ Á¦ Ã× ¶û	0		16. Rohtnax	Rohtnax	James
+17	 »ð Ö® É½	0		17. Pascella Tisk	Pascella Tisk	James
+18	 Ô¤ ÑÔ	0		18. Pascella Tisk	Pascella Tisk	James
+19	 ÈÎ Îñ	0		19. Pascella Tisk	Pascella Tisk	James
+20	 ÈÎ Îñ	0		20. Pascella Tisk	Dadeross	
+21	 ÈÎ Îñ	0		21. Dadeross	Brekish Onefang	
+22	 Èç ºÎ ½ú Éý Îª °µ ¾« ×ð Õß	0		22. Brekish Onefang	Dark Elf Elder	
+23	 ¿¼ Á¦ ¡¤ ºÚ Íõ ×ù	0		24. Brekish Onefang	Dark Elf Elder	
+24	 ¶à Ð» £¡	0		26. Old Dark Elf	Cauri Blackthorne	James
+25	 ×ð Õß	0		25. Old Dark Elf	Cauri Blackthorne	James
+26	 ÑÒ Ê¯ È¦	0		28. Old Dark Elf	Cauri Blackthorne	James
+27	 ¿¼ Á¦ ¡¤ ºÚ Íõ ×ù	0		31. Cleric of the Sun	Cleric of the Sun	James
+28	 ÐÅ	0			Elgar Fellmoon	
+29	 ÈÎ Îñ	0			Elgar Fellmoon	
+30	 ºÚ Íõ ×ù µÄ ¾Ó Ëù	0		39. Old Dark Elf	Dark Elf Elder	James
+31	 ¿¼ Á¦ ÔÚ ÄÄ Àï £¿	0		25. Old Dark Elf	Dark Elf Elder	James
+32	 ÀÕ Ë÷	0		40. Old Dark Elf	Arion Hunter	
+33	 ×ß Ë½ Õß µÄ ´¬	0		41. Arion Hunter	Arion Hunter	
+34	 ¹Å ´ú ¾Þ Ä§ Ö® ¼Ò	0		42. Arion Hunter	TROLL PROMO	James
+35	 ÈÎ Îñ	0		43. Arion Hunter	TROLL PROMO	James
+36	 ÕÒ µ½ ÁË ¹Å ´ú ¾Þ Ä§ Ö® ¼Ò £¡	0		45. TROLL PROMO	TROLL PROMO	James
+37	 ÑÒ Ê¯ µÄ ×ç Öä	0		46. TROLL PROMO	Volog Sandwind	
+38	 ¶à Ð» Äã µÄ °ï Öú £¡	0		47. Cauri Blackthorne	Cauri Blackthorne	
+39	 ¶à Ð» Äã µÄ °ï Öú £¡	0		48. TROLL PROMO	TROLL PROMO	
+40	 ¹Å ´ú ¾Þ Ä§ Ö® ¼Ò	0		49. TROLL PROMO	TROLL PROMO	
+41	 ËÍ ÉÏ ±¨ ¸æ	0			Bastian Loudrin	
+42	 ÈÎ Îñ	0			Bastian Loudrin	
+43	 ÈÎ Îñ	0		54. TROLL PROMO	Bastian Loudrin	
+44	 ¸É µÄ ºÃ	0		55. TROLL PROMO	Bastian Loudrin	
+45	 »ð ºþ	0			Overdune Snapfinger	
+46	 À´ °¢ ¶û Íß	0			Overdune Snapfinger	
+47	 Î¬ ¶û °Ý	0			OVERDUNE'S FATHER	
+48	 Áª ÃË	0			Deftclaw Redreaver	
+49	 ÈÎ Îñ	0			Deftclaw Redreaver	
+50	 ²¼ À­ É­ ¡¤ ±© ·ç Ç¹ µÄ ÖÎ ÁÆ ·½ ·¨	0		68. Charles Quixote	Dervish Chevron	
+51	 ÷¼ ÷Ã Áú	0		61. Leane Stormlance	Leane Stormlance	
+52	 Èç ºÎ ½ú Éý µ½ ÓÂ Ê¿	0		62. Leane Stormlance	Leane Stormlance	
+53	 ºÚ Ä¾ Ö® Ã¬	0		63. Blazen Stormlance	Blazen Stormlance	
+54	 Ò© ·½	0		64. Blazen Stormlance	Blazen Stormlance	
+55	 ·è ¿ñ µÄ ËÀ Áé ·¨ Ê¦	0		65. Blazen Stormlance	Blazen Stormlance	
+56	 ±© ·ç Ç¹	0		66. Charles Quixote	Charles Quixote	
+57	 ºÚ Ä¾ Ö® Ã¬	0		67. Charles Quixote	Charles Quixote	
+58	 Èç ºÎ ½ú Éý µ½ ÓÂ Ê¿	0			Charles Quixote	
+59	 ÎÒ µÄ ¸¸ Ç×	0		69. Leane Stormlance	Leane Stormlance	
+60	 Èç ºÎ ½ú Éý µ½ Éñ Áú	0			Deftclaw Redreaver	
+61	 ÍÀ Áú Õß	0			Deftclaw Redreaver	
+62	 É± Áú ÈË Ö® ½£	0			Deftclaw Redreaver	
+63	 Áª ÃË	0			Charles Quixote	
+64	 ÈÎ Îñ	0			Charles Quixote	
+65	 Áª ÃË	0			Masul NPC 13	
+66	 ºé Ë®	0			Thanys	
+67	 ÈÎ Îñ	0			Thanys	
+68	 °Í ¶û Èø É· Ö® ¸«			91. Tessalar	Tessalar	
+69	 Èç ºÎ ½ú Éý Îª Å£ Í· Áì Ö÷			92. Tessalar	Tessalar	
+70	 ºÚ °µ °« ÈË			93. Tessalar	Tessalar	
+71	 ÈÎ Îñ				Tessalar	
+72	 ²Ð ÆÆ Õò µÄ °Í ¶û Èø É·				Tessalar	
+73	 °Í ¶û Èø É· Ö® ¸«			97. Dadeross	Dadeross	
+74	 ¶à Ð» Äã µÄ °ï Öú £¡			99. Tessalar	Tessalar	
+75	 ¿ì µã £¡			101. Dadeross	Dadeross	
+76	 Ì« Ñô Ô¤ ÑÔ			103. Verish	Verish	
+77	 Ïß Ë÷			104. Verish	Verish	
+78	 Éý Ö° Îª ¹â Ã÷ Ö÷ ½Ì			105. Verish	Verish	
+79	 Óð Éß Ö® ³² Ñ¨			105. Verish	Verish	
+80	 Ì« Ñô Ô¤ ÑÔ			107. Verish	Cleric of the Sun	
+81	 ÈÎ Îñ			108. Verish	Verish	
+82	 ¿É ²¼			109. Lathean	Lathean	
+83	 ÈÎ Îñ			110. Lathean	Lathean	
+84	 ¿É ²¼			152. "Korbu?  He was the 	Korbu clue	
+85	 ¿É ²¼			153. "Korbu left us after	Korbu clue	
+86	 Î× Ñý			113. Vetrinus Taleshire	Vetrinus Taleshire	
+87	 Î× Ñý Ö® Æ¿				Necro Clue	
+88	 ¿¨ ¶û µÄ Ê§ Âä Ö® Êé				Necro Clue	
+89	 ½ú Éý Îª Î× Ñý			116. Vetrinus Taleshire	Vetrinus Taleshire	
+90	 ¿É ²¼ µÄ ÔÙ ÁÙ			117. Lathean	Lathean	
+91	 ¶à Ð» Äã µÄ °ï Öú £¡			121. Lathean	Verish	
+92	 ¶à Ð» Äã µÄ °ï Öú £¡			122. You must be a member	Lathean	
+93	 ¶à Ð» Äã µÄ °ï Öú £¡			151. We need to consult K	Vetrinus Taleshire	
+94	 Áª ÃË				Sandro	
+95	 ÈÎ Îñ				Sandro	
+96	 ´÷ É­ ¡¤ Àî À¶				Sandro	
+97	 ËÀ Áé ·¨ Ê¦				Dyson Leland	
+98	 Ì« Ñô Éñ Ãí				Dyson Leland	
+99	 Äã ×Ô ¼º				Dyson Leland	
+100	 ¼Ó Èë				Dyson Leland	
+101	 Ì· ÌØ				Sandro	
+102	 Áª ÃË				Oskar Tyre NPC 37	
+103	 ÈÎ Îñ				Oskar Tyre NPC 37	
+104	 Áª ÃË		Elgar during form alliance quest		Elgar Fellmoon NPC 53	
+105	 ¹î Òì µÄ ÐÅ µÀ		Elgar's general subject during alliance quest	170. Elgar Fellmoon NPC 5	Elgar Fellmoon NPC 53	
+106	 °¬ ¶÷ ·¨ Ë¹ ÌØ		Elgar tells about contact of ironfists		Elgar Fellmoon NPC 53	
+107	 ÈÎ Îñ		sink the regnan fleet		Elgar Fellmoon NPC 53	
+108	 º£ µÁ		general pirate info about pirates		Elgar Fellmoon NPC 53	
+109	 Èø Ë÷ ¶û		talks about newly arrived xanthor		Elgar Fellmoon NPC 53	
+110	 ÈÎ Îñ		talk to xanthor		Elgar Fellmoon NPC 53	
+111	 °¬ ¶÷ ·¨ Ë¹ ÌØ µÄ µ½ À´		genera info about ironfists		Elgar Fellmoon NPC 53	
+112	 »ð Ôª ËØ ½ç		Elgar's subject during find elemental hearts quest	180. Elgar Fellmoon NPC 5	Elgar Fellmoon NPC 53	
+113	 ½ç ¼ä Ö® µØ		Elgar's subject during find the source of conflux	181. Elgar Fellmoon NPC 5	Elgar Fellmoon NPC 53	
+114	 Ôª ËØ Ö® Íõ µÄ ¼à Óü		Elgar's subject during free the elemental lords	182. Elgar Fellmoon NPC 5	Elgar Fellmoon NPC 53	
+115	 ÉÌ ÈË Ö® ¼Ò		Elgar's subject after player wins game	183. Elgar Fellmoon NPC 5	Elgar Fellmoon NPC 53	
+116	 ÁÔ Áú		Quixote while alliance being formed	184. Elgar Fellmoon NPC 5	Charles Quixote NPC 65	
+117	 ºÚ ¾® ¡¤ ¹Å ²®		Quixote during sink the fleet	185. Charles Quixote NPC 	Charles Quixote NPC 65	
+118	 Èø Ë÷ ¶û		Quixote during talk to xanthor	186. Charles Quixote NPC 	Charles Quixote NPC 65	
+119	 ×é Ö¯ ²¿ ¶Ó		Quixote during find the hearts	187. Charles Quixote NPC 	Charles Quixote NPC 65	
+120	 ½ç ¼ä Ö® µØ		Quixote during find the source of conflux	188. Charles Quixote NPC 	Charles Quixote NPC 65	
+121	 Èø Ë÷ ¶û		Quixote during free the elemental lords	189. Charles Quixote NPC 	Charles Quixote NPC 65	
+122	 ÁÔ Áú		Quixote at home after win game	190. Charles Quixote NPC 	Charles Quixote NPC 65	
+123	 °ï Öú		Deftclaw while alliance being formed	191. Charles Quixote NPC 	Deftclaw Redreaver NPC 66	
+124	 À× ¸ñ ÄÇ µº		Deftclaw during sink the fleet	192. Deftclaw Redreaver N	Deftclaw Redreaver NPC 66	
+125	 ¼ª ¿Æ µÂ µÄ ±¦ ²Ø		Deftclaw during talk to xanthor	193. Deftclaw Redreaver N	Deftclaw Redreaver NPC 66	
+126	 ´« ËÍ ÃÅ		Deftclaw during find the hearts	194. Deftclaw Redreaver N	Deftclaw Redreaver NPC 66	
+127	 Ë® ¾§ Áú		Deftclaw during find the source of conflux	195. Deftclaw Redreaver N	Deftclaw Redreaver NPC 66	
+128	 »Ù Ãð Õß		Deftclaw during free the elemental lords	196. Deftclaw Redreaver N	Deftclaw Redreaver NPC 66	
+129	 ´ó ÊÂ		Deftclaw at home after win game	197. Deftclaw Redreaver N	Deftclaw Redreaver NPC 66	
+130	 ¹â Ã÷		Tyre while alliance being formed	198. Deftclaw Redreaver N	Oskar Tyre NPC 67	
+131	 ÁÒ Ñô ¶¤ ´¸		Tyre during sink the fleet	199. Oskar Tyre NPC 67	Oskar Tyre NPC 67	
+132	 °¬ ¶÷ ·¨ Ë¹ ÌØ		Tyre during talk to xanthor	550. Oskar Tyre NPC 67	Oskar Tyre NPC 67	
+133	 ·ç Ôª ËØ ½ç		Tyre during find the hearts	551. Oskar Tyre NPC 67	Oskar Tyre NPC 67	
+134	 Î£ »ú Ö® À´ Ô´		Tyre during find the source of conflux	552. Oskar Tyre NPC 67	Oskar Tyre NPC 67	
+135	 ¶ñ Ä§		Tyre during free the elemental lords	553. Oskar Tyre NPC 67	Oskar Tyre NPC 67	
+136	 ¹â Ö® ÆÍ ÈË		Tyre at home after win game	554. Oskar Tyre NPC 67	Oskar Tyre NPC 67	
+137	 Í¼ Êé ¹Ý		Masul while alliance being formed	555. Masul NPC 68	Masul NPC 68	
+138	 º£ µÁ ÇÖ ÂÔ		Masul during sink the fleet	556. Masul NPC 68	Masul NPC 68	
+139	 ¿­ Éª ÁÕ ¡¤ °¬ ¶÷ ·¨ Ë¹ ÌØ		Masul during talk to xanthor	557. Masul NPC 68	Masul NPC 68	
+140	 Ë® Ôª ËØ ½ç		Masul during find the hearts	558. Masul NPC 68	Masul NPC 68	
+141	 ¸É Á¸		Masul during find the source of conflux	559. Masul NPC 68	Masul NPC 68	
+142	 ¾È Êê		Masul during free the elemental lords	560. Masul NPC 68	Masul NPC 68	
+143	 Í¨ Íù ³Ç ÊÐ Ö® Ô¿ ³×		Masul at home after win game	561. Masul NPC 68	Masul NPC 68	
+144	 Ì« Ñô Éñ Ãí		Sandro while alliance being formed	562. Sandro NPC 69	Sandro NPC 69	
+145	 º£ µÁ ·¨ Ê¦		Sandro during sink the fleet	563. Sandro NPC 69	Sandro NPC 69	
+146	 Î× Ê¦		Sandro during talk to xanthor	654. James	Sandro NPC 69	
+147	 ´Î Ôª Ö® ½ä		Sandro during find the hearts	565. Sandro NPC 69	Sandro NPC 69	
+148	 ¶ñ ÃÎ		Sandro during find the source of conflux	566. Sandro NPC 69	Sandro NPC 69	
+149	 Ôª ËØ Ö® Õ½		Sandro during free the elemental lords	567. Sandro NPC 69	Sandro NPC 69	
+150	 °² È«		Sandro at home after win game	568. Sandro NPC 69	Sandro NPC 69	
+151	 Èø Ë÷ ¶û		XANTHOR's Lackey	569. XANTHOR's LACKEY NPC	XANTHOR'S LACKEY NPC 77	
+152	 Ë® ¾§ 				XANTHOR NPC 23	
+153	 ÈÎ Îñ				XANTHOR NPC 23	
+154	 ´« ËÍ ÃÅ				XANTHOR NPC 23	
+155	 Ôª ËØ Ö® Íõ				XANTHOR NPC 23	
+156	 »Ù Ãð Õß				XANTHOR NPC 23	
+157	 Àë ¿ª				XANTHOR NPC 23	
+158	 Áú ¿û µÆ Â¯				Thant	
+159	 Äã ÊÇ Ë­ £¿				Escaton	
+160	 Ö÷ ÈË				Escaton	
+161	 ´ó ÔÖ ±ä				Escaton	
+162	 ¿Ë Àï ¸ù ÈË				Escaton	
+163	 Õü ¾È ÊÀ ½ç				Escaton	
+164	 ÃÕ Ìâ Ò»				Escaton	
+165	 ÃÕ Ìâ ¶þ				Escaton	
+166	 ÃÕ Ìâ Èý				Escaton	
+167	 ÊÍ ·Å ·ç Ö® Íõ				Shalwend	
+168	 ÊÍ ·Å Ë® Ö® Íõ				Acwalander	
+169	 ÊÍ ·Å µØ Ö® Íõ				Gralkor	
+170	 ÊÍ ·Å »ð Ö® Íõ				Pyrannaste	
+171	 ÃÕ Ìâ				Escaton	
+172	 ½Ù ÂÓ Õß				Thanys	
+173	 ¼Ó Èë				Thanys	
+174	 ÈÎ Îñ		hint/info about Jungle Feaver	619. James		James
+175	 ÈÎ Îñ		Begin Cure Disease quest	620. James		James
+176	 Äã ×è Ö¹ ÁË ´« È¾ ²¡ Âð £¿		Cure Disease quest 2	621. James		James
+177	 ÈÎ Îñ		Begin Poisoned Water Supply Quest	622. James		James
+178	 Äã ÓÐ ½â ¶¾ ¼Á Âð £¿		End Poisoned Water Supply Quest	623. James		James
+179	 ´¿ ´â ËÙ ¶È Ò© ¼Á		Recipe and Indgredient quest	624. James		James
+180	 Åä ·½		missing ingredients	747. "Black Potions are m		James
+181	 Äã ÓÐ Åä ·½ Âð £¿		end of recipie quest	626. James		James
+182	 ÈÎ Îñ		Begin Idol of the Snake quest	627. James		James
+183	 Äã ÓÐ Å¼ Ïñ Âð £¿		end Idol of the Snake quest	628. James		James
+184	 ÈÎ Îñ		Kill all Dire Wolves in/out	629. James		James
+185	 ÃÍ ÀÇ Æ¤		Pays for Pelts	630. James		James
+186	 ÖÕ ÓÚ £¡		Killed all the Wolves	631. James		James
+187	 ÈÎ Îñ		Rescue Smugler Family from Ogre Fortress	632. James 		James
+188	 ÈÎ Îñ		Begin deliver false report to pirates quest	633. James		James
+189	 ±¨ ¸æ ËÍ µ½ ÁË Âð £¿		End false report quest	634. James		James
+190	 Éñ Ñ¡ Ò© ¼Á		Hint about anointed potion location	635. James		James
+191	 °ë Éß ÈË Æ¤		Merchant who pays for Naga Hides	636. James		James
+192	500 ¸ö ½ð ±Ò £¡		Payment for Naga Hides	637. James		James
+193	 ÈÎ Îñ		recover shield from Necromancer's guild for cleric (item#516)	638. James		James
+194	 ÈÕ Ê´		end shield quest	639. James		James
+195	 ÃÀ Ê³		Jelly Hint			James
+196	1000 ¸ö ½ð ±Ò		1000 Gold!			James
+197	 »Æ ·ä ·ä Íõ ½º		Royal Wasp Jelly			James
+198	 ÈÎ Îñ		Begin Kill all Ogres quest outdoor/in Ogre Fortress	643. James		James
+199	 Ê³ ÈË Ñý ¶ú ¶ä µÄ Ðü ÉÍ		Pays for Ogre Ears	644. James		James
+200	 ÓÖ ¿É ÒÔ °² È« µÄ ÂÃ ÐÐ ÁË £¡		Kill Ogres quest completed	645. James		James
+201	 ´¿ ´â ÔË Æø Ò© ¼Á		Recipe and Indgredient quest	646. James		James
+202	 Åä ·½		missing ingredients	747. "Black Potions are m		James
+203	 Äã ÓÐ Åä ·½ Âð £¿		end of recipie quest	648. James		James
+204	 »Æ ·ä ´Ì		Merchant who pays for Wasp Stingers	649. James		James
+205	500 ¸ö ½ð ±Ò £¡		Payment for Wasp Stingers	650. James		James
+206	 Éú ´æ £¡		Info for deliver Fire Resistance potions quest	651. James		James
+207	 ÈÎ Îñ		Begin deliver Fires Resistance Scrolls quest	652. James		James
+208	 Ã» ÓÐ ×ã ¹» µÄ Ò© ¼Á Âð £¿		Scroll's not delivered to all huts	653. James		James
+209	 Õâ ¸ö ´å ×¯ Ó¦ ¸Ã ¿É ÒÔ µ² µÄ ×¡ ÁË ¡£		Scroll's not delivered to all huts	653. James		James
+210	 ´¿ ´â ÄÍ Á¦ Ò© ¼Á		Recipe and Indgredient quest	655. James		James
+211	 Åä ·½		missing ingredients	747. "Black Potions are m		James
+212	 Äã ÓÐ Åä ·½ Âð £¿		end of recipie quest	657. James		James
+213	 ÈÎ Îñ		Begin Dragon Hunters dragonbane quest	658. James		James
+214	 ÓÐ ¶¾ £¡		No dragonbane	659. James		James
+215	 ¶à Ð» Äã µÄ °ï Öú £¡		End Dragon Hunters dragonbane quest	660. James		James
+216	 ÈÎ Îñ		Begin Dragons dragonbane quest	661. James		James
+217	 ÓÐ ¶¾ £¡		No dragonbane	662. James		James
+218	 ¶à Ð» Äã µÄ °ï Öú £¡		End Dragons dragonbane quest	663. James		James
+219	 ÈÎ Îñ		Kill all Dragons in outdoor map	664. James		James
+220	 ÖÕ ÓÚ £¡		All dragons in outdoor map killed	665. James		James
+221	 ÈÎ Îñ		Kill all Dragon Hunters in outdoor map	666. James		James
+222	 ÏÖ ÔÚ Ò» ÇÐ ÓÖ ¶¼ »Ø ¸´ Ô­ ×´ ÁË £¡		All Dragon Hunters in outdoor map killed	667. James		James
+223	 ÈÎ Îñ		Begin Drum of Victory quest	668. James		James
+224	 Ê¤ Àû Ö® ¹Ä µÄ Àú Ê·		Drum of Victory History	669. James		James
+225	 ¹Ä ÔÚ ÄÄ Àï £¿		Drum returned!	670. James		James
+226	 ÈÎ Îñ		Recover the lost bone of doom from the Dire Wolf lair	671. James		James
+227	 ¹Ç Í· µÄ Àú Ê·		Bone History	672. James		James
+228	 Ì« ºÃ ÁË £¡		Returned Bone	673. James		James
+229	 ÈÎ Îñ		Recover the cursed puzzle box from the Mad Necro lair	674. James		James
+230	 ½â ÃÕ µÄ Àú Ê·		Puzzle History	675. James		James
+231	 ¿É ÒÔ Íæ ÉÏ ºÃ ¾Ã ÁË £¡		Returned the Puzzle Box	676. James		James
+232	 ´¿ ´â ÖÇ Á¦ Ò© ¼Á		Recipe and Indgredient quest	677. James		James
+233	 ÔÚ ¹« »á ºÍ Éñ Ãí Ö® ¼ä µÄ Õ½ Õù		hint	885. James Hint		James
+234	 Äã ÓÐ Åä ·½ Âð £¿		end of recipie quest	679. James		James
+235	 ÈÎ Îñ		Begin recover Vial of Grave Dirt quest!	680. James		James
+236	 Ä¹ ÍÁ Ö® Æ¿		Dirt History	681. James		James
+237	 Äã ÄÃ µ½ ×° ÍÁ µÄ Æ¿ ×Ó ÁË Âð £¿		Returned Vial of Grave Dirt	682. James		James
+238	 ÓÀ ºã ¸ö ÐÔ Ò© ¼Á		Recipe and Indgredient quest	683. James		James
+239	 Åä ·½		missing ingredients	747. "Black Potions are m		James
+240	 ¶à Ð» Äã µÄ Åä ·½		end of recipie quest	685. James		James
+241	 ¹Å ÀÏ µÄ Ë« ×ã Òí Áú		Info about Wyverns and their horns	686. James		James
+242	 Ë« ×ã Òí Áú Ö® ½Ç µÄ ÉÍ ½ð		I will buy Wyvern horns	687. James		James
+243	1500 ¸ö ½ð ±Ò £¡		payment for Wyvern Horns	688. James		James
+244	 ´¿ ´â ¾« È· Ò© ¼Á		Recipe and Indgredient quest	689. James		James
+245	 Åä ·½		missing ingredients	747. "Black Potions are m		James
+246	 Äã ÓÐ Åä ·½ Âð £¿		end of recipie quest	691. James		James
+247	 ¿Ö ²À º£ µÁ Ê· Ì¹ Á¦ µÄ ±¦ ²Ø		Rumor about legendary Pirate Treasure	692. James		James
+248	 ²Æ ±¦		Rumor about legendary Pirate Treasure	693. James		James
+249	 ÈÎ Îñ		Begin quest to find Pirate Treasure	694. James		James
+250	 ÓÃ200 ¸ö ½ð ±Ò ¹º Âò ÍÐ ²® Ë¹ ¿Ë ¹û		Trading Triangle Simple Buy 1 (area 1)	695. James		James
+251	 Âô µô ÍÐ ²® Ë¹ ¿Ë °× À¼ µØ		Trading Triangle Simple Sell 2 (area 1)	696. James		James
+252	 ¹º Âò ÍÐ ²® Ë¹ ¿Ë ¹û Ö­		Trading Triangle Simple Buy 2 (area 2)	697. James		James
+253	 Âô µô ÍÐ ²® Ë¹ ¿Ë ¹û		Trading Triangle Simple Sell 3 (area 2)	698. James		James
+254	 ÒÔ500 ¸ö ½ð ±Ò ¹º Âò ÍÐ ²® Ë¹ ¿Ë °× À¼ µØ		Trading Triangle Simple Buy 3 (area 3)	699. James		James
+255	 Âô µô ÍÐ ²® Ë¹ ¿Ë ¹û Ö­		Trading Triangle Simple Sell 1 (area 3)	700. James		James
+256	 »¨1000 ¸ö ½ð ±Ò ¹º Âò ¼Ö µ¤ Ä· ´ó Â½ µÄ ÐÄ Ö® Ä¾		Trading Triangle Expensive Buy 1 (area 7)	701. James		James
+257	 Âô µô ·ç ¸É ·­ ³µ ÓÚ		Trading Triangle Expensive Sell 2 (area 7)	702. James		James
+258	 »¨1500 ¸ö ½ð ±Ò ¹º Âò º£ µÁ »¤ Éí ·û		Trading Triangle Expensive Buy 2 (area 6)	703. James		James
+259	 Âô µô ¼Ö µ¤ Ä· ´ó Â½ µÄ ÐÄ Ö® Ä¾		Trading Triangle Expensive Sell 3 (area 6)	704. James		James
+260	 »¨2000 ¸ö ½ð ±Ò ¹º Âò ·ç ¸É ·­ ³µ Óã		Trading Triangle Expensive Buy 3 (area 13)	705. James		James
+261	 Âô µô º£ µÁ »¤ Éí ·û		Trading Triangle Expensive Sell 1 (area 13)	706. James		James
+262	 ÒÔ5000 ¸ö ½ð ±Ò ¹º Âò º£ Ö® Òø ³¾		Trading Triangle Mysterious Buy 1 (area 6)	707. James		James
+263	 Âô µô µØ Ãæ Ë« ×ã Òí Áú µÄ ½Ç		Trading Triangle Mysterious Sell 2 (area 6)	708. James		James
+264	 ÒÔ6500 ¸ö ½ð ±Ò ¹º Âò Î± Ôì Æ¾ Ö¤		Trading Triangle Mysterious Buy 2 (area 2)	709. James		James
+265	 Âô µô º£ Ö® Òø ³¾		Trading Triangle Mysterious Sell 3 (area 2)	710. James		James
+266	 ÒÔ7500 ¸ö ½ð ±Ò ¹º Âò µØ Ãæ Ë« ×ã Òí Áú µÄ ½Ç		Trading Triangle Mysterious Buy 3 (area 8)	711. James		James
+267	 Âô µô Î± Ôì Æ¾ Ö¤		Trading Triangle Mysterious Sell 1 (area 8)	712. James		James
+268	 ¿Õ Í°			713. Empty Barrel		James
+269	 ºì É« ¾Æ Í°			714. +2 Might permanent		James
+270	 »Æ É« ¾Æ Í°			715. +2 Accuracy permanen		James
+271	 À¶ É« ¾Æ Í°			716. +2 Personality perma		James
+272	 ³È É« ¾Æ Í°			717. +2 Intellect permane		James
+273	 ÂÌ É« ¾Æ Í°			718. +2 Endurance permane		James
+274	 ×Ï É« ¾Æ Í°			719. +2 Speed permanent		James
+275	 °× É« ¾Æ Í°			720. +2 Luck permanent		James
+276	 ¿Õ ¹ø			721. Empty Cauldron		James
+277	 Õô Æû ¹ø			722. +2 Fire Resistance p		James
+278	 Àä Ëª ¹ø			723. +2 Water Resistance 		James
+279	 ¾ª âð ¹ø			724. +2 Air Resistance pe		James
+280	 Ôà ¹ø			725. +2 Earth Resistance 		James
+281	 À¬ »ø ¶Ñ			726. Diseased!		James
+282	 À¬ »ø ¶Ñ			727. Nothing Here		James
+283	 À¬ »ø ¶Ñ			728. Poisoned!		James
+284	 À¬ »ø ¶Ñ			729. You have failed the 		James
+285	 Óª »ð			730. You have failed the 		James
+286	 Óª »ð			731. You have failed the 		James
+287	 ²Í µú			732. You have failed the 		James
+288	 ¿Õ Í°			733. You have already won		James
+289	 ¾Æ Í°			734. You win!  +3 Skill P		James
+290	 »Æ ÈÈ ²¡		Hut 1			James
+291	 »Æ ÈÈ ²¡		Hut 2			James
+292	 »Æ ÈÈ ²¡		Hut 3			James
+293	 »Æ ÈÈ ²¡		Hut 4			James
+294	 »Æ ÈÈ ²¡		Hut 5			James
+295	 »Æ ÈÈ ²¡		Hut 6			James
+296	 ÂÞ Ë¹ ÄÇ ¿Ë Ë¹					James
+297	 ÔÙ ´Î Ð» Ð» Äã £¡			531. The Cleric sent you 		James
+298	 ±¨ ¸æ £¡			777. You're new aren't yo		James
+299	 ¼Ö µ¤ Ä· ´ó Â½ µÄ Ãü ÔË					
+300	 ÊÖ ÕÈ ×¨ ¼Ò	0		300. James	Expert Staff (2)	James
+301	 ÊÖ ÕÈ ´ó Ê¦	0		301. James	Master Staff (4)	James
+302	 ÊÖ ÕÈ ×Ú Ê¦	0		302. James	Grand Master Staff (6)	James
+303	 ³¤ ½£ ×¨ ¼Ò	0		303. James	Expert Sword (2)	James
+304	 ³¤ ½£ ´ó Ê¦	0		304. James	Master Sword (13)	James
+305	 ³¤ ½£ ×Ú Ê¦	0		305. James	Grand Master Sword (5)	James
+306	 Ø° Ê× ×¨ ¼Ò	0		306. James	Expert Dagger (3)	James
+307	 Ø° Ê× ´ó Ê¦	0		307. James	Master Dagger (2)	James
+308	 Ø° Ê× ×Ú Ê¦	0		308. James	Grand Master Dagger (13)	James
+309	 Õ½ ¸« ×¨ ¼Ò	0		309. James	Expert Axe (5)	James
+310	 Õ½ ¸« ´ó Ê¦	0		310. James	Master Axe (2)	James
+311	 Õ½ ¸« ×Ú Ê¦	0		311. James	Grand Master Axe (7)	James
+312	 ³¤ Ã¬ ×¨ ¼Ò	0		312. James	Expert Spear (2)	James
+313	 ³¤ Ã¬ ´ó Ê¦	0		313. James	Master Spear (3)	James
+314	 ³¤ Ã¬ ×Ú Ê¦	0		314. James	Grand Master Spear (1)	James
+315	 ¹­ ¼ý ×¨ ¼Ò	0		315. James	Expert Bow (1)	James
+316	 ¹­ ¼ý ´ó Ê¦	0		316. James	Master Bow (2)	James
+317	 ¹­ ¼ý ×Ú Ê¦	0		317. James	Grand Master Bow (3)	James
+318	 ¶¤ ´¸ ×¨ ¼Ò	0		318. James	Expert Mace (2)	James
+319	 ¶¤ ´¸ ´ó Ê¦	0		319. James	Master Mace (5)	James
+320	 ¶¤ ´¸ ×Ú Ê¦	0		320. James	Grand Master Mace (4)	James
+321	 Áñ µ¯ Ç¹ ×¨ ¼Ò	0		321. Hevatia Deverbero NP	Expert Blaster	James
+322	 Áñ µ¯ Ç¹ ´ó Ê¦	0		322. Hevatia Deverbero NP	Master Blaster	James
+323	 Áñ µ¯ Ç¹ ×Ú Ê¦	0		323. Verish NPC 467	Grand Master Blaster	James
+324	 ¶Ü ÅÆ ×¨ ¼Ò	0		324. James	Expert Shield (3)	James
+325	 ¶Ü ÅÆ ´ó Ê¦	0		325. James	Master Shield (6)	James
+326	 ¶Ü ÅÆ ×Ú Ê¦	0		326. James	Grand Master Shield (5)	James
+327	 Æ¤ ¼× ×¨ ¼Ò	0		327. James	Exper Leather (1)	James
+328	 Æ¤ ¼× ´ó Ê¦	0		328. James	Master Leather (7)	James
+329	 Æ¤ ¼× ×Ú Ê¦	0		329. James	Grand Master Leather (4)	James
+330	 Ëø ¼× ×¨ ¼Ò	0		330. James	Expert Chain (2)	James
+331	 Ëø ¼× ´ó Ê¦	0		331. James	Master Chain (13)	James
+332	 Ëø ¼× ×Ú Ê¦	0		332. James	Grand Master Chain (3)	James
+333	 ¸Ö ¼× ×¨ ¼Ò	0		333. James	Expert Plate (1)	James
+334	 ¸Ö ¼× ´ó Ê¦	0		334. James	Master Plate (2)	James
+335	 ¸Ö ¼× ×Ú Ê¦	0		335. James	Grand Master Plate (5)	James
+336	 »ð Ïµ Ä§ ·¨ ×¨ ¼Ò	0		336. James	Expert Fire_Magic (2)	James
+337	 »ð Ïµ Ä§ ·¨ ´ó Ê¦	0		337. James	Master Fire_Magic (7)	James
+338	 »ð Ïµ Ä§ ·¨ ×Ú Ê¦	0		338. James	Grand Master Fire_Magic (11)	James
+339	 ¿Õ Æø Ä§ ·¨ ×¨ ¼Ò	0		339. James	Expert Air_Magic (1)	James
+340	 ¿Õ Æø Ä§ ·¨ ´ó Ê¦	0		340. James	Master Air_Magic (1)	James
+341	 ¿Õ Æø Ä§ ·¨ ×Ú Ê¦	0		341. James	Grand Master Air_Magic (9)	James
+342	 Ë® Ïµ Ä§ ·¨ ×¨ ¼Ò	0		342. James	Expert Water_Magic (2)	James
+343	 Ë® Ïµ Ä§ ·¨ ´ó Ê¦	0		343. James	Master Water_Magic (4)	James
+344	 Ë® Ïµ Ä§ ·¨ ×Ú Ê¦	0		344. James	Grand Master Water_Magic (12)	James
+345	 ÍÁ Ïµ Ä§ ·¨ ×¨ ¼Ò	0		345. James	Expert Earth_Magic (1)	James
+346	 ÍÁ Ïµ Ä§ ·¨ ´ó Ê¦	0		346. James	Master Earth_Magic (7)	James
+347	 ÍÁ Ïµ Ä§ ·¨ ×Ú Ê¦	0		347. James	Grand Master Earth_Magic (10)	James
+348	 Áé »ê Ä§ ·¨ ×¨ ¼Ò	0		348. James	Expert Spirit_Magic (2)	James
+349	 Áé »ê Ä§ ·¨ ´ó Ê¦	0		349. James	Master Spirit_Magic (5)	James
+350	 Áé »ê Ä§ ·¨ ×Ú Ê¦	0		350. James	Grand Master Spirit_Magic (8)	James
+351	 ÐÄ ÖÇ Ä§ ·¨ ×¨ ¼Ò	0		351. James	Expert Mind_Magic (3)	James
+352	 ÐÄ ÖÇ Ä§ ·¨ ´ó Ê¦	0		352. James	Master Mind_Magic (7)	James
+353	 ÐÄ ÖÇ Ä§ ·¨ ×Ú Ê¦	0		353. James	Grand Master Mind_Magic (8)	James
+354	 Ö« Ìå Ä§ ·¨ ×¨ ¼Ò	0		354. James	Expert Body_Magic (1)	James
+355	 Ö« Ìå Ä§ ·¨ ´ó Ê¦	0		355. James	Master Body_Magic (5)	James
+356	 Ö« Ìå Ä§ ·¨ ×Ú Ê¦	0		356. James	Grand Master Body_Magic (8)	James
+357	 ¹â Ã÷ Ä§ ·¨ ×¨ ¼Ò	0		357. James	Expert Light_Magic (2)	James
+358	 ¹â Ã÷ Ä§ ·¨ ´ó Ê¦	0		358. James	Master Light_Magic (13)	James
+359	 ¹â Ã÷ Ä§ ·¨ ×Ú Ê¦	0		359. James	Grand Master Light_Magic (8)	James
+360	 °µ ºÚ Ä§ ·¨ ×¨ ¼Ò	0		360. James	Expert Dark_Magic (3)	James
+361	 °µ ºÚ Ä§ ·¨ ´ó Ê¦	0		361. James	Master Dark_Magic (13)	James
+362	 °µ ºÚ Ä§ ·¨ ×Ú Ê¦	0		362. James	Grand Master Dark_Magic (6)	James
+363	 ºÚ °µ ¾« Áé ÄÜ Á¦ ×¨ ¼Ò	0		363. James	Expert Dark Elf	James
+364	 ºÚ °µ ¾« Áé ÄÜ Á¦ ´ó Ê¦	0		364. James	Master Dark Elf (2)	James
+365	 ºÚ °µ ¾« Áé ÄÜ Á¦ ×Ú Ê¦	0		365. James	Grand Master Dark Elf (3)	James
+366	 Îü Ñª ¹í ÄÜ Á¦ ×¨ ¼Ò	0		366. James	Expert Vampire	James
+367	 Îü Ñª ¹í ÄÜ Á¦ ´ó Ê¦	0		367. James	Master Vampire (6)	James
+368	 Îü Ñª ¹í ÄÜ Á¦ ×Ú Ê¦	0		368. James	Grand Master Vampire (6)	James
+369	 ·É Áú ÄÜ Á¦ ×¨ ¼Ò	0		369. James	Expert Dragon	James
+370	 ·É Áú ÄÜ Á¦ ´ó Ê¦	0		370. James	Master Dragon (5)	James
+371	 ·É Áú ÄÜ Á¦ ×Ú Ê¦	0		371. James	Grand Master Dragon (5)	James
+372	 Îï Æ· ¼ø ¶¨ Êõ ×¨ ¼Ò	0		372. James	Expert Identify_Item	James
+373	 Îï Æ· ¼ø ¶¨ Êõ ´ó Ê¦	0		373. James	Master Identify_Item	James
+374	 Îï Æ· ¼ø ¶¨ Êõ ×Ú Ê¦	0		374. James	Grand Master Identify_Item	James
+375	 ¾­ ÉÌ Êõ ×¨ ¼Ò	0		375. James	Expert Merchant (1)	James
+376	 ¾­ ÉÌ Êõ ´ó Ê¦	0		376. James	Master Merchant (3)	James
+377	 ¾­ ÉÌ Êõ ×Ú Ê¦	0		377. James	Grand Master Merchant (2)	James
+378	 Ô® »¤ Êõ ×¨ ¼Ò	0		378. James	Expert Repair_Item	James
+379	 Ô® »¤ Êõ ´ó Ê¦	0		379. James	Master Reapir_Item	James
+380	 Ô® »¤ Êõ ×Ú Ê¦	0		380. James	Grand Master Repair_Item	James
+381	 ½¡ Éí Êõ ×¨ ¼Ò Ñµ Á·	0		381. James	Expert Body_building (1)	James
+382	 ½¡ Éí Êõ ´ó Ê¦ Ñµ Á·	0		382. James	Master Body_Building (5)	James
+383	 ½¡ Éí Êõ ×Ú Ê¦	0		383. James	Grand Master Body_Building (4)	James
+384	 Ú¤ Ïë Êõ ×¨ ¼Ò Ñµ Á·	0		384. James	Expert Meditation (2)	James
+385	 Ú¤ Ïë Êõ ´ó Ê¦	0		385. James	Master Meditation (7)	James
+386	 Ú¤ Ïë Êõ ×Ú Ê¦	0		386. James	Grand Master Meditation (6)	James
+387	 ¶´ ²ì Êõ ×¨ ¼Ò Ñµ Á·	0		387. James	Expert Perception (3)	James
+388	 ¶´ ²ì Êõ ´ó Ê¦ Ñµ Á·	0		388. James	Master Perception (6)	James
+389	 ¶´ ²ì Êõ ×Ú Ê¦	0		389. James	Grand Master Perception (7)	James
+390	 ÔÙ Éú Êõ ×¨ ¼Ò	0		390. James	Expert Regeneration	James
+391	 ÔÙ Éú Êõ ´ó Ê¦	0		391. James	Master Regeneration	James
+392	 ÔÙ Éú Êõ ×Ú Ê¦	0		392. James	Grand Master Regeneration	James
+393	 ÏÝ Úå ²ð Ð¶ Êõ ×¨ ¼Ò	0		393. James	Expert Disarm_Trap (1)	James
+394	 ÏÝ Úå ²ð Ð¶ Êõ ´ó Ê¦	0		394. James	Master Disarm_Trap (13)	James
+395	 ÏÝ Úå ²ð Ð¶ Êõ ×Ú Ê¦	0		395. James	Grand Master Disarm_Trap (3)	James
+396	 ÉÁ ¶ã Êõ ×¨ ¼Ò	0		396. Verish NPC 467	Expert Dodging	James
+397	 ÉÁ ¶ã Êõ ´ó Ê¦	0		397. Nelix Uriel NPC 468	Master Dodging	James
+398	 ÉÁ ¶ã Êõ ×Ú Ê¦	0		398. Nelix Uriel NPC 468	Grand Master Dodging	James
+399	 ¿Õ ÊÖ ²« ¶· Êõ ×¨ ¼Ò	0		399. Sethrc Thistlebone N	Expert Unarmed	James
+400	 ¿Õ ÊÖ ²« ¶· Êõ ´ó Ê¦	0		400. Sethrc Thistlebone N	Master Unamred	James
+401	 ¿Õ ÊÖ ²« ¶· Êõ ×Ú Ê¦	0		401. Rionel NPC 470	Grand Master Unarmed	James
+402	 ¹Ö Îï ¼ø ¶¨ Êõ ×¨ ¼Ò	0		402. James	Expert Identify_Monster	James
+403	 ¹Ö Îï ¼ø ¶¨ Êõ ´ó Ê¦	0		403. James	Master Identify_Monster	James
+404	 ¹Ö Îï ¼ø ¶¨ Êõ ×Ú Ê¦	0		404. James	Grand Master Identify_Monster	James
+405	 Îä Æ÷ Ê¹ ÓÃ Êõ ×¨ ¼Ò	0		405. James	Expert Armsmaster	James
+406	 Îä Æ÷ Ê¹ ÓÃ Êõ ´ó Ê¦	0		406. James	Master Armsmaster	James
+407	 Îä Æ÷ Ê¹ ÓÃ Êõ ×Ú Ê¦	0		407. James	Grand Master Armsmaster	James
+408	 Íµ ÇÔ Êõ ×¨ ¼Ò	0		408. Rionel NPC 470	Expert Stealing	James
+409	 Íµ ÇÔ Êõ ´ó Ê¦	0		409. Adric Stellare NPC 4	Master Stealing	James
+410	 Íµ ÇÔ Êõ ×Ú Ê¦	0		410. Adric Stellare NPC 4	Grand Master Stealing	James
+411	 Á¶ ½ð Êõ ×¨ ¼Ò	0		411. James	Expert Alchemy	James
+412	 Á¶ ½ð Êõ ´ó Ê¦	0		412. James	Master Alchemy	James
+413	 Á¶ ½ð Êõ ×Ú Ê¦	0		413. James	Grand Master Alchemy	James
+414	 Ñ§ Ï° Êõ ×¨ ¼Ò	0		414. James	Expert Learning (7)	James
+415	 Ñ§ Ï° Êõ ´ó Ê¦	0		415. James	Master Learning (6)	James
+416	 Ñ§ Ï° Êõ ×Ú Ê¦	0		416. James	Grand Master Learning (5)	James
+417	 ÆÕ ¶à ¡¤ Ì© ¶÷	0		417. Expert Staff (2)	Expert Staff (2)	teacher hint
+418	 Èü Àö ÑÅ ¡¤ Ë¹ Í¨	0		418. Master Staff (4)	Master Staff (4)	teacher hint
+419	 ´Þ Ë¹ Ì¹ ¡¤ Ö¹ Ë®	0		419. Grand Master Staff (	Grand Master Staff (6)	teacher hint
+420	 °® Àû ¡¤ Â¬ Å· ÁÖ	0		420. Expert Sword (2)	Expert Sword (2)	teacher hint
+421	 ½Ü ÐÂ ¡¤ ¿¨ ×¿	0		421. Master Sword (13)	Master Sword (13)	teacher hint
+422	 Âó ÓÑ ¡¤ ×· Áú Õß	0		422. Grand Master Sword (	Grand Master Sword (5)	teacher hint
+423	 ÂÞ Èð ¡¤ Î¬ Ë¹ ²¨	0		423. Expert Dagger (3)	Expert Dagger (3)	teacher hint
+424	 ÇÇ ²¨	0		424. Master Dagger (2)	Master Dagger (2)	teacher hint
+425	 ¿¨ À­ ¡¤ Åµ Éª Ë¹	0		425. Grand Master Dagger 	Grand Master Dagger (13)	teacher hint
+426	 ¹þ Âå ¡¤ ·ð Ë¹ Ì« ¿Ë	0		426. Expert Axe (5)	Expert Axe (5)	teacher hint
+427	 ½Ü Ë¹ ÆÕ ¡¤ º« ÌØ	0		427. Master Axe (2)	Master Axe (2)	teacher hint
+428	 ¼Ó Èð ¿Ë ¡¤ É­ ½Ü ¿Ë	0		428. Grand Master Axe (7)	Grand Master Axe (7)	teacher hint
+429	 Âó ´Þ ¿Ë ¡¤ ÌÕ ¶÷ Èü ·ð	0		429. Expert Spear (2)	Expert Spear (2)	teacher hint
+430	 ÑÅ É½ µÂ À­ ¡¤ »Ý Éª Ê· ÃÜ Ë¹	0		430. Master Spear (3)	Master Spear (3)	teacher hint
+431	 ÑÅ ÂÞ	0		431. Grand Master Spear (	Grand Master Spear (1)	teacher hint
+432	 Ï¯ Íß ¡¤ Èñ ÑÛ	0		432. Expert Bow (1)	Expert Bow (1)	teacher hint
+433	 Å· ²® Á¦ ¿Ë ¡¤ Åµ Ë¹ ÎÖ	0		433. Master Bow (2)	Master Bow (2)	teacher hint
+434	 Ë÷ Á¦ Ë¹	0		434. Grand Master Bow (3)	Grand Master Bow (3)	teacher hint
+435	 Àö É¯ ¡¤ Ëù ¶û ²¨ ÂÞ	0		435. Expert Mace (2)	Expert Mace (2)	teacher hint
+436	 ÂÞ ²® ÌØ ¡¤ ³¿ ÐÇ	0		436. Master Mace (5)	Master Mace (5)	teacher hint
+437	 ºØ Ë¹ ÎÖ µÜ ÐÖ	0		437. Grand Master Mace (4	Grand Master Mace (4)	teacher hint
+438	 ¿ü À¶ ¡¤ Ä¦ ¶û	0		438. Expert Shield (3)	Expert Shield (3)	teacher hint
+439	 Ð» ¶û ¶Ù ¡¤ Ò¹ Ä¾	0		439. Master Shield (6)	Master Shield (6)	teacher hint
+440	 ÅÉ ÁÖ ¡¤ Èð ·ð Ë¹ Í¨	0		440. Grand Master Shield 	Grand Master Shield (5)	teacher hint
+441	 Ì© ¶¡	0		441. Expert Leather (1)	Exper Leather (1)	teacher hint
+442	 É³ Ä® Ë¹ ¡¤ ºÉ Á¦ ·Æ	0		442. Master Leather (7)	Master Leather (7)	teacher hint
+443	 Âó Íß Á¦ ¡¤ °® Ä· Ë¹ Âó ¶û	0		443. Grand Master Leather	Grand Master Leather (4)	teacher hint
+444	 ÍÐ ²® Â× ¡¤ ·ð ¼ª °® ÌØ	0		444. Expert Chain (2)	Expert Chain (2)	teacher hint
+445	 º£ Á¢ °² ¡¤ °¬ ·ð Ë¹ Âó	0		445. Master Chain (13)	Master Chain (13)	teacher hint
+446	 Èü ÁÖ ¡¤ ²® ¸ü ¶·	0		446. Grand Master Chain (	Grand Master Chain (3)	teacher hint
+447	 Åó ¶÷	0		447. Expert Plate (1)	Expert Plate (1)	teacher hint
+448	 ²¨ É¢ ¶÷	0		448. Master Plate (2)	Master Plate (2)	teacher hint
+449	 Èü ÐÀ ¡¤ °¬ ¶÷ ·¨ Ë¹ ÌØ	0		449. Grand Master Plate (	Grand Master Plate (5)	teacher hint
+450	 Ì© Â× ¡¤ Ì¸ ÆÕ	0		450. Expert Fire_Magic (2	Expert Fire_Magic (2)	teacher hint
+451	 Ëù ÂÞ ÃÅ ¡¤ Ê· Ìá ¶û	0		451. Master Fire_Magic (7	Master Fire_Magic (7)	teacher hint
+452	 ²® ¶÷	0		452. Grand Master Fire_Ma	Grand Master Fire_Magic (11)	teacher hint
+453	 Èð Î÷	0		453. Expert Air_Magic (1)	Expert Air_Magic (1)	teacher hint
+454	 ºÉ Á¦ Ë¾ ¡¤ ±© ·ç ÑÛ	0		454. Master Air_Magic (7)	Master Air_Magic (1)	teacher hint
+455	 ¿Ë ÀÍ µÂ ¡¤ ÄÍ µÂ Áú	0		455. Grand Master Air_Mag	Grand Master Air_Magic (9)	teacher hint
+456	 ÎÚ ¶û ²¼ À­ Æõ ¡¤ ÅÉ µÂ ¶«	0		456. Expert Water_Magic (	Expert Water_Magic (2)	teacher hint
+457	 ¸ð Àö ¹û Á¦ ¡¤ ÃÔ Îí	0		457. Master Water_Magic (	Master Water_Magic (4)	teacher hint
+458	 ºÚ Á÷	0		458. Grand Master Water_M	Grand Master Water_Magic (12)	teacher hint
+459	 °Â Ë¹ ´Þ ¶÷ ¡¤ ¸ð Èð Î¬ ¿Ë	0		459. Expert Earth_Magic (	Expert Earth_Magic (1)	teacher hint
+460	 ÌÕ ÀÖ Îõ ¡¤ Èû °Ù Îï	0		460. Master Earth_Magic (	Master Earth_Magic (8)	teacher hint
+461	 ¸ð Èð ÎÄ	0		461. Grand Master Earth_M	Grand Master Earth_Magic (10)	teacher hint
+462	 Ê· À­ ¶Ù ¡¤ ºÎ Ë÷ ¶÷	0		462. Expert Spirit_Magic 	Expert Spirit_Magic (2)	teacher hint
+463	 ±´ Ë÷ µÂ ¡¤ ¿Æ ¶÷	0		463. Master Spirit_Magic 	Master Spirit_Magic (5)	teacher hint
+464	 À´ Î÷ ÌØ ¡¤ Ñ» ÑÛ	0		464. Grand Master Spirit_	Grand Master Spirit_Magic (8)	teacher hint
+465	 ÉÌ ¶÷ ¡¤ ¿Ë Â³ À¼	0		465. Expert Mind_Magic (3	Expert Mind_Magic (3)	teacher hint
+466	 °Å °Å À­ ¡¤ À­ ×È	0		466. Master Mind_Magic (7	Master Mind_Magic (7)	teacher hint
+467	 ¼ª À­ µÂ ¡¤ ÃÎ Ñý	0		467. Grand Master Mind_Ma	Grand Master Mind_Magic (8)	teacher hint
+468	 Èü Íß ¡¤ ²¨ Ë¹ µÂ	0		468. Expert Body_Magic (1	Expert Body_Magic (1)	teacher hint
+469	 ÍÁ ¼Ó ¡¤ °® ÁÖ	0		469. Master Body_Magic (5	Master Body_Magic (5)	teacher hint
+470	 ¿Ë Àí Ëþ Ë¹ ¡¤ Ñ© Ê÷	0		470. Grand Master Body_Ma	Grand Master Body_Magic (8)	teacher hint
+471	 °¢ »ù °Í µÂ ¡¤ Êï ¹â	0		471. Expert Light_Magic (	Expert Light_Magic (2)	teacher hint
+472	 Â¬ Àí ÄÇ Ë¹ ¡¤ ÆÆ Ïþ Õß	0		472. Master Light_Magic (	Master Light_Magic (13)	teacher hint
+473	 °¬ µÂ ÁÖ ¡¤ Ã÷ ÑÛ	0		473. Grand Master Light_M	Grand Master Light_Magic (8)	teacher hint
+474	 ÅÁ ÌØ ÎÂ ¡¤ ´ï ¿Ï Ä¦ ¶û	0		474. Expert Dark_Magic (3	Expert Dark_Magic (3)	teacher hint
+475	 ¿¨ À­ ¡¤ °² ²® ÆÕ ¶û	0		475. Master Dark_Magic (1	Master Dark_Magic (13)	teacher hint
+476	 Î÷ Î÷ ¿Ë Ë¹ ¡¤ Ó° ÅÜ Õß	0		476. Grand Master Dark_Ma	Grand Master Dark_Magic (6)	teacher hint
+477	 Æä À­ ¡¤ Ê· °Í ¿Ë Âü	0		477. Expert Identify_Item	Expert Identify_Item	teacher hint
+478	 °® Î÷ ¶÷	0		478. Master Identify_Item	Master Identify_Item	teacher hint
+479	 °¬ ¶û Ë¹ ²® ¡¤ Âç Õæ	0		479. Grand Master Identif	Grand Master Identify_Item	teacher hint
+480	 ·Ñ Ðí ÄÇ ¡¤ ÌÀ ²®	0		480. Expert Merchant (1)	Expert Merchant (1)	teacher hint
+481	 ·Ñ ¶Ù ¡¤ °¬ ·ð É­	0		481. Master Merchant (3)	Master Merchant (3)	teacher hint
+482	 Èð ÎÄ ¡¤ ¿ì Éà	0		482. Grand Master Merchan	Grand Master Merchant (2)	teacher hint
+483	 °¬ ·² ´ï ¡¤ À­ ×È	0		483. Expert Repair_Item (	Expert Repair_Item	teacher hint
+484	 åÓ ¿Ë ¡¤ Õä ÄÝ	0		484. Master Reapir_Item (	Master Reapir_Item	teacher hint
+485	 åÓ Ë¹ ÁÖ ¡¤ ¶« ¿Ë	0		485. Grand Master Repair_	Grand Master Repair_Item	teacher hint
+486	 Âü ÄÉ Ëó ¶û	0		486. Expert Body_building	Expert Body_building (1)	teacher hint
+487	 ¿Ï Äá Ë¹ ¡¤ Å· ÌØ ¶Ù	0		487. Master Body_Building	Master Body_Building (5)	teacher hint
+488	 Ã× ¿­ ¶û ¡¤ Ê· ÃÜ É­	0		488. Grand Master Body_Bu	Grand Master Body_Building (4)	teacher hint
+489	 °¬ ¶Ù ¡¤ ÆÕ ÌØ ÄÏ	0		489. Expert Meditation (2	Expert Meditation (2)	teacher hint
+490	 ¸ð À­ ÇÙ ¡¤ ÄÍ Ü½ Äª ¶û	0		490. Master Meditation (7	Master Meditation (7)	teacher hint
+491	 À¶ Åµ µÂ ¡¤ Ò¹ ÐÐ Õß	0		491. Grand Master Meditat	Grand Master Meditation (6)	teacher hint
+492	 Ï£ ¶û ¿Ë ¡¤ Ò¹ ÐÐ Õß	0		492. Expert Perception (3	Expert Perception (3)	teacher hint
+493	 º£ ¶û ¼Ó ¡¤ ¸Ö ÑÛ	0		493. Master Perception (6	Master Perception (6)	teacher hint
+494	 °Í À¼ ¡¤ È· Î²	0		494. Grand Master Percept	Grand Master Perception (7)	teacher hint
+495	 ¿­ Ë¹ Èð ¡¤ Ëþ À¼	0		495. Expert Regeneration 	Expert Regeneration	teacher hint
+496	 Íþ Á® ¡¤ É½ ÆÕ É­	0		496. Master Regeneration 	Master Regeneration	teacher hint
+497	 ¶à Î² ÎÚ Ðí	0		497. Grand Master Regener	Grand Master Regeneration	teacher hint
+498	 Æä Íõ ¡¤ Îª Ë¹ ÌØ	0		498. Expert Disarm_Trap (	Expert Disarm_Trap (1)	teacher hint
+499	 ¿­ Á¦ ¡¤ À´ ÌØ ·Ò ¸ñ	0		499. Master Disarm_Trap (	Master Disarm_Trap (13)	teacher hint
+500	 ¼Ó À­ Ë¾ ¡¤ Àí ·ò ÌØ	0		500. Grand Master Disarm_	Grand Master Disarm_Trap (3)	teacher hint
+501	 ÖÆ Ôì Îä Æ÷					
+502	 ÖÆ Ôì ¿ø ¼×					
+503	 ÖÆ Ôì Îï Æ·					
+504	 ´ò ÕÐ ºô		James Hint			
+505	 Áú Ó¬		James Hint			
+506	 ¿Ý Ê÷ ÁÖ		James Hint			
+507	 Ì© É³ ¡¤ Âí ¿Ë	0		507. Expert Identify_Mons	Expert Identify_Monster	teacher hint
+508	 Âí ´Þ ¿Ë ¡¤ Èñ ·æ	0		508. Master Identify_Mons	Master Identify_Monster	teacher hint
+509	 ²¼ À­ ¿Ï ¡¤ Ê¯ µ¶	0		509. Grand Master Identif	Grand Master Identify_Monster	teacher hint
+510	 Åµ ²® ÌØ ¡¤ É± ÊÖ	0		510. Expert Armsmaster (5	Expert Armsmaster	teacher hint
+511	 °Ì Ãæ À­ É³ Í¥	0		511. Master Armsmaster (1	Master Armsmaster	teacher hint
+512	 ½Ü Ë¹ ²® ¡¤ Ê· Ìá ¶û ¿Ë ·ò	0		512. Grand Master Armsmas	Grand Master Armsmaster	teacher hint
+513	 ¸¶1000 ¸ö ½ð ±Ò		Ambush			
+514	 ¾Ü ¾ø Ö§ ¸¶		Ambush			
+515	200 ¸ö ½ð ±Ò Âò ¼ý Í·		Trading Triangle			
+516	 Ëþ ±Ø É· ¡¤ Íß ÌØ É³	0		516. Expert Alchemy (3)	Expert Alchemy	teacher hint
+517	 ¿­ Ë¹ Èð ¡¤ ±¦ Ê¯	0		517. Master Alchemy (7)	Master Alchemy	teacher hint
+518	 ÒÁ Ææ	0		518. Grand Master Alchemy	Grand Master Alchemy	teacher hint
+519	 ÅÉ µÂ À­ ¡¤ ÃÜ Ë¹ Èð	0		519. Expert Learning (7)	Expert Learning (7)	teacher hint
+520	 ¼Ó Èð ÌØ ¡¤ Îí ´º	0		520. Master Learning (6)	Master Learning (6)	teacher hint
+521	 Íô ´ï ¡¤ À´ ÌØ Ê· Íô	0		521. Grand Master Learnin	Grand Master Learning (5)	teacher hint
+522	 ·ð ÁÖ ¡¤ É³ ´ï	0		522. Expert Vampire (2)	Expert Vampire	teacher hint
+523	 µÀ ¸ñ À­ Ë¹ ¡¤ µÂ Ë¹ Ä¦ ¶û	0		523. Master Vampire (6)	Master Vampire (6)	teacher hint
+524	 Åå ¼ª ¡¤ °¢ À­ Äá ÑÅ	0		524. Grand Master Vampire	Grand Master Vampire (6)	teacher hint
+525	 ·Ñ µÂ ÎÂ ¡¤ µÂ Î¬ ìû	0		525. Expert Dark Elf (3)	Expert Dark Elf	teacher hint
+526	 À¶ Î÷ ¡¤ ¿¨ ·ð Ï£ ¶û	0		526. Master Dark Elf (2)	Master Dark Elf (2)	teacher hint
+527	 ÌÃ ¡¤ °® ¸ñ Èð Äá ¶û	0		527. Grand Master Dark El	Grand Master Dark Elf (3)	teacher hint
+528	 ÒÁ Ë¹ ¶Ù	0		528. Expert Dragon	Expert Dragon	teacher hint
+529	 Ø¬ ÐÀ ÌØ	0		529. Master Dragon (5)	Master Dragon (5)	teacher hint
+530	 ¿Ë À¼ ¡¤ °Ì ³á	0		530. Grand Master Dragon 	Grand Master Dragon (5)	teacher hint
+531	 ¼Ó ËÙ Ä§ ·¨ Öù				James	
+532	 ´ó µØ Ö® Öù				James	
+533	 ÖÚ Éñ Ö® Öù				James	
+534	 ·À Óù Ö® Öù				James	
+535	 Á÷ Ë® Ö® Öù				James	
+536	 ÁÒ »ð Ö® Öù				James	
+537	 Ó¢ ÐÛ Ö® Öù				James	
+538	 ²» Ðà Ö® Öù				James	
+539	 ÐÄ ÖÇ Ö® Öù				James	
+540	 Ö« Ìå Ö® Öù				James	
+541	 Ê¯ ·ô Ö® Öù				James	
+542	 ¿Õ Æø Ö® Öù				James	
+543	 Á¦ Á¿ ÓÎ Ï·				James	
+544	 ÄÍ Á¦ ÓÎ Ï·				James	
+545	 ÖÇ Á¦ ÓÎ Ï·				James	
+546	 ¸ö ÐÔ ÓÎ Ï·				James	
+547	 ¾« È· ÓÎ Ï·				James	
+548	 ËÙ ¶È ÓÎ Ï·				James	
+549	 ÐÒ ÔË ÓÎ Ï·				James	
+550	 Á¦ Á¿ ¾º Èü				James	
+551	 ÄÍ Á¦ ¾º Èü				James	
+552	 ÖÇ Á¦ ¾º Èü				James	
+553	 ¸ö ÐÔ ¾º Èü				James	
+554	 ¾« È· ¾º Èü				James	
+555	 ËÙ ¶È ¾º Èü				James	
+556	 ÐÒ ÔË ¾º Èü				James	
+557	 Á¦ Á¿ ²â ÊÔ				James	
+558	 ÄÍ Á¦ ²â ÊÔ				James	
+559	 ÖÇ Á¦ ²â ÊÔ				James	
+560	 ¸ö ÐÔ ²â ÊÔ				James	
+561	 ¾« È· ²â ÊÔ				James	
+562	 ËÙ ¶È ²â ÊÔ				James	
+563	 ÔË Æø ²â ÊÔ				James	
+564	 Á¦ Á¿ Ìô Õ½				James	
+565	 ÄÍ Á¦ Ìô Õ½				James	
+566	 ÖÇ Á¦ Ìô Õ½				James	
+567	 ¸ö ÐÔ Ìô Õ½				James	
+568	 ¾« È· Ìô Õ½				James	
+569	 ËÙ ¶È Ìô Õ½				James	
+570	 ÔË Æø Ìô Õ½				James	
+571	 Óù »ð Ò© ¼Á		House 1		James	
+572	 Óù »ð Ò© ¼Á		House 2		James	
+573	 Óù »ð Ò© ¼Á		House 3		James	
+574	 Óù »ð Ò© ¼Á		House 4		James	
+575	 Óù »ð Ò© ¼Á		House 5		James	
+576	 Óù »ð Ò© ¼Á		House 6		James	
+577	 ÉÍ ½ð ÁÔ ÈË ¹« »á				James	
+578	 ÉÍ ½ð				James	
+579	 Õâ ¸ö ÔÂ µÄ ÉÍ ½ð ÁÔ Îï				James	
+580	 Ä§ »Ã ÅÆ Ñ² »Ø ±È Èü			540. "To be declared Arco	James	
+581	 ÄÁ Ê¦ ËÀ Áé ·¨ Ê¦ Õ½ Õù				DARK ELF ADVISOR	
+582	 ÁÔ Áú ÈË				DARK ELF ADVISOR	
+583	 Å£ Í· ÈË				DARK ELF ADVISOR	
+584	 ÇÅ Áº ÒÑ ¶Ï				James	
+585	 ÔÚ µº Óì Ö® ¼ä ÂÃ ÐÐ				James	
+586	 Ð¡ ´¬ ¸Û ¿Ú				James	
+587	 ¿Ë Àï ¸ù ÈË				Roland Ironfist	
+588	 Ôª ËØ Ö® Íõ				Roland Ironfist	
+589	 ¶÷ Âå Ë¹				Roland Ironfist	
+590	 °£ À­ Î÷ ÑÇ				Catherine Ironfist	
+591	 ¿Ë Àï ¸ù ÈË				Catherine Ironfist	
+592	 Ôª ËØ				Catherine Ironfist	
+593	 Äã ¾È ³ö Ëû ÃÇ ÁË Âð £¿				James	
+594	 ÖÆ Ôì Îä Æ÷				James	
+595	 ÖÆ Ôì ¿ø ¼×				James	
+596	 ÖÆ Ôì Îï Æ·				James	
+597	 Ä§ »Ã ÅÆ Ñ² »Ø ±È Èü				James	
+598	 ÑÒ Ê¯ Ëþ				James	
+599	 ÑÒ Ê¯ Ëþ				James	
+600	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		NOT USED		NOT USED	
+601	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Devlin Arcanus		Main PC	
+602	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Fredrick Talimere		Inn	
+603	 ¼Ó Èë		Simon Templar		Mainline	
+604	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Overdune Snaprfinger		Abandoned Temple	
+605	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Masul		Mainline	
+606	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Rohani Oscleton		Will Always Join	
+607	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Elsbeth Lamentia		Will Always Join	
+608	 ¼Ó Èë		Ithilgore		Inn	
+609	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Karanya Memoria		Dragon Cave Always Join	
+610	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Maylander 		Will Always Join	
+611	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Leane Stormlance		Will Always Join	
+612	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Volog Sandwind		James	
+613	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Thanys		James	
+614	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Jasp Thelbourne		After Minotaur Alliance	
+615	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Gethric Mercutura		Will Always Join	
+616	 ¼Ó Èë		Flamdring		Will Always Join	
+617	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Hevatia Deverbero		"Renegade Dragon Cave, Always Join"	
+618	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Verish 		Join if Necro Alliance Done	
+619	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Nelix Uriel		Join if Cleric Alliance Done	
+620	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Sethrc Thistlebone		Join if D Hunter Alliance Done	
+621	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Rionel		Join if Form Alliance Done	
+622	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Adric Stellare		Join if Form Alliance Done	
+623	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Infaustus 		Join if Form Alliance Done	
+624	 ¼Ó Èë		Brimstone		Join if Form Alliance Done	
+625	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Vetrinus Taleshire		James	
+626	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Dervish Chevron		James	
+627	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Tempus 		Join if Fleet Sunk	
+628	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Thorne Understone		Join if Fleet Sunk	
+629	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Ulbrecht		Join if Fleet Sunk	
+630	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Cauri Blackthorne		Join if Fleet Sunk	
+631	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Artorius Veritas		James	
+632	 ¼Ó Èë		Duroth the Eternal		Join if Fleet Sunk	
+633	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Nathaniel Roberts		"Join if Fleet Sunk, Ren Dragon"	
+634	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Dyson Leyland		Will Always Join	
+635	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		Blazen Stormlance		Mainline	
+636	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		troll		James	
+637	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		minotaur			
+638	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		darkelf			
+639	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		vampire			
+640	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		dragon			
+641	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		necromancer			
+642	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		cleric			
+643	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		knight			
+644	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		troll			
+645	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		minotaur			
+646	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		darkelf			
+647	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		vampire			
+648	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		dragon			
+649	 ¼Ó Èë ¶Ó Ô± Çå µ¥ ÊÂ ¼þ		dragon			
+650	 ÑÒ Ê¯ Ëþ		 		James	
+651	 ÑÒ Ê¯ Ëþ				James	
+652	 ÑÒ Ê¯ Ëþ				James	
+653	 ÑÒ Ê¯ Ëþ				James	
+654	 ÎÒ µÄ Éú »î				Asael Fromago	
+655	 ÎÖ Àï ÄÌ ÀÒ ´ó Ê¦				Asael Fromago	
+656	 ÈÎ Îñ				Asael Fromago	
+657	 Ä° Éú ÈË		Escaton generic text	817. Hint Ravenshore	James	
+658	 Ë® ¾§ Ö® Ò¹		Escaton/crystal generic text	818. Hint Ravenshore	James	
+659	 Ë® ¾§ 		crystal generic text	819. Hint Ravenshore	James	
+660	 Âþ ÓÎ ·¨ Ê¦		Escaton generic text	820. Hint Ravenshore	James	
+661	 º£ µÁ ½Ù ÂÓ		Pirate generic text/complaint	821. "Hint Ravenshore, Da	James	
+662	 À× ¸ñ ÄÇ		Pirate generic text/complaint	822. "Hint Ravenshore, Da	James	
+663	 ÎÞ ¾¡ Ö® º£ µÄ µÛ ¹ú		Pirate generic text/complaint	823. "Hint Ravenshore, Da	James	
+664	 Ê³ ÈË Ñý ºÍ µÁ ·Ë		Ogre generic text/complaint	824. Hint Alvar	James	
+665	 Â½ µØ ÂÃ ÓÎ		Ogre generic text/complaint	825. Hint Alvar	James	
+666	 ×ß Ë½ Õß		Sumggler generic text/complaint	826. "Hint Ravenshore, Al	James	
+667	 °ë Êó ÈË		Sumggler generic text/complaint	827. "Hint Ravenshore, Al	James	
+668	 Ìú É³ Ä® µÄ ¶À ÑÛ ¾Þ ÈË		Troll generic text	828. Hint Ironsand	James	
+669	 »ð Ñæ Ö® º£		Troll generic text	829. Hint Ironsand	James	
+670	 Ìæ ÎÒ ÃÇ ÕÒ ¸ö ¼Ò £¡		Troll generic text	830. Hint Ironsand	James	
+671	 ¿ó Ê¯ ÉÌ ÈË		Ore generic text	831. Hint anywhere	James	
+672	 Ê± ¹â ¿â		Hint	832. Poundlin Deerhunter	Poundlin Deerhunter NPC417	
+673	 ÅÑ Äæ ·É Áú		Renegade Dragon clue for Dragon	833. Bazalath NPC 443	Bazalath NPC 443	
+674	 Æä Ëü ·É Áú		Renegade Dragon clue for D Hunter 1	834. Isram Delver NPC 418	Isram Delver NPC 419	
+675	 À× ¸ñ ÄÇ ·É Áú		Renegade Dragon clue for D Hunter 2	835. topic 675	Chadric Benson NPC 407	
+676	 »Ù Ãð Õß		Ravenshore Destroyer filler 1	836. Elsie Apple NPC 405	Elsie Apple NPC 405	
+677	 »Ù Ãð Õß		Ravenshore Destroyer filler 2	837. Aznog Black NPC 409	Aznog Black NPC 409	
+678	 ÒÁ ÆÕ Éñ Ãí		Temple of Eep Clue one	838. Mortie Bith NPC 408	Mortie Bith NPC 408	
+679	 ÄÌ ÀÒ		Temple of Eep Clue two	839. Jillian Applebee NPC	Jillian Applebee NPC 406	
+680	 ²Ð ¿á ¸ð Èð ¸ñ			840. Plane of Earth one		
+681	 ÍÁ Ôª ËØ ½ç			841. Plane of Earth two		
+682	 ÍÁ Ôª ËØ Ö® Íõ			842. Plane of Air one		
+683	 ·ç Ôª ËØ ½ç			843. Plane of Air two		
+684	 Ë® Ôª ËØ ½ç			844. Plane of Water one		
+685	 Ë® Ôª ËØ Ö® Íõ			845. Plane of Water two		
+686	 »ð Ôª ËØ Ö® Íõ			846. Plane of Fire one		
+687	 »ð Ôª ËØ ½ç			847. Plane of Fire two		
+688	 Ã° ÏÕ				Hevatia D NPC 466	
+689	 ¼Ó Èë ÎÒ ÃÇ				Verish NPC 467	
+690	 Ã° ÏÕ				Nelix Uriel NPC 468	
+691	 ¼Ó Èë ÎÒ ÃÇ				Sethrc Thistlebone NPC 469	
+692	 Ã° ÏÕ				Rionel NPC 470	
+693	 Ã° ÏÕ				Adric Stellare NPC 471	
+694	 ºÍ ÎÒ ÃÇ Ò» Æð ×ß				Infaustus NPC 472	
+695	 ¼Ó Èë ÎÒ ÃÇ				Brimstone NPC 473	
+696	 ¼Ó Èë ÎÒ ÃÇ				Tempus NPC 476	
+697	 ¼Ó Èë ÎÒ ÃÇ				Thorne Understone NPC 477	
+698	 Ã° ÏÕ				Ulbrecht NPC 478	
+699	 ¼Ó Èë ÎÒ ÃÇ				Artorius Veritas NPC 480	
+700	 ¼Ó Èë ÎÒ ÃÇ				Duroth the Eternal 481	
+701	 ¼Ò ×å Ä¹ Ñ¨				Overdune Snapfinger NPC 7	
+702	 Äã ÕÒ µ½ ¶Ü ÅÆ ÁË Âð £¿				Lathius	
+703	 ºÃ ºÃ ÉÆ ÓÃ ÈÕ Ê´ ¶Ü ÅÆ				Lathius	
+704	 ¾º ¼¼ ³¡				Arean Topic	
+705	 ÎÒ Åª ¶ª ÁË £¡				Seer/I lost it	
+706	 ¼Ó Èë ÎÒ ÃÇ				K Memoria NPC 458	
+707	 ¼Ó Èë ÎÒ ÃÇ				Maylander NPC 459	
+708	 ¼Ó Èë ÎÒ ÃÇ				J Thelbourne NPC 463	
+709	 Ê³ ÈË Ñý Ç¿ µÁ				Dekian Farswell NPC 421	
+710	 »Æ ·ä				Brand Featherwind NPC 422	
+711	 ÊÜ ¹ý Ñµ Á· µÄ ·É Áú				W Falconeye NPC 420	
+712	 É¢ Ë÷ À­				K Fellburn NPC 423	
+713	 Îü Ñª ¹í Ä¹ ½Ñ				L Gallowswell NPC 428	
+714	 ¹« »á				Ashen Fiddlebone NPC 424	
+715	 ¹× ²Ä				Sethrik Fist NPC 425	
+716	 Ó¼ Ö® Ëí µÀ				Bigfist Slowstepper NPC 426	
+717	 µ¼ º½				Zephyr NPC 427	
+718	 Çá ËÉ µÄ Éú »î				Davee Sail NPC 503	
+719	 ¿Ö ²À º£ µÁ Ê· Ì¹ Á¦				Erik Jarblower NPC 504	
+720	 ¼Ö µ¤ Ä· µÄ ×ß Ë½ Õß				Jarrena Marmon NPC 505	
+721	 Ê· Ì¹ Á¦ µÄ ²Æ ±¦				Pirate Paul NPC 506	
+722	 Òþ ²Ø µÄ ²Æ ±¦				Yoel Wargreen NPC 507	
+723	 Âñ Ôá ¸Ú				Pordo NPC 508	
+724	 ÒÁ ÆÕ µÄ ÐÅ Ñö Õß				Vish NPC 509	
+725	 Ë® Ôª ËØ ½ç ´« ËÍ ÃÅ				Ferris NPC 510	
+726	 º£ µÁ Òª Èû				ex-captain terrence NPC 511	
+727	 À× ¸ñ ÄÇ ÎÄ »¯				F Ferne NPC 512	
+728	 Áú ¿û »¤ Éí ·û				Dierdra Wallace NPC 513	
+729	 Ë× Æø µÄ Öé ±¦				Nalani NPC 514	
+730	 ·­ ³µ Óã				Rhetta Mercer NPC 515	
+731	 ´¢ ²Ø ²Ö ¿â				Elgar Fellmoon NPC 53	
+732	 °µ Ê¾				Oracle	
+733	 ½ú Éý ºÚ °µ ¾« Áé				Jeebes	
+734	 ½ú Éý ¾Þ Ä§					
+735	 ½ú Éý Æï Ê¿					
+736	 ½ú Éý ·É Áú					
+737	 ½ú Éý ÄÁ Ê¦					
+738	 ½ú Éý ËÀ Áé ·¨ Ê¦					
+739	 ½ú Éý Îü Ñª ¹í					
+740	 ½ú Éý Å£ Í· ÈË					
+741	 ¶à Ð» £¡				Irabelle Hunter	
+742	 ºÍ Äã Ò» Æð ÂÃ ÐÐ £¡				Vetrinus	
+743	 ºÍ Äã Ò» Æð ÂÃ ÐÐ £¡				Dervish Chevron	
+744	 Õü ¾È				Masul	
+745	Placeholder					
+746	Placeholder					
+747	Placeholder					
+748	Placeholder					
+749	Placeholder					
+750	Placeholder					
+751	 ¹þ ÃÉ ´ú ¶û ³Ç ±¤	0	Praise for Glorious Castle Harmondale	1053. Markham	Lord Markham	1
+752	 Ñ° ±¦	0	Isn't this hunt exciting?	1052. "Isn't this hunt e	Lord Markham	1
+753	 ×£ ºØ	0	Speech for winning the contest (replace with topic 8)	1054. "Congratulations! 	Lord Markham	1
+754	 Äã µÄ ´¬	0	(replaces topic 7) go to castle Harmondale now	1055. "Well, the ship th	Lord Markham	1
+755	 Ñ° ±¦ ¹æ Ôò	0	Basic Rules	1072. "Good afternoon.  	Judge	2
+756	 Äã ÄÃ µ½ ÁË Ê² Ã´ £¿	0	"Check for quest items + returns for each one, all, and none"		Judge	2
+757	 ÕÐ ºô	0	Gives Questbit 1	1049. Welcome to Emerald	Docent	3
+758	 ôä ´ä µº	0		1048. "Emerald Island is	Docent	3
+759	 ¾º Èü	0		1051. "The rules of the 	Docent	3
+760	 ¡° Ñ° ±¦ ¡± ¾º Èü	0		1081. "Are you contestan	Bard	4
+761	 ÀÖ Æ÷	0		1082. "I own a few instr	Bard	4
+762	 ²¦ ÏÒ ÇÙ	0		1083. "You say you need 	Bard	4
+763	500 ¸ö ½ð ±Ò Âò ²¦ ÏÒ ÇÙ	0			Bard	4
+764	 º£ Ñó	0	Blahblahblah	1059. "I love being out 	Sally	5
+765	 ±´ ¿Ç	0	Wanna buy a seashell (there are more elsewhere)	1060. "I have some nice 	Sally	5
+766	100 ¸ö ½ð ±Ò Âò ±´ ¿Ç		Wanna buy a seashell (there are more elsewhere)		Sally	5
+767	 ¹þ ÃÉ ´ú ¶û	0	Blahblahblah	1057. We have reason to 	Mr. Malwick	6
+768	 Ìá Òé	0	Give proposal	1056. "Allow me to intro	Mr. Malwick	6
+769	 ½Ó ÊÜ È¨ ÕÈ	0	Give wand	1058. "Excellent.  Somet	Mr. Malwick	6
+770	 ¾Ü ¾ø ½Ó ÊÜ È¨ ÕÈ	0	Offer chance again	1050. "I respect your de	Mr. Malwick	6
+771	 Äã µÄ Ã± ×Ó £¬ Çë	0	Blahblahblah	1066. This Temple is a p	Sal Sharktooth	7
+772	 Éñ Ãí	0	Robbery attempt	1063. "I see you have a 	Sal Sharktooth	7
+773	 °Ñ Ã± ×Ó ¸ø ÉÜ ¶û	0	Robbery attempt	1064. "Thanks for the ha	Sal Sharktooth	7
+774	 ±£ Áô Ã± ×Ó	0	Robbery attempt	1065. You should have ac	Sal Sharktooth	7
+775	 ÎÒ ¾¯ ¸æ Äã	0	Tease	1067. You should have li	Sal Sharktooth	7
+776	 ºÜ ºÃ £¬ ÄÇ Ã´	0	Blahblahblah	1068. I take this to mea	Mr. Malwick	6
+777	 ÓÃ Ã± ×Ó ½» »» Ò© ¼Á £¿	0	"Trade hat for red potion + positive, negative, and no potion returns"	1086. "Hello there!  I s	Adventurer 1	8
+778	 ´õ Í½	0	Bad guys in temple	1069. The toughest band 	Adventurer 1	8
+779	 À¶ É« Ò© ¼Á	0	Blue potion instructions	1070. "I know how to mak	Adventurer 1	8
+780	 ÓÃ Ò© ¼Á ½» »» Ã± ×Ó	0			Adventurer 1	8
+781	 ±£ Áô Ò© ¼Á	0		1088. "What's the matter	Adventurer 1	8
+782	 ×ø ´¬ º½ º£	0	Not sailing yet	1071. "Sorry mates, this	William	0
+783	 ½â ¿ª ÀÂ Éþ	0	"Won contest, ready to go"	1090. "Good job, mates! 	William	0
+784	 Ê§ ×Ù µÄ ²Î Èü Õß	0	Markham's go look for contestants	1091. Keep in mind I hav	Markham	1
+785	 Ê§ ×Ù µÄ ²Î Èü Õß		Markham's go look for contestants + Positive and negative returns		Markham	1
+786	 Ê§ ×Ù µÄ ÈË ÃÇ	0	0	1094. "Hmm... I recall a f	Donna	0
+787	 ·Ï Ãí	0	0	1095. "The cave right be	Donna	0
+788	 Áú Ó¬	0	0	1096. "Wild Dragonflies 	Mia Lucille	0
+789	 Áú	0	0	1097. "The Dragon of Eme	Mia Lucille	0
+790	 Áú Ñ¨	0	0	1098. "You're contestant	Grant	0
+791	 ²Î Èü Õß	0	0	1099. "I'd watch those o	Grant	0
+792	 ½á Êø Ö¸ µ¼	0	Sets questbit 17	1100. "You have decided 	Docent	3
+793	 ¿ª Ê¼ Ö¸ µ¼	0	removes questbit 17	1101. You have decided t	Docent	3
+794	 Éñ Íµ	0	0	1102. William Lasker	William Lasker	15
+795	 Éñ Íµ	0	0		William Lasker	15
+796	 ÃÜ Ì½	0	0	1107. William Lasker	William Lasker	15
+797	 ÃÜ Ì½	0	0		William Lasker	15
+798	 Òû ²è	0	0	1113. Seknit Undershadow	Seknit Undershadow	16
+799	 É± ÊÖ	0	0		Seknit Undershadow	16
+800	 É± ÊÖ	0	0		Seknit Undershadow	16
+801	 Ê® ×Ö ¾ü	0	0	1121. Sir Charles Quixot	Sir Charles Quixote	17
+802	 Ê® ×Ö ¾ü	0	0		Sir Charles Quixote	17
+803	 Ó¢ ÐÛ	0	0	1124. Sir Charles Quixot	Sir Charles Quixote	17
+804	 Ó¢ ÐÛ	0	0		Sir Charles Quixote	17
+805	 Ó¢ ÐÛ £¿	0	0		Alice Hargreave	54
+806	 Ä§ Í·	0	0		William Setag	18
+807	 Ä§ Í·	0	0		William Setag	18
+808	 É³ ÃÖ	0	0	1140. Bartholomew Hume	Bartholomew Hume	38
+809	 É³ ÃÖ	0	0	1142. Bartholomew Hume	Bartholomew Hume	38
+810	 É³ ÃÖ	0	0	1141. Bartholomew Hume	Bartholomew Hume	38
+811	 ÖÇ Õß	0	0	1143. Bartholomew Hume	Bartholomew Hume	38
+812	 ÖÇ Õß	0	0		Bartholomew Hume	38
+813	 ÈÌ Õß	0	0		Stephan Sand	39
+814	 ÈÌ Õß	0	0		Stephan Sand	39
+815	 Éñ ¼ý ÊÖ	0	0		Lawrence Mark	40
+816	 Éñ ¼ý ÊÖ	0	0		Lawrence Mark	40
+817	 ¸ß ¼¶ Éä ÊÖ	0	0		Steagal Snick	41
+818	 ¸ß ¼¶ Éä ÊÖ	0	0		Steagal Snick	41
+819	 ¾Ñ »÷ ÊÖ	0	0		Steagal Snick	41
+820	 ¾Ñ »÷ ÊÖ	0	0		Steagal Snick	41
+821	 ÓÂ Ê¿	0	0		Leda Rowan	42
+822	 ÓÂ Ê¿	0	0		Leda Rowan	42
+823	 ºÀ ÏÀ	0	0		Frederick Org	43
+824	 ºÀ ÏÀ	0	0		Frederick Org	43
+825	 ºÚ Æï Ê¿	0	0		Frederick Org	43
+826	 ºÚ Æï Ê¿	0	0		Frederick Org	43
+827	 ÓÎ Æï Áì Ö÷	0	0		Lysander Sweet	44
+828	 ÓÎ Æï Áì Ö÷	0	0		Lysander Sweet	44
+829	 ÁÔ ÊÖ	0	0		ebednezar Sour	45
+830	 ÁÔ ÊÖ	0	0		ebednezar Sour	45
+831	 ÉÍ ½ð ÁÔ ÈË	0	0		ebednezar Sour	45
+832	 ÉÍ ½ð ÁÔ ÈË	0	0		ebednezar Sour	45
+833	 ÁÔ ÈË £¿	0	Hunter End Promo Quest		Faerie King	52
+834	 ¹Å Ê÷ Ö® ÐÄ	0	Ranger Lord quest		Oldest Tree	53
+835	 ¹Å Ê÷ Ö® ÐÄ	0	Ranger Lord quest		Oldest Tree	53
+836	 ¹â Ã÷ Ö÷ ½Ì	0	0		Rebecca Devine	46
+837	 ¹â Ã÷ Ö÷ ½Ì	0	0		Rebecca Devine	46
+838	 Éñ ¸¦	0	0		Daedalus Falk	47
+839	 Éñ ¸¦	0	0		Daedalus Falk	47
+840	 ºÚ °µ Ö÷ ½Ì	0	0		Daedalus Falk	47
+841	 ºÚ °µ Ö÷ ½Ì	0	0		Daedalus Falk	47
+842	 ·¨ Ê¦	0	0		Thomas Grey	48
+843	 ·¨ Ê¦	0	0		Thomas Grey	48
+844	 ´ó ·¨ Ê¦	0	0		Thomas Grey	48
+845	 ´ó ·¨ Ê¦	0	0		Thomas Grey	48
+846	 Î× Ñý	0	0		Halfgild Wynac	49
+847	 Î× Ñý	0	0		Halfgild Wynac	49
+848	 ¸ß ¼¶ µÂ Â³ ÒÁ	0	0		Anthony Green	50
+849	 ¸ß ¼¶ µÂ Â³ ÒÁ	0	0		Anthony Green	50
+850	 ´ó µÂ Â³ ÒÁ	0	0		Anthony Green	50
+851	 ´ó µÂ Â³ ÒÁ	0	0		Anthony Green	50
+852	 Ð° Êõ Ê¦	0	0		Tor Anwyn	51
+853	 Ð° Êõ Ê¦	0	0		Tor Anwyn	51
+854	 ÈË Å¼ Ö« Ìå	0	0		Golem	56
+855	 ½» »» ÈË Å¼ Í· Â­	0	0		Golem	56
+856	 ´ó ¶ú ¹Ö	0	0		Butler	58
+857	 Óª ¾È °« ÈË	0	0		Dwarf King	59
+858	 Óª ¾È °« ÈË	0	0		Dwarf King	59
+859	 Ê¹ ÓÃ µ¤ Ò©	0	0		Dwarf Engineer	60
+860	 Ê¹ ÓÃ µ¤ Ò©	0	0		Dwarf Prisoner 1	61
+861	 Ê¹ ÓÃ µ¤ Ò©	0	0		Dwarf Prisoner 2	62
+862	 Ê¹ ÓÃ µ¤ Ò©	0	0		Dwarf Prisoner 3	63
+863	 Ê¹ ÓÃ µ¤ Ò©	0	0		Dwarf Prisoner 4	64
+864	 Ê¹ ÓÃ µ¤ Ò©	0	0		Dwarf Prisoner 5	65
+865	 Ê¹ ÓÃ µ¤ Ò©	0	0		Dwarf Prisoner 6	66
+866	 Ò» ·Ý Ñû Çë Êé	0	See my boss		Ellen Rockway	67
+867	 Î± Ôì µÄ Éè ¼Æ Í¼	0	Good work giving the elves false plans		Ellen Rockway	67
+868	 ±¦ Îï	0	Good work giving me the artifact		Ellen Rockway	67
+869	 ±³ ÅÑ £¿	0	You betrayed us?		Ellen Rockway	67
+870	 Ò» ·Ý Ñû Çë Êé	0	See my boss		Alain Hani	68
+871	 ¼Ù Çô ·¸	0	Good work giving the humans the false prisoner		Alain Hani	68
+872	 ±¦ Îï	0	Good work giving me the artifact		Alain Hani	68
+873	 ±³ ÅÑ £¿	0	You betrayed us?		Alain Hani	68
+874	 Õ½ ·ý	0	0		Queen Catherine	69
+875	 Õ½ ·ý	0	0		Queen Catherine	69
+876	 Õâ ÊÇ ¼Ù Çô ·¸	0	0		Queen Catherine	69
+877	 Àû ÎÄ Ë¹ µÂ	0	0		Queen Catherine	69
+878	 Àû ÎÄ Ë¹ µÂ	0	0		Queen Catherine	69
+879	 ÎÒ ÃÇ Íµ µ½ ÁË Éè ¼Æ Í¼	0	0		Queen Catherine	69
+880	 ±¦ Îï	0	0		Queen Catherine	69
+881	 Àû ÎÄ Ë¹ µÂ	0	0		ElfKing	70
+882	 Àû ÎÄ Ë¹ µÂ	0	0		ElfKing	70
+883	 Õâ ÊÇ Î± Ôì µÄ Éè ¼Æ Í¼	0	0		ElfKing	70
+884	 ÃÜ Ì½	0	0		ElfKing	70
+885	 ÃÜ Ì½	0	0		ElfKing	70
+886	 ÎÒ ÃÇ Óª ¾È ÁË ÀÍ Â× £¡	0	0		ElfKing	70
+887	 ±¦ Îï	0	0		ElfKing	70
+888	 °µ Ê¾	0	0		Arbiter	74
+889	 ÎÒ ¶ª ÁË ÖØ Òª Îï ¼þ	0	0		Arbiter	74
+890	 ±¦ Îï	0	0		Arbiter	74
+891	 ÎÒ Ñ¡ ÖÐ Äã ÁË £¡	0	0		Evil Arbiter	77
+892	 °µ Ê¾	0	0		Evil Arbiter	77
+893	 ÎÒ Ñ¡ ÖÐ Äã ÁË £¡	0	0		Judge Fairweather	78
+894	 °µ Ê¾	0	0		Judge Fairweather	78
+895	 ¾» ÐÄ ÌÃ	0	0		Gavin Magnus	79
+896	 ¾» ÐÄ ÌÃ	0	0		Gavin Magnus	79
+897	 °µ ºÚ Éñ Ãí	0	0		Resurectra	80
+898	 °µ ºÚ Éñ Ãí	0	0		Resurectra	80
+899	 ´ò »÷ ¶ñ Ä§	0	0		Resurectra	80
+900	 ´ò »÷ ¶ñ Ä§	0	0		Resurectra	80
+901	 Îü Ñª ¹í	0	0		Crag Hack	81
+902	 Îü Ñª ¹í	0	0		Crag Hack	81
+903	 Áé »ê Ö® Ì³	0	0		Sir Caneghm	82
+904	 Áé »ê Ö® Ì³	0	0		Sir Caneghm	82
+905	 ÍÐ ¶û ²® µÙ	0	0		Robert the Wise	83
+906	 ÍÐ ¶û ²® µÙ	0	0		Robert the Wise	83
+907	 ¹â Ã÷ Éñ Ãí	0	0		Kastore	84
+908	 ¹â Ã÷ Éñ Ãí	0	0		Kastore	84
+909	 ´ò »÷ ¶ñ Ä§	0	0		Kastore	84
+910	 ´ò »÷ ¶ñ Ä§	0	0		Kastore	84
+911	 Áé »ê Ö® Ì³	0	0		Maximus	85
+912	 Áé »ê Ö® Ì³	0	0		Maximus	85
+913	 ¿Æ À¼ ¿Ë µÄ Êµ Ñé ÊÒ	0	0		Dark Shade	86
+914	 ¿Æ À¼ ¿Ë µÄ Êµ Ñé ÊÒ	0	0		Dark Shade	86
+915	 ÖÇ Õß ÂÞ ²® ÌØ	0	0		Tolberti	87
+916	 ÖÇ Õß ÂÞ ²® ÌØ	0	0		Tolberti	87
+917	 ÔÙ Éú Ö® µØ	0	0		Archibald	88
+918	 ÔÙ Éú Ö® µØ	0	0		Archibald	88
+919	 ×î ÖÕ ÈÎ Îñ	0	0		Resurectra	80
+920	 ×î ÖÕ ÈÎ Îñ	0	0		Resurectra	80
+921	 ×î ÖÕ ÈÎ Îñ	0	0		Kastore	84
+922	 ×î ÖÕ ÈÎ Îñ	0	0		Kastore	84
+923	 ½ø Èë ¹â Ã÷ Éñ Ãí	0	0		Dungeon Entrance	89
+924	 ½ø Èë °µ ºÚ Éñ Ãí	0	0		Dungeon Entrance	90
+925	 ÍÐ Âí Ë¹ ¡¤ ¸ñ À×	0	0		Eric Swarrel	281
+926	 Êé µê	0	0		Eric Swarrel	281
+927	 Êé µê	0	0		Eric Swarrel	281
+928	 ×ô ¿¨ ¶û µÄ Ê¬ ¹Ç	0	0		Dwarf King	59
+929	 ÈÎ Îñ	0	0		Tarin Withern	93
+930	 ÈÎ Îñ	0	0		Tarin Withern	93
+931	 ÈÎ Îñ	0	0		Mazim Dusk	
+932	 ÈÎ Îñ	0	0		Mazim Dusk	
+933	 ÈÎ Îñ	0	0		Davrick Peladium	
+934	 ÈÎ Îñ	0	0		Davrick Peladium	
+935	 ÈÎ Îñ	0	0		Norbert Thrush	
+936	 Î÷ À­ Ë¿ µÄ ÐÅ ¼þ	0	0		Lord Markham	
+937	 ÈÎ Îñ	0	0		Norbert Thrush	
+938	 ÈÎ Îñ	0	0		Johann Kerrid	
+939	 ÈÎ Îñ	0	0		Faerie King	
+940	 ÈÎ Îñ	0	0		Johann Kerrid	
+941	 ÈÎ Îñ	0	0		Niles Stantley	
+942	 ÈÎ Îñ	0	0		Niles Stantley	
+943	 ÈÎ Îñ	0	0		Niles Stantley	
+944	 ÈÎ Îñ	0	0		Spark Burnkindle	
+945	 ÈÎ Îñ	0	0		Spark Burnkindle	
+946	 ÈÎ Îñ	0	0		Seth Drakkson	
+947	 ÈÎ Îñ	0	0		Seth Drakkson	
+948	 ÈÎ Îñ	0	0		Darron Temper	
+949	 ÈÎ Îñ	0	0		Darron Temper	
+950	 ¹Å ÀÏ ±ø Æ÷					
+951	Placeholder					
+952	Placeholder					
+953	 ³¤ ½£ ×¨ ¼Ò					
+954	 ³¤ ½£ ´ó Ê¦					
+955	 ³¤ ½£ ×Ú Ê¦					
+956	 Ø° Ê× ×¨ ¼Ò					
+957	 Ø° Ê× ´ó Ê¦					
+958	 Ø° Ê× ×Ú Ê¦					
+959	 Õ½ ¸« ×¨ ¼Ò					
+960	 Õ½ ¸« ´ó Ê¦					
+961	 Õ½ ¸« ×Ú Ê¦					
+962	 ³¤ Ã¬ ×¨ ¼Ò					
+963	 ³¤ Ã¬ ´ó Ê¦					
+964	 ³¤ Ã¬ ×Ú Ê¦					
+965	 ¹­ ¼ý ×¨ ¼Ò					
+966	 ¹­ ¼ý ´ó Ê¦					
+967	 ¹­ ¼ý ×Ú Ê¦					
+968	 ¶¤ ´¸ ×¨ ¼Ò					
+969	 ¶¤ ´¸ ´ó Ê¦					
+970	 ¶¤ ´¸ ×Ú Ê¦					
+971	 Áñ µ¯ Ç¹ ×¨ ¼Ò					
+972	 Áñ µ¯ Ç¹ ´ó Ê¦					
+973	 Áñ µ¯ Ç¹ ×Ú Ê¦					
+974	 ¶Ü ÅÆ ×¨ ¼Ò					
+975	 ¶Ü ÅÆ ´ó Ê¦					
+976	 ¶Ü ÅÆ ×Ú Ê¦					
+977	 Æ¤ ¼× ×¨ ¼Ò					
+978	 Æ¤ ¼× ´ó Ê¦					
+979	 Æ¤ ¼× ×Ú Ê¦					
+980	 Ëø ¼× ×¨ ¼Ò					
+981	 Ëø ¼× ´ó Ê¦					
+982	 Ëø ¼× ×Ú Ê¦					
+983	 ¸Ö ¼× ×¨ ¼Ò					
+984	 ¸Ö ¼× ´ó Ê¦					
+985	 ¸Ö ¼× ×Ú Ê¦					
+986	 »ð Ïµ Ä§ ·¨ ×¨ ¼Ò					
+987	 »ð Ïµ Ä§ ·¨ ´ó Ê¦					
+988	 »ð Ïµ Ä§ ·¨ ×Ú Ê¦					
+989	 ¿Õ Æø Ä§ ·¨ ×¨ ¼Ò					
+990	 ¿Õ Æø Ä§ ·¨ ´ó Ê¦					
+991	 ¿Õ Æø Ä§ ·¨ ×Ú Ê¦					
+992	 Ë® Ïµ Ä§ ·¨ ×¨ ¼Ò					
+993	MMExt Placeholder					
+994	MMExt Placeholder					
+995	MMExt Placeholder					
+996	MMExt Placeholder					
+997	MMExt Placeholder					
+998	MMExt Placeholder					
+999	MMExt Placeholder					
+1000	MMExt Placeholder					
+1001	 ÐÄ ÖÇ Ä§ ·¨ ×¨ ¼Ò					
+1002	 ÐÄ ÖÇ Ä§ ·¨ ´ó Ê¦					
+1003	 ÐÄ ÖÇ Ä§ ·¨ ×Ú Ê¦					
+1004	 Ö« Ìå Ä§ ·¨ ×¨ ¼Ò					
+1005	 Ö« Ìå Ä§ ·¨ ´ó Ê¦					
+1006	 Ö« Ìå Ä§ ·¨ ×Ú Ê¦					
+1007	 ¹â Ã÷ Ä§ ·¨ ×¨ ¼Ò					
+1008	 ¹â Ã÷ Ä§ ·¨ ´ó Ê¦					
+1009	 ¹â Ã÷ Ä§ ·¨ ×Ú Ê¦					
+1010	 °µ ºÚ Ä§ ·¨ ×¨ ¼Ò					
+1011	 °µ ºÚ Ä§ ·¨ ´ó Ê¦					
+1012	 °µ ºÚ Ä§ ·¨ ×Ú Ê¦					
+1013	 Îï Æ· ¼ø ¶¨ Êõ ×¨ ¼Ò					
+1014	 Îï Æ· ¼ø ¶¨ Êõ ´ó Ê¦					
+1015	 Îï Æ· ¼ø ¶¨ Êõ ×Ú Ê¦					
+1016	 ¾­ ÉÌ Êõ ×¨ ¼Ò					
+1017	 ¾­ ÉÌ Êõ ´ó Ê¦					
+1018	 ¾­ ÉÌ Êõ ×Ú Ê¦					
+1019	 Ô® »¤ Êõ ×¨ ¼Ò					
+1020	 Ô® »¤ Êõ ´ó Ê¦					
+1021	 Ô® »¤ Êõ ×Ú Ê¦					
+1022	 ½¡ Éí Êõ ×¨ ¼Ò					
+1023	 ½¡ Éí Êõ ´ó Ê¦					
+1024	 ½¡ Éí Êõ ×Ú Ê¦					
+1025	 Ú¤ Ïë Êõ ×¨ ¼Ò					
+1026	 Ú¤ Ïë Êõ ´ó Ê¦					
+1027	 Ú¤ Ïë Êõ ×Ú Ê¦					
+1028	 ¶´ ²ì Êõ ×¨ ¼Ò					
+1029	 ¶´ ²ì Êõ ´ó Ê¦					
+1030	 ¶´ ²ì Êõ ×Ú Ê¦					
+1031	 ½» ¼Ê Êõ ×¨ ¼Ò					
+1032	 ½» ¼Ê Êõ ´ó Ê¦					
+1033	 ½» ¼Ê Êõ ×Ú Ê¦					
+1034	 Íµ ÇÔ Êõ ×¨ ¼Ò	Not used				
+1035	 Íµ ÇÔ Êõ ´ó Ê¦	Not used				
+1036	 Íµ ÇÔ Êõ ×Ú Ê¦	Not used				
+1037	 ²ð Ð¶ Êõ ×¨ ¼Ò					
+1038	 ²ð Ð¶ Êõ ´ó Ê¦					
+1039	 ²ð Ð¶ Êõ ×Ú Ê¦					
+1040	 ÉÁ ¶ã Êõ ×¨ ¼Ò					
+1041	 ÉÁ ¶ã Êõ ´ó Ê¦					
+1042	 ÉÁ ¶ã Êõ ×Ú Ê¦					
+1043	 ¿Õ ÊÖ ²« ¶· Êõ ×¨ ¼Ò					
+1044	 ¿Õ ÊÖ ²« ¶· Êõ ´ó Ê¦					
+1045	 ¿Õ ÊÖ ²« ¶· Êõ ×Ú Ê¦					
+1046	 ¹Ö Îï ¼ø ¶¨ Êõ ×¨ ¼Ò					
+1047	 ¹Ö Îï ¼ø ¶¨ Êõ ´ó Ê¦					
+1048	 ¹Ö Îï ¼ø ¶¨ Êõ ×Ú Ê¦					
+1049	 Îä Æ÷ Ê¹ ÓÃ Êõ ×¨ ¼Ò					
+1050	 Îä Æ÷ Ê¹ ÓÃ Êõ ´ó Ê¦					
+1051	 Îä Æ÷ Ê¹ ÓÃ Êõ ×Ú Ê¦					
+1052	 Íµ ÇÔ Êõ ×¨ ¼Ò					
+1053	 Íµ ÇÔ Êõ ´ó Ê¦					
+1054	 Íµ ÇÔ Êõ ×Ú Ê¦					
+1055	 Á¶ ½ð Êõ ×¨ ¼Ò					
+1056	 Á¶ ½ð Êõ ´ó Ê¦					
+1057	 Á¶ ½ð Êõ ×Ú Ê¦					
+1058	 Ñ§ Ï° Êõ ×¨ ¼Ò					
+1059	 Ñ§ Ï° Êõ ´ó Ê¦					
+1060	 Ñ§ Ï° Êõ ×Ú Ê¦					
+1061	 Ñ° ÕÒ Ðü ÉÍ Éú Îï					
+1062	 ½» ·£ ¿î					
+1063	 ÈÎ Îñ					
+1064	 ÈÎ Îñ					
+1065	 °¬ ¶û Ï£ ¡¤ Åà ¶Ù		James Teacher Hints			
+1066	 »ù Àï °² ¡¤ Ã× Ë¹ Èð ÌØ		James Teacher Hints			
+1067	  ÌØ ¸ñ ¡¤ Ë¹ À³ Éª		James Teacher Hints			
+1068	 ²é µÂ ¿Æ ¡¤ ÌÆ Éª ·ò		James Teacher Hints			
+1069	 °£ ×È Åµ ¸ñ ¡¤ Ë¹ À³ Ê²		James Teacher Hints			
+1070	 ÍÐ ¿Ï ¡¤ ·Ñ Ë¹ ÌØ		James Teacher Hints			
+1071	 µÂ ÁÖ ¡¤ ¿¨ ÄÚ »ù		James Teacher Hints			
+1072	 ¿¨ ¶÷ ¡¤ Ë¹ Í¨ ¿Æ Àû ·ò		James Teacher Hints			
+1073	 ¿Æ À­ µÂ ÁÖ ¡¤ Î÷ ¶û ÆÕ		James Teacher Hints			
+1074	 Ï£ ÁÖ ¡¤ ·¨ ¶û ¿Æ ÄÚ		James Teacher Hints			
+1075	 À¼ Ï£ ¡¤ À­ ¸¥ Èü ÌØ		James Teacher Hints			
+1076	 ¿­ µÂ À­ ¿Ë ¡¤ Ë¹ µÙ µÂ		James Teacher Hints			
+1077	 ²¼ À­ Ôó ¡¤ ÂÞ Ë¹ ºº Ä·		James Teacher Hints			
+1078	 ÅÁ ÌØ ÎÄ ¡¤ ·Ñ ¶û ±¾		James Teacher Hints			
+1079	 ÒÁ Ë¹ À­ Ä· ¡¤ ¸ñ Âå Íþ ¶û		James Teacher Hints			
+1080	 ·Ñ µÂ ÎÄ ¡¤ Ë¹ ÃÜ É­		James Teacher Hints			
+1081	 À­ ±È Èø ¡¤ Äá µÂ Â×		James Teacher Hints			
+1082	 Ã× ¶û Ñï ¡¤ ¿ü ¿Ë		James Teacher Hints			
+1083	 Âó µÂ ÎÖ Àï		James Teacher Hints			
+1084	 ¹þ Àû °² ¡¤ ÄÇ ·ò Äª ¶û		James Teacher Hints			
+1085	 µÂ ¿² ¡¤ ¸» µÂ À´ ÌØ		James Teacher Hints			
+1086	 ¹¤ ½³ ²¼ ÀÊ ´ï		James Teacher Hints			
+1087	 °¢ Ê² ¡¤ Ì¹ ÆÕ		James Teacher Hints			
+1088	 ²¼ À× Ôó		James Teacher Hints			
+1089	 Èð Ë¹ ÁÖ ¡¤ ¸ï ÁÖ Ë¹ µÀ		James Teacher Hints			
+1090	 ¸ñ Àû		James Teacher Hints			
+1091	 ÍÐ ²® Â× ¡¤ Èð ¶÷ Ð» µÂ		James Teacher Hints			
+1092	 ÌØ Â×		James Teacher Hints			
+1093	 À¼ À­ ¡¤ Ë¹ Í¨ À³ ÌØ		James Teacher Hints			
+1094	 °£ À¼ Ææ		James Teacher Hints			
+1095	 Ï£ Éª ¡¤ µÂ Ä· Àû ß¯		James Teacher Hints			
+1096	 ±¾ ½Ü Ã÷		James Teacher Hints			
+1097	 Ã× À³ Ë¹ ¡¤ ·Æ µÂ ÎÄ ÌØ		James Teacher Hints			
+1098	 ¿Ë Î¬ ¶û ¡¤ ²¼ Àï ÃÅ		James Teacher Hints			
+1099	 °î ²¼ ´ó ¸ç		James Teacher Hints			
+1100	 Ì¹ ÆÕ Ë¹		James Teacher Hints			
+1101	 Èø çÑ ¶û ¡¤ °Ý É­		James Teacher Hints			
+1102	 Åå ¼ª ¡¤ ²¼ Â³ Ë¹ ÎÄ		James Teacher Hints			
+1103	 ±´ ÌØ ºú µÂ ¡¤ ¿­ ·ò Ï£ ¶û		James Teacher Hints			
+1104	 ¿à ÐÐ Õß ²¼ Àï ºº Ä·		James Teacher Hints			
+1105	 ÍÐ Âí Ë¹ ¡¤ Ä¦ ¶û		James Teacher Hints			
+1106	 ÐÞ ²¹ ½³ ¸ñ Àï Ë¹		James Teacher Hints			
+1107	 Íô ´ï ¡¤ ¸» Ë¹ ¿Ë		James Teacher Hints			
+1108	 ÒÁ Íò ´ï ¡¤ ÍÐ Âí Ë¹		James Teacher Hints			
+1109	 ÌØ Èø ¡¤ ¸ñ ÁÖ Ë¹ ÎÖ µÂ		James Teacher Hints			
+1110	 ¿Ë Òò		James Teacher Hints			
+1111	 ¼Î Èð ÌØ ¡¤ ¶à µÏ Ë¹		James Teacher Hints			
+1112	 Åå ÌØ À­ ¡¤ ¿Ë À³ Àû ÑÇ		James Teacher Hints			
+1113	 Àî Åµ µÂ ¡¤ Ë¹ ¸ñ ÄÇ		James Teacher Hints			
+1114	 ¿ì ×ì Ë¹ ¶û ¿Ë		James Teacher Hints			
+1115	 °Â ²® Èð ¿Ë ¡¤ ¿Ë À× ¶÷		James Teacher Hints			
+1116	 ¿Æ Äá Ë¹ ¡¤ Íþ ¶û ÄÇ		James Teacher Hints			
+1117	 °² ²® À³ ºÕ ÌØ ¡¤ ²¼ ÀÍ ÀÕ		James Teacher Hints			
+1118	 Åµ Àï Ë¹		James Teacher Hints			
+1119	 ¼ª Äá ¡¤ Ë¹ Íþ ·ò ÌØ		James Teacher Hints			
+1120	 ÁÔ ÈË À³ ÎÄ		James Teacher Hints			
+1121	 ±£ À­ ¡¤ ²¼ À³ Ë¹		James Teacher Hints			
+1122	 À­ Ë¹ ÌØ		James Teacher Hints			
+1123	 Àï Äá ¡¤ Ð» µÂ À­ ÄÇ		James Teacher Hints			
+1124	 Ò¹ ÐÐ Õß ÒÁ ·ò Àû		James Teacher Hints			
+1125	 °£ ×È ±´ ÌØ ¡¤ ÎÂ ÌØ Ë¹ ÆÕ ¶÷		James Teacher Hints			
+1126	 Â³ Î÷ µÂ ¡¤ °£ ÆÕ		James Teacher Hints			
+1127	 µÀ Âå Ï£ ¡¤ É­ ¼Ó ¿¨		James Teacher Hints			
+1128	 Íþ Á® Ä· ¡¤ ´÷ Î¬ Ë¹		James Teacher Hints			
+1129	 ³¿ ÐÇ º£ Â× ÄÈ		James Teacher Hints			
+1130	 ¸ñ ÎÄ ¡¤ Âê ¸ñ Å¬ Ë¹		James Teacher Hints			
+1131	 Èû Ë¹ ¡¤ ´ï ¿Ë Äª		James Teacher Hints			
+1132	 °¢ »ù °Í µÂ		James Teacher Hints			
+1133	 ¿Õ Í°					
+1134	 ºì É« ¾Æ Í°					
+1135	 »Æ É« ¾Æ Í°					
+1136	 À¶ É« ¾Æ Í°					
+1137	 ³È É« ¾Æ Í°					
+1138	 ÂÌ É« ¾Æ Í°					
+1139	 ×Ï É« ¾Æ Í°					
+1140	 °× É« ¾Æ Í°					
+1141	 ¿Õ ¹ø					
+1142	 Õô Æû ¹ø					
+1143	 Àä Ëª ¹ø					
+1144	 ¾ª âð ¹ø					
+1145	 Ôà ¹ø					
+1146	 À¬ »ø ¶Ñ					
+1147	 À¬ »ø ¶Ñ					
+1148	 À¬ »ø ¶Ñ					
+1149	 ¿ª Ê¼ ¾º ¼¼ ³¡ ¾ö ¶·					
+1150	 Ôª ËØ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1151	 ×Ô ÎÒ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1152	 ¿Õ Æø Ä§ ·¨ ÐÐ »á ³É Ô±					
+1153	 ÍÁ Ïµ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1154	 »ð Ïµ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1155	 Ë® Ïµ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1156	 Ö« Ìå Ä§ ·¨ ÐÐ »á ³É Ô±					
+1157	 ÐÄ ÖÇ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1158	 Áé »ê Ä§ ·¨ ÐÐ »á ³É Ô±					
+1159	 ¹â Ã÷ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1160	 °µ ºÚ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1161	 À¬ »ø ¶Ñ					
+1162	 Óª »ð					
+1163	 Óª »ð					
+1164	 ²Í µú					
+1165	 ¿Õ Í°					
+1166	 ¾Æ Í°					
+1167	 Ä¢ ¹½					
+1168	 Âí ¿Ë ºº Ä· ¾ô Ê¿		James Quest Hint			
+1169	 µÁ Ôô ´ó Ê¦		James Quest Hint			
+1170	 ÉÚ Ëþ		James Quest Hint			
+1171	 ±È ¶û ¡¤ À­ Ë¹ ¿Ë		James Quest Hint			
+1172	 ¿¨ Ã× ¶û ·ò ÈË		James Quest Hint			
+1173	 É± ÊÖ		James Quest Hint			
+1174	 ÀÍ Ë¹ À³ ¿Ë		James Quest Hint			
+1175	 Ê® ×Ö ¾ü		James Quest Hint			
+1176	 Çã ¹ú Çã ³Ç		James Quest Hint			
+1177	 ¶ñ ¹÷		James Quest Hint			
+1178	 É® ÂÂ Ñµ Á·		James Quest Hint			
+1179	 ÃÀ ¶Å É¯		James Quest Hint			
+1180	 Ñò Ãù ½Ì Éñ Ãí		James Quest Hint			
+1181	 Ê§ ×Ù µÄ Ñò Èº		James Quest Hint			
+1182	 ±à ÃÜ Âë		James Quest Hint			
+1183	 Õ³ ÍÁ ¹Ö µÄ Èõ µã		James Quest Hint			
+1184	 ÃÀ ¶Å É¯		James Quest Hint			
+1185	 Ì© Ì¹ ¾Þ ÈË Óª µØ		James Quest Hint			
+1186	 ¾º ¼¼ ³¡		James Quest Hint			
+1187	 ¾º ¼¼ ³¡ ¾ö ¶·		James Quest Hint			
+1188	 ¹í Õ¬		James Quest Hint			
+1189	 ÓÄ Áé		James Quest Hint			
+1190	 ÃÜ µÀ		James Quest Hint			
+1191	 Éñ ÏÉ		James Quest Hint			
+1192	 ·è ¿ñ µÄ É­ ÁÖ		James Quest Hint			
+1193	 ¹Å Ê÷		James Quest Hint			
+1194	 Ðü ÉÍ ²¶ ÁÔ		James Quest Hint			
+1195	 Ðü ÉÍ ²¶ ÁÔ		James Quest Hint			
+1196	 ³± Ë® ¶´ Ñ¨		James Quest Hint			
+1197	 °£ ¸¥ ÃÉ µº		James Quest Hint			
+1198	 º½ º£ Í¼		James Quest Hint			
+1199	 ×ç Öä		James Quest Hint			
+1200	 ÈË Å¼ Ö« Ìå		James Quest Hint			
+1201	 ÈË Å¼		James Quest Hint			
+1202	 ÆÕ ¶É ÖÚ Éú Ä§ ·¨		James Quest Hint			
+1203	 ÆÕ ¶É ÖÚ Éú		James Quest Hint			
+1204	 Áé »ê Ö® Ì³		James Quest Hint			
+1205	 ÒÇ Ê½		James Quest Hint			
+1206	 Ê¯ È¦		James Quest Hint			
+1207	 ÏÄ ¼¾ Ö® È¦		James Quest Hint			
+1208	 Ä¹ µØ		James Quest Hint			
+1209	 Ì½ Ë÷ Ä¹ µØ		James Quest Hint			
+1210	 ¾Þ ÈË Áì µØ		James Quest Hint			
+1211	 ¾Þ Áú		James Quest Hint			
+1212	 ÈÎ Îñ		Statuette			
+1213	 ÈÎ Îñ		Statuette			
+1214	 ÈÎ Îñ		Painting			
+1215	 ÈÎ Îñ		Painting			
+1216	 ÈÎ Îñ		Arcomage			
+1217	 ÈÎ Îñ		Arcomage			
+1218	 Ê¯ Í· ³Ç		James Quest Hint			
+1219	 Ê¯ Í· ³Ç		James Quest Hint			
+1220	 Äá ¸ù Ö® Â·		James Quest Hint			
+1221	 Ð° Êõ Ê¦ µÄ Ëí µÀ		James Quest Hint			
+1222	 Ä¹ µØ		James Quest Hint			
+1223	 ÃÀ ¶Å É¯		James Quest Hint			
+1224	 ºì °« ÈË ¿ó ¾®		James Quest Hint			
+1225	 Ê¯ Ïñ		James Quest Hint			
+1226	 Ê¯ Í· ³Ç		James Quest Hint			
+1227	 ¹þ ÃÉ ´ú ¶û		James Quest Hint			
+1228	 ±© ¶¯		James Quest Hint			
+1229	 ¹þ ÃÉ ´ú ¶û ³Ç ±¤		James Quest Hint			
+1230	 Í¼ À­ Àû °º ¶´ Ñ¨		James Quest Hint			
+1231	 Ðü ÑÂ ¶´ Ñ¨		James Quest Hint			
+1232	 Àû ÎÄ Ë¹ µÂ Òª Èû		James Quest Hint			
+1233	 Õ½ Àû Æ·		James Quest Hint			
+1234	 µ÷ ½â ÈË		James Quest Hint			
+1235	 ÊÕ »ñ Óë Ê§ Âä		James Quest Hint			
+1236	 ¾ñ Ôñ		James Quest Hint			
+1237	 ¾» ÐÄ ÌÃ		James Quest Hint			
+1238	 Èû À³ Ë¹ ÌØ		James Quest Hint			
+1239	 µØ Óü ³Ç		James Quest Hint			
+1240	 Èû À³ Ë¹ ÌØ		James Quest Hint			
+1241	 Éñ ÃØ µÄ É± ÊÖ		James Quest Hint			
+1242	 ¿Ë Àï ¸ù ¶ñ Ä§		James Quest Hint			
+1243	 Õ½ Õù Ê§ °Ü		James Quest Hint			
+1244	 ±» ¸Ï ³ö µÏ ÑÅ		James Quest Hint			
+1245	 ¶÷ Âå Ë¹ µÄ ÂÞ À¼ µÂ		James Quest Hint			
+1246	 Áé »ê Ö® Ì³		James Quest Hint			
+1247	 Ð° Êõ Ê¦		James Quest Hint			
+1248	 ¿Æ À¼ ¿Ë µÄ ·À »¤ ¶Ü		James Quest Hint			
+1249	 ×¨ ¼Ò ¼¶ ½Ì Ê¦		James Quest Hint			
+1250	 Ê§ ×Ù µÄ ÈË ÃÇ		James Quest Hint			
+1251	 ²¼ À­ ¿¨ ´ï µÄ Ô¶ ¾à Àë ´« ËÍ Æ÷		James Hint			
+1252	 ³Ç ±¤ Éý ¼¶		Butler Text			
+1253	 Ä§ ·¨ Öù		Butler Text			
+1254	 Õù Òé Ö® µØ		Butler Text			
+1255	 ¹þ ÃÉ ´ú ¶û ³Ç ±¤		Butler Text			
+1256	 ·é »ð		Spy Text			
+1257	 Âô ³ö Í¼ À­ Àû °º Ä¾ ÁÏ		Trading Triangle			
+1258	200 ¸ö ½ð ±Ò Âò Ê¨ ðÕ Óð Ã«		Trading Triangle			
+1259	 Âô ³ö ¼ý Í·		Trading Triangle			
+1260	200 ¸ö ½ð ±Ò Âò Í¼ À­ Àû °º Ä¾ ÁÏ		Trading Triangle			
+1261	 Âô ³ö Ê¨ ðÕ Óð Ã«		Trading Triangle			
+1262	2000 ¸ö ½ð ±Ò Âò ¿ó É°	1	Trading Triangle			
+1263	 Âô ³ö ¶÷ Âå Ë¹ ÃÀ ¾Æ	1	Trading Triangle			
+1264	2000 ¸ö ½ð ±Ò Âò ²£ Á§ Æ¿	2	Trading Triangle			
+1265	 Âô ³ö ¿ó É°	2	Trading Triangle			
+1266	2000 ¸ö ½ð ±Ò Âò ¶÷ Âå Ë¹ ÃÀ ¾Æ	3	Trading Triangle			
+1267	 Âô ³ö ²£ Á§ Æ¿	3	Trading Triangle			
+1268	 ´¬ ÆÚ		James Hint			
+1269	 Äá ¸ù Ëí µÀ		James Hint			
+1270	 ×ö Âò Âô		James Hint			
+1271	 ¼Ó ËÙ Ä§ ·¨ Öù					
+1272	 ´ó µØ Ö® Öù					
+1273	 ÖÚ Éñ Ö® Öù					
+1274	 ·À Óù Ö® Öù					
+1275	 Á÷ Ë® Ö® Öù					
+1276	 ÁÒ »ð Ö® Öù					
+1277	 Ó¢ ÐÛ Ö® Öù					
+1278	 ²» Ðà Ö® Öù					
+1279	 ÐÄ ÖÇ Ö® Öù					
+1280	 Ö« Ìå Ö® Öù					
+1281	 Ê¯ ·ô Ö® Öù					
+1282	 ¿Õ Æø Ö® Öù					
+1283	 Á¦ Á¿ ÓÎ Ï·					
+1284	 ÄÍ Á¦ ÓÎ Ï·					
+1285	 ÖÇ Á¦ ÓÎ Ï·					
+1286	 ¸ö ÐÔ ÓÎ Ï·					
+1287	 ¾« È· ÓÎ Ï·					
+1288	 ËÙ ¶È ÓÎ Ï·					
+1289	 ÐÒ ÔË ÓÎ Ï·					
+1290	 Á¦ Á¿ ¾º Èü					
+1291	 ÄÍ Á¦ ¾º Èü					
+1292	 ÖÇ Á¦ ¾º Èü					
+1293	 ¸ö ÐÔ ¾º Èü					
+1294	 ¾« È· ¾º Èü					
+1295	 ËÙ ¶È ¾º Èü					
+1296	 ÐÒ ÔË ¾º Èü					
+1297	 Á¦ Á¿ ²â ÊÔ					
+1298	 ÄÍ Á¦ ²â ÊÔ					
+1299	 ÖÇ Á¦ ²â ÊÔ					
+1300	 ¸ö ÐÔ ²â ÊÔ					
+1301	 ¾« È· ²â ÊÔ					
+1302	 ËÙ ¶È ²â ÊÔ					
+1303	 ÔË Æø ²â ÊÔ					
+1304	 Á¦ Á¿ Ìô Õ½					
+1305	 ÄÍ Á¦ Ìô Õ½					
+1306	 ÖÇ Á¦ Ìô Õ½					
+1307	 ¸ö ÐÔ Ìô Õ½					
+1308	 ¾« È· Ìô Õ½					
+1309	 ËÙ ¶È Ìô Õ½					
+1310	 ÔË Æø Ìô Õ½					
+1311	 ÅÑ Í½ £¡					
+1312	 ¼À Ì³					
+1313	 Ìô Õ½					
+1314	 ÐÅ ¼þ					
+1315	 ÐÅ ¼þ					
+1316	 ´ó ¶ú ¹Ö Ç° ÉÚ					
+1317	 ´ó ¶ú ¹Ö Ç° ÉÚ					
+1318	 Ð° ¶ñ ¼À ìë					
+1319	 Ð° ¶ñ ¼À ìë					
+1320	 Ð° ¶ñ ¼À ìë					
+1321	 Ãù ÔÂ					
+1322	 ÐÅ ¼þ					
+1323	 ¿Æ ¶û ±¾ ¾ô Ê¿					
+1324	 ¿Æ ¶û ±¾ ¾ô Ê¿					
+1325	 ¸ß ¼¶ Òé »á		Need text for speaking with Wilbur Humphrey before talking to the traitor.			
+1326	 Ê® ×Ö ¾ü					
+1327	 Ê® ×Ö ¾ü					
+1328	 Ó¢ ÐÛ					
+1329	 Ó¢ ÐÛ					
+1330	 Ó¢ ÐÛ					
+1331	 Ñá ¾ë					
+1332	 Âí Ï· ÍÅ					
+1333	Missing Text 20					
+1334	 Çë Ô­ ÁÂ £¬ ±Ý ÏÂ					
+1335	 Çë Ô­ ÁÂ £¬ ±Ý ÏÂ					
+1336	Missing Text 23					
+1337	 Âí Ï· ÍÅ					
+1338	 °¢ »ù °Í µÂ Êå Êå					
+1339	 µÚ Èý Ö» ÑÛ					
+1340	 °¢ »ù °Í µÂ Êå Êå					
+1341	 °¢ »ù °Í µÂ Êå Êå		What should we do with the Archibald statue and the release method?			
+1342	 ¿Õ					
+1343	 ÊÍ ·Å °¢ »ù °Í µÂ					
+1344	 Òø ¶æ					
+1345	 µÁ Ôô Íõ ×Ó					
+1346	 µÁ Ôô Íõ ×Ó					
+1347	 ¸ß ¼¶ Òé »á					
+1348	 Éñ ¸¦					
+1349	 Éñ ¸¦					
+1350	 ´ó Ö÷ ½Ì					
+1351	 ´ó Ö÷ ½Ì					
+1352	 ´ó Ö÷ ½Ì					
+1353	 ´ó ·¨ Ê¦					
+1354	 Ì½ ÏÕ Àú ³Ì					
+1355	 ÈÎ Îñ					
+1356	 ÈÎ Îñ					
+1357	Put Text Here 44		Shrine event			
+1358	 ÎÒ ¶ª ÁË ÖØ Òª Îï ¼þ					
+1359	 °µ Ê¾					
+1360	 ÆÕ ¶É ÖÚ Éú					
+1361	 ÆÕ ¶É ÖÚ Éú					
+1362	 ÆÕ ¶É ÖÚ Éú					
+1363	Put Text Here 50		Shrine event			
+1364	 Òé »á ÈÎ Îñ					
+1365	 Òé »á ÈÎ Îñ					
+1366	 ´Ë ´¦ ·Å Õý ÎÄ		Telepathy			
+1367	 Òé »á ÈÎ Îñ					
+1368	 Î× Ê¦					
+1369	 Î× Ê¦					
+1370	Put Text Here 57		Fountain event			
+1371	 Î× Ê¦					
+1372	 Ä§ ·¨ ´ó Ê¦					
+1373	 Ä§ ·¨ ´ó Ê¦					
+1374	 Òé »á ÈÎ Îñ					
+1375	 Òé »á ÈÎ Îñ					
+1376	Put Text Here 63		Mini-dungeon event			
+1377	 Òé »á ÈÎ Îñ					
+1378	 ºÀ ÏÀ					
+1379	 ÈÎ Ãü					
+1380	 ºÀ ÏÀ					
+1381	 ºÀ ÏÀ					
+1382	 ºÀ ÏÀ					
+1383	 ÓÂ Ê¿					
+1384	 ÓÂ Ê¿					
+1385	 ÓÂ Ê¿					
+1386	 Ë® ¾§ µØ µã					
+1387	 ¼Ç Òä Ë® ¾§					
+1388	Put Text Here 75		Memory Crystal event			
+1389	 ¿Ø ÖÆ ÖÐ ÐÄ					
+1390	 ¿Ë Àï ¸ù ÈË					
+1391	 ¹Å ¼£					
+1392	 Ç® ²Æ					
+1393	 Ç® ²Æ					
+1394	 Ç® ²Æ					
+1395	 ¸ß ¼¶ µÂ Â³ ÒÁ					
+1396	 ¸ß ¼¶ µÂ Â³ ÒÁ					
+1397	 ´ó µÂ Â³ ÒÁ					
+1398	 ´ó µÂ Â³ ÒÁ					
+1399	 ´ó µÂ Â³ ÒÁ					
+1400	 ¶¬ Ìì					
+1401	 ¶¬ Ìì					
+1402	 ¶¬ Ìì					
+1403	 ¶¬ Ìì					
+1404	 ¸ß ¼¶ Éä ÊÖ					
+1405	 ¸ß ¼¶ Éä ÊÖ					
+1406	 Éñ ¼ý ÊÖ					
+1407	 Éñ ¼ý ÊÖ					
+1408	 ¶¬ Ìì					
+1409	 ¶¬ Ìì					
+1410	 ¶¬ Ìì					
+1411	 ÎÒ µÄ ·ý Â²					
+1412	 ¹Ì ¶¨ ¼Û ¸ñ					
+1413	 Éñ ¼ý ÊÖ					
+1414	 Ï¯ ¶û Íß ÍÐ ¶÷ µÄ ¾Ü ¾ø					
+1415	 Ï¯ ¶û Íß ÍÐ ¶÷ µÄ ÖÎ Óú					
+1416	 »Ê ¹Ú µÄ ·þ Îñ					
+1417	 ¹æ ¶¨					
+1418	 ¼Û ¸ñ					
+1419	 Ö¸ µ¼					
+1420	 »¨ ·Ñ50 ½ð ±Ò ²Î ¼Ó Á¦ Á¿ ±È Èü					
+1421	 »¨ ·Ñ50 ½ð ±Ò ²Î ¼Ó ÄÍ Á¦ ±È Èü					
+1422	 »¨ ·Ñ50 ½ð ±Ò ²Î ¼Ó ËÙ ¶È ±È Èü					
+1423	 »¨ ·Ñ50 ½ð ±Ò ²Î ¼Ó ¾« È· ±È Èü					
+1424	 »¨ ·Ñ50 ½ð ±Ò ²Î ¼Ó ÔË Æø ±È Èü					
+1425	 »¨ ·Ñ50 ½ð ±Ò ²Î ¼Ó ÖÇ Á¦ ±È Èü					
+1426	 Âà					
+1427	 ¹Ç Í·					
+1428	 Ìì È» ´Å Ê¯					
+1429	 Ó¥ Éí Å® Ñý µÄ Óð Ã«					
+1430	 ½ð ×Ö Ëþ					
+1431	 Í° ×° ¾Æ					
+1432	 ÑÀ ³Ý					
+1433	 ËÄ Ò¶ ²Ý					
+1434	 çú çê					
+1435	 ÈÎ Îñ					
+1436	 ÈÎ Îñ					
+1437	 »¶ Ó­					
+1438	 Äê Çá Åç Èª					
+1439	 Ö¸ µ¼					
+1440	 Ö¸ µ¼					
+1441	 Ö¸ µ¼					
+1442	 ÓÃ ½ð ×Ö Ëþ ½» »» îø ¼×					
+1443	 ÓÃ ½ð ×Ö Ëþ ½» »» ±ø Æ÷					
+1444	 ÓÃ ½ð ×Ö Ëþ ½» »» Îï Æ·					
+1445	 ÓÃ ¾Æ Í° »» îø ¼×					
+1446	 ÓÃ ¾Æ Í° »» ±ø Æ÷					
+1447	 ÓÃ ¾Æ Í° »» Îï Æ·					
+1448	 ÓÃ Éñ µÆ »» Öé ±¦					
+1449	 ´Ë ´¦ ·Å Õý ÎÄ					
+1450	 ´Ë ´¦ ·Å Õý ÎÄ					
+1451	 ´Ë ´¦ ·Å Õý ÎÄ					
+1452	 ´Ë ´¦ ·Å Õý ÎÄ					
+1453	 ´Ë ´¦ ·Å Õý ÎÄ					
+1454	 ´Ë ´¦ ·Å Õý ÎÄ					
+1455	 ´Ë ´¦ ·Å Õý ÎÄ					
+1456	 ´Ë ´¦ ·Å Õý ÎÄ					
+1457	 ´Ë ´¦ ·Å Õý ÎÄ					
+1458	 ´Ë ´¦ ·Å Õý ÎÄ					
+1459	 ´Ë ´¦ ·Å Õý ÎÄ					
+1460	 ´Ë ´¦ ·Å Õý ÎÄ					
+1461	 ´Ë ´¦ ·Å Õý ÎÄ					
+1462	 ´Ë ´¦ ·Å Õý ÎÄ					
+1463	 ´Ë ´¦ ·Å Õý ÎÄ					
+1464	 ´Ë ´¦ ·Å Õý ÎÄ					
+1465	 ´Ë ´¦ ·Å Õý ÎÄ					
+1466	 ´Ë ´¦ ·Å Õý ÎÄ					
+1467	 ´Ë ´¦ ·Å Õý ÎÄ					
+1468	 ´Ë ´¦ ·Å Õý ÎÄ					
+1469	 ´Ë ´¦ ·Å Õý ÎÄ					
+1470	 ´Ë ´¦ ·Å Õý ÎÄ					
+1471	 ´Ë ´¦ ·Å Õý ÎÄ					
+1472	 ´Ë ´¦ ·Å Õý ÎÄ					
+1473	 ´Ë ´¦ ·Å Õý ÎÄ					
+1474	 ´Ë ´¦ ·Å Õý ÎÄ					
+1475	 ´Ë ´¦ ·Å Õý ÎÄ					
+1476	 ´Ë ´¦ ·Å Õý ÎÄ					
+1477	 ´Ë ´¦ ·Å Õý ÎÄ					
+1478	 ´Ë ´¦ ·Å Õý ÎÄ					
+1479	 ´Ë ´¦ ·Å Õý ÎÄ					
+1480	 ´Ë ´¦ ·Å Õý ÎÄ					
+1481	 ´Ë ´¦ ·Å Õý ÎÄ					
+1482	 ´Ë ´¦ ·Å Õý ÎÄ					
+1483	 ´Ë ´¦ ·Å Õý ÎÄ					
+1484	 ´Ë ´¦ ·Å Õý ÎÄ					
+1485	 ´Ë ´¦ ·Å Õý ÎÄ					
+1486	 ´Ë ´¦ ·Å Õý ÎÄ					
+1487	 ´Ë ´¦ ·Å Õý ÎÄ					
+1488	 ´Ë ´¦ ·Å Õý ÎÄ					
+1489	 ´Ë ´¦ ·Å Õý ÎÄ					
+1490	 ´Ë ´¦ ·Å Õý ÎÄ					
+1491	 ´Ë ´¦ ·Å Õý ÎÄ					
+1492	 ´Ë ´¦ ·Å Õý ÎÄ					
+1493	 ´Ë ´¦ ·Å Õý ÎÄ					
+1494	 ´Ë ´¦ ·Å Õý ÎÄ					
+1495	 ´Ë ´¦ ·Å Õý ÎÄ					
+1496	 ´Ë ´¦ ·Å Õý ÎÄ					
+1497	 ´Ë ´¦ ·Å Õý ÎÄ					
+1498	 ´Ë ´¦ ·Å Õý ÎÄ					
+1499	 ´Ë ´¦ ·Å Õý ÎÄ					
+1500	 ´Ë ´¦ ·Å Õý ÎÄ					
+1501	 ´Ë ´¦ ·Å Õý ÎÄ					
+1502	 ´Ë ´¦ ·Å Õý ÎÄ					
+1503	 ´Ë ´¦ ·Å Õý ÎÄ					
+1504	 ´Ë ´¦ ·Å Õý ÎÄ					
+1505	 ´Ë ´¦ ·Å Õý ÎÄ					
+1506	 ´Ë ´¦ ·Å Õý ÎÄ					
+1507	 ´Ë ´¦ ·Å Õý ÎÄ					
+1508	 ´Ë ´¦ ·Å Õý ÎÄ					
+1509	 ´Ë ´¦ ·Å Õý ÎÄ					
+1510	 ´Ë ´¦ ·Å Õý ÎÄ					
+1511	 ´Ë ´¦ ·Å Õý ÎÄ					
+1512	 ´Ë ´¦ ·Å Õý ÎÄ					
+1513	 ÊÖ ÕÈ ×¨ ¼Ò Ñµ Á·		Expert staff training			
+1514	 ÊÖ ÕÈ ´ó Ê¦ Ñµ Á·		Master staff training			
+1515	 ³¤ ½£ ×¨ ¼Ò Ñµ Á·		Expert sword training			
+1516	 ³¤ ½£ ´ó Ê¦ Ñµ Á·		Master sword training			
+1517	 Ø° Ê× ×¨ ¼Ò Ñµ Á·		Expert dagger training			
+1518	 Ø° Ê× ´ó Ê¦ Ñµ Á·		Master dagger training			
+1519	 Õ½ ¸« ×¨ ¼Ò Ñµ Á·		Expert Axe training			
+1520	 Õ½ ¸« ´ó Ê¦ Ñµ Á·		Master axe training			
+1521	 ³¤ Ã¬ ×¨ ¼Ò Ñµ Á·		Expert spear training			
+1522	 ³¤ Ã¬ ´ó Ê¦ Ñµ Á·		Master spear training			
+1523	 ¹­ ¼ý ×¨ ¼Ò Ñµ Á·		Expert bow training			
+1524	 ¹­ ¼ý ´ó Ê¦ Ñµ Á·		Master bow training			
+1525	 ¶¤ ´¸ ×¨ ¼Ò Ñµ Á·		Expert mace training			
+1526	 ¶¤ ´¸ ´ó Ê¦ Ñµ Á·		Master mace training			
+1527	 ÉÏ ¹Å ±ø Æ÷ ×¨ ¼Ò		Expert blaster training			
+1528	 ÉÏ ¹Å ±ø Æ÷ ´ó Ê¦		Master Blasters			
+1529	 ¶Ü ÅÆ ×¨ ¼Ò Ñµ Á·		Expert shield training			
+1530	 ¶Ü ÅÆ ´ó Ê¦ Ñµ Á·		Master shield training			
+1531	 Æ¤ ¼× ×¨ ¼Ò Ñµ Á·		Expert leather training			
+1532	 Æ¤ ¼× ´ó Ê¦ Ñµ Á·		Master leather training			
+1533	 Ëø ¼× ×¨ ¼Ò Ñµ Á·		Expert chain armor training			
+1534	 Ëø ¼× ´ó Ê¦ Ñµ Á·		Master chain armor training			
+1535	 ¸Ö ¼× ×¨ ¼Ò Ñµ Á·		Expert plate armor training			
+1536	 ¸Ö ¼× ´ó Ê¦ Ñµ Á·		Master plate armor training			
+1537	 »ð Ïµ Ä§ ·¨ ×¨ ¼Ò		Expert Fire magic training			
+1538	 »ð Ïµ Ä§ ·¨ ´ó Ê¦		Master Fire magic training			
+1539	 ¿Õ Æø Ä§ ·¨ ×¨ ¼Ò		Expert Air magic training			
+1540	 ¿Õ Æø Ä§ ·¨ ´ó Ê¦		Master Air magic training			
+1541	 Ë® Ïµ Ä§ ·¨ ×¨ ¼Ò		Expert water magic training			
+1542	 Ë® Ïµ Ä§ ·¨ ´ó Ê¦		Master water magic training			
+1543	 ÍÁ Ïµ Ä§ ·¨ ×¨ ¼Ò		Expert earth magic training			
+1544	 ÍÁ Ïµ Ä§ ·¨ ´ó Ê¦		Master earth magic training			
+1545	 Áé »ê Ä§ ·¨ ×¨ ¼Ò		Expert spirit magic training			
+1546	 Áé »ê Ä§ ·¨ ´ó Ê¦		Master spirit magic training			
+1547	 ÐÄ ÖÇ Ä§ ·¨ ×¨ ¼Ò		Expert mind magic training			
+1548	 ÐÄ ÖÇ Ä§ ·¨ ´ó Ê¦		Master mind magic training			
+1549	 Ö« Ìå Ä§ ·¨ ×¨ ¼Ò		Expert body magic training			
+1550	 Ö« Ìå Ä§ ·¨ ´ó Ê¦		Master body magic training			
+1551	 ¹â Ã÷ Ä§ ·¨ ×¨ ¼Ò		Expert light magic training			
+1552	 ¹â Ã÷ Ä§ ·¨ ´ó Ê¦		Master light magic training			
+1553	 °µ ºÚ Ä§ ·¨ ×¨ ¼Ò		Expert dark magic training			
+1554	 °µ ºÚ Ä§ ·¨ ´ó Ê¦		Master dark magic training			
+1555	 ¼ø ¶¨ Êõ ×¨ ¼Ò Ñµ Á·		Expert identify item training			
+1556	 ¼ø ¶¨ Êõ ´ó Ê¦ Ñµ Á·		Master identify item training			
+1557	 ¾­ ÉÌ Êõ ×¨ ¼Ò Ñµ Á·		Expert merchant training			
+1558	 ¾­ ÉÌ Êõ ´ó Ê¦ Ñµ Á·		Master merchant training			
+1559	 Ô® »¤ Êõ ×¨ ¼Ò Ñµ Á·		Expert repair training			
+1560	 Ô® »¤ Êõ ´ó Ê¦ Ñµ Á·		Master repair training			
+1561	 ½¡ Éí Êõ ×¨ ¼Ò Ñµ Á·		Expert body building training			
+1562	 ½¡ Éí Êõ ´ó Ê¦ Ñµ Á·		Master body building training			
+1563	 Ú¤ Ïë Êõ ×¨ ¼Ò Ñµ Á·		Expert meditation training			
+1564	 Ú¤ Ïë Êõ ´ó Ê¦ Ñµ Á·		Master meditation training			
+1565	 ¶´ ²ì Êõ ×¨ ¼Ò Ñµ Á·		Expert perception training			
+1566	 ¶´ ²ì Êõ ´ó Ê¦ Ñµ Á·		Master perception training			
+1567	 Á¶ ½ð Êõ ×¨ ¼Ò		Expert Alchemy			
+1568	 Á¶ ½ð Êõ ´ó Ê¦		Master Alchemy			
+1569	 ²ð Ð¶ Êõ ×¨ ¼Ò Ñµ Á·		Expert disarm traps training			
+1570	 ²ð Ð¶ Êõ ´ó Ê¦ Ñµ Á·		Master disarm traps training			
+1571	 Ñ§ Ï° Êõ ×¨ ¼Ò Ñµ Á·		Expert learning training			
+1572	 Ñ§ Ï° Êõ ´ó Ê¦ Ñµ Á·		Master learning training			
+1573	 ½Ü Ë¹ Åå ¡¤ À³ Ë¹		Location of Staff Master Teacher			
+1574	 ¸Ç ¡¤ ºº ÆÕ ¶Ù		Location of Sword Master Teacher			
+1575	 Öì ¶û Ë¹ ¡¤ Ã× ¶û Ë¹		Location of Dagger Master Teacher			
+1576	 °¢ Î¬ Àï ¡¤ ÐÁ Î÷ ÑÇ		Location of Axe Master Teacher			
+1577	 ²® ¶Ù ¡¤ ÂÞ µÂ ¸£ µÂ		Location of Spear Master Teacher			
+1578	 µÂ Ë¹ ÃÉ µÂ ¡¤ Íþ ÀÕ		Location of Bow Master Teacher			
+1579	 °£ ÂÞ ¡¤ °Â Ë¹ ÌØ Âü		Location of Mace Master Teacher			
+1580	 Àî ¿Ë Ë¹ À­		Location of Blaster Master Teacher			
+1581	 ²¼ ÀÊ ¡¤ Ã· ¿Ë		Location of Shield Master Teacher			
+1582	 °¢ Â× ¡¤ Éª ÀÕ		Location of Leather Master Teacher			
+1583	 ´÷ Î¬ ¡¤ ·Ñ Ê²		Location of Chain Master Teacher			
+1584	 ¸£ À× Ë¹ ÌØ ¡¤ Èø µÂ Ë¹		Location of Plate Master Teacher			
+1585	 ½Ü Ôú ±´ ¶û		Location of Fire Master Teacher			
+1586	 ¿¼ ¡¤ Èø Â×		Location of Air Master Teacher			
+1587	 ¹þ ÆÕ ¡¤ ¿Æ ÁÖ Ë¹		Location of Water Master Teacher			
+1588	 Àî Î¬ ¡¤ ²® ÌØ ÄÉ		Location of Earth Master Teacher			
+1589	 ±Ï Ð¤ ÆÕ ¡¤ Òò ¿ü Ë¹ ÌØ		Location of Spirit Master Teacher			
+1590	 Ì¹ ¶÷ ¡¤ ÂÞ ÆÕ		Location of Mind Master Teacher			
+1591	 ¼ª ¶û ²® ÌØ ¡¤ ºº Ä¬		Location of Body Master Teacher			
+1592	 Ææ ÂÞ Äá		Location of Light Master Teacher			
+1593	 ËÕ ÀÊ Âú		Location of Dark Master Teacher			
+1594	 ºº Ë¹ ¡¤ ¼ª ¸£ µÂ		Location of Identify Master Teacher			
+1595	 Íþ ¶û ¡¤ °Â ÌØ Âü		Location of Merchant Master Teacher			
+1596	 Èð °² ¡¤ ÌØ Àï ¿Ë ¶û		Location of Repair Master Teacher			
+1597	 ¼Ö É­ ¡¤ Ì© ¸£ ÀÕ		Location of Body Building Master Teacher			
+1598	 Åµ Àï °Â ¡¤ °¢ Àï ¸ñ ÄÉ		Location of Meditation Master Teacher			
+1599	 Âó ¿Ë ÂÞ ¡¤ ¼Ó Àï ¹Ï À­		Location of Perception Master Teacher			
+1600	 ¼Ö ¿Ë Ë¹ ¡¤ ¿Æ »ô		Location of Diplomacy Master Teacher			
+1601	 ¸Ç ±´ ¡¤ À³ Ë¹ ÌØ		Location of Disarm Master Teacher			
+1602	 Ô¼ º² ¡¤ ÌØ ¿Ë		Location of Learning Master Teacher			
+1603	 ÈÎ Îñ					
+1604	 ÈÎ Îñ					
+1605	 ÈÎ Îñ					
+1606	 ÈÎ Îñ					
+1607	 Òø ¶æ					
+1608	 Òø ¶æ					
+1609	 ÈÎ Îñ					
+1610	 ÈÎ Îñ					
+1611	 Òø É« ÐÖ µÜ »á					
+1612	 Ã× À­ ´ï					
+1613	 Ê® ×Ö ¼Ü					
+1614	 Ë¹ ÄÉ ¸ñ µÄ Ô¿ ³×					
+1615	 Òþ ²Ø µÄ ÎÄ ÕÂ					
+1616	 ÈÎ Îñ					
+1617	 ÈÎ Îñ					
+1618	 ÈÎ Îñ					
+1619	 ÈÎ Îñ					
+1620	Put Text Here 307					
+1621	 ÈÎ Îñ					
+1622	 ÈÎ Îñ					
+1623	 ÈÎ Îñ					
+1624	 ÈÎ Îñ					
+1625	 ÑÛ ¾µ Éß µ°					
+1626	 ÈÎ Îñ					
+1627	 ÈÎ Îñ					
+1628	 ÈÎ Îñ					
+1629	 ÈÎ Îñ					
+1630	 ÈÎ Îñ					
+1631	 ÈÎ Îñ					
+1632	 ×£ ºØ					
+1633	 ×£ ºØ					
+1634	 ²¼ À³ ¿Ë ¿¤					
+1635	 ÈÎ Îñ					
+1636	 ÈÎ Îñ					
+1637	 ÈÎ Îñ					
+1638	 ÈÎ Îñ					
+1639	 Òõ Ó° ½Ì					
+1640	 ÐÂ Ë÷ Æ¥ ¸ñ Õò					
+1641	 ÈÎ Îñ					
+1642	 ÈÎ Îñ					
+1643	 ¾È Ãü £¡					
+1644	 ÈÎ Îñ					
+1645	 ÈÎ Îñ					
+1646	 ÌÓ ÅÜ					
+1647	 ÈÎ Îñ					
+1648	 ÈÎ Îñ					
+1649	 ×£ ºØ					
+1650	 ×£ ºØ					
+1651	 ÀÇ ÈË					
+1652	 ´¿ ½à Õä Öé					
+1653	 ÈÎ Îñ					
+1654	 ÈÎ Îñ					
+1655	 ´¿ ½à Õä Öé					
+1656	Put Text Here 343					
+1657	Put Text Here 344					
+1658	Put Text Here 345					
+1659	Put Text Here 346					
+1660	 ÈË ÃÇ					
+1661	 ×£ ºØ					
+1662	 ÖÒ ¸æ					
+1663	 ¼è ¿à µÄ ¹¤ ×÷					
+1664	 ÈÎ Îñ					
+1665	 ÈÎ Îñ					
+1666	 °¢ »ù °Í µÂ					
+1667	 ÈÎ Îñ					
+1668	 ÈÎ Îñ					
+1669	 ÈÎ Îñ					
+1670	 ÈÎ Îñ					
+1671	 ÆÍ ÈË					
+1672	 ¹Ö Îï					
+1673	 ÈÎ Îñ					
+1674	Put Text Here 361					
+1675	 Ê® ×Ö ¼Ü					
+1676	 Ê® ×Ö ¼Ü					
+1677	 Ê® ×Ö ¼Ü					
+1678	 Ì« Ñô ÒÇ Ê½					
+1679	 ÔÂ ÁÁ ÒÇ Ê½					
+1680	Put Text Here 367					
+1681	Put Text Here 368					
+1682	Put Text Here 369					
+1683	Put Text Here 370					
+1684	Put Text Here 371					
+1685	Put Text Here 372					
+1686	Put Text Here 373					
+1687	Put Text Here 374					
+1688	 °Ý ¼û Éñ Ê¹					
+1689	 °Ý ¼û Éñ Ê¹					
+1690	 °Ý ¼û Éñ Ê¹					
+1691	 °Ý ¼û Éñ Ê¹					
+1692	 °Ý ¼û Éñ Ê¹					
+1693	 °Ý ¼û Éñ Ê¹					
+1694	 Ôª ËØ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1695	 ×Ô ÎÒ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1696	 º£ µÁ Ö® ³² ³É Ô±					
+1697	 ±£ »¤ ·þ Îñ ³É Ô±					
+1698	 ×ß Ë½ Õß ³É Ô±					
+1699	 ÖÕ ¼« Àû ÈÐ ³É Ô±					
+1700	 Ë« ÈÐ ½£ ·æ ³É Ô±					
+1701	 À× öª Õð Å­ ³É Ô±					
+1702	 ¿Õ Æø Ä§ ·¨ ÐÐ »á ³É Ô±					
+1703	 ÍÁ Ïµ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1704	 »ð Ïµ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1705	 Ë® Ïµ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1706	 Ö« Ìå Ä§ ·¨ ÐÐ »á ³É Ô±					
+1707	 ÐÄ ÖÇ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1708	 Áé »ê Ä§ ·¨ ÐÐ »á ³É Ô±					
+1709	 ¹â Ã÷ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1710	 °µ ºÚ Ä§ ·¨ ÐÐ »á ³É Ô±					
+1711	 ÈÎ Îñ					
+1712	 Ñ° ÕÒ Ðü ÉÍ Éú Îï					
+1713	 »ñ µÃ ¾º ¼¼ ³¡ ½± Àø					
+1714	 ÖÎ ÁÆ ¶Ó Îé					
+1715	 Éú ³É Ê³ Îï					
+1716	 Ê© Õ¹ ·É ÐÐ Ææ Êõ					
+1717	 Ê© Õ¹ Áè ²¨ Î¢ ²½					
+1718	 Ê© Õ¹ Ê± ¿Õ Ö® ÃÅ					
+1719	 Ê© Õ¹ Ê¥ Áé ÓÓ ×ô					
+1720	 Ê© Õ¹ Ìì ´Í Éñ Á¦					
+1721	 ÎÞ ÊÜ Òæ					
+1722	 ¿Õ Í°					
+1723	 Ò» Í° ºì É« Òº Ìå					
+1724	 Ò» Í° »Æ É« Òº Ìå					
+1725	 Ò» Í° À¶ É« Òº Ìå					
+1726	 Ò» Í° ³È É« Òº Ìå					
+1727	 Ò» Í° ÂÌ É« Òº Ìå					
+1728	 Ò» Í° ×Ï É« Òº Ìå					
+1729	 Ò» Í° °× É« Òº Ìå					
+1730	 ¿Õ ¹ø					
+1731	 Õô Æû Òû ÁÏ					
+1732	 ±ù Ëª Òû ÁÏ					
+1733	 Õð ²ü Òû ÁÏ					
+1734	 ¶¾ Ò© Òû ÁÏ					
+1735	 Ä§ Á¦ Òû ÁÏ					
+1736	 ·¹ ¹ø					
+1737	 ·¹ ¹ø					
+1738	 ·¹ ¹ø					
+1739	 ·¹ ¹ø					
+1740	 ·¹ ¹ø					
+1741	 Ãæ ·Û ´ü					
+1742	 Ãæ ·Û ´ü					
+1743	 ´ó ´ü ×Ó					
+1744	 ´ó ´ü ×Ó					
+1745	 ´ó ´ü ×Ó					
+1746	 ´ó ´ü ×Ó					
+1747	 ½ð ±Ò ¿Ú ´ü					
+1748	 À¬ »ø ¶Ñ					
+1749	 À¬ »ø ¶Ñ					
+1750	 Í· ¹Ç ¶Ñ					
+1751	 ËÉ É¢ Í· ¹Ç ¶Ñ					
+1752	 ×ç Öä Í· ¹Ç ¶Ñ					
+1753	 ÓÞ ´À Í· ¹Ç ¶Ñ					
+1754	 ËÀ Íö Í· ¹Ç ¶Ñ					
+1755	 Ë® Í°					
+1756	 Ë® Í°					
+1757	 Ë® Í°					
+1758	 Ë® Í°					
+1759	 Ë® ¾§					
+1760	 Ë® ¾§					
+1761	 Ë® ¾§					
+1762	 Ë® ¾§					
+1763	 Ë® ¾§					
+1764	 Ë® ¾§					
+1765	 Ë® ¾§					
+1766	 Æò Çó					
+1767	 Íþ Ð²					
+1768	 »ß Â¸					
+1769	 Äþ ËÀ ²» ´Ó				Verdant	803
+1770	 Áé »ê Ä§ ·¨ ×Ú Ê¦					
+1771	 Áé »ê Ä§ ·¨ ´ó Ê¦					
+1772	 Áé »ê Ä§ ·¨ ×¨ ¼Ò					
+1773	 ÍÁ Ïµ Ä§ ·¨ ×Ú Ê¦					
+1774	 ÍÁ Ïµ Ä§ ·¨ ´ó Ê¦					
+1775	 ÍÁ Ïµ Ä§ ·¨ ×¨ ¼Ò					
+1776	 Ë® Ïµ Ä§ ·¨ ×Ú Ê¦					
+1777	 Ë® Ïµ Ä§ ·¨ ´ó Ê¦					
+1778	 ÖØ Òª µÄ ÊÂ				Verdant	803
+1779	 Ò» µã ¶« Î÷				Verdant	803
+1780	 Äã µÄ ÈÎ Îñ				Verdant	803
+1781	 Ê± ¼ä ÂÃ ÐÐ Ö¸ ÄÏ				Verdant	803
+1782	 ¼Ö µ¤ Ä·				Verdant	803
+1783	 ¶÷ Ëþ ¸ñ Èð				Verdant	803
+1784	 ¶÷ Âå Ë¹				Verdant	803
+1785	 ¿É ÅÂ µÄ ¶« Î÷				Verdant	803
+1786	 ¿É ¿Ø ÁÑ ·ì				Verdant	803
+1787	 ½Ó ÏÂ À´ ÊÇ Ê² Ã´ £¿				Verdant	803
+1788	 Í¨ Ñ¶ ±¦ Ê¯				Verdant	803
+1789	 ¼Ó Èë £¡				Breach find friends topic	
+1790	 ÃÕ Óï				Runaway Chaos	1092
+1791	 ÃÕ Óï £¿				Runaway Chaos	1092
+1792	 ¸ú ÎÒ À´				Runaway Chaos	1092
+1793	 Åó ÓÑ £¡				Breach find friends topic
+1794	 Ê§ ¿Ø »ì ãç				Runaway Chaos	1092
+1795	Templar				Leda Rowan	381
+1796	Cast Lloyd's Beacon
+1797	Great Druid				Anthony Green	1230
+1798	Master Druid				Anthony Green	1230
+1799	Initiate Monk				Bartholomew Hume	1231
+1800	Master Monk				Li Storm	1229
+1801	Permission				Li Storm	1229
+1802	Become Master Monk				Bartholomew Hume	1231
+1803	Revenge for My friend				Li Storm	1229

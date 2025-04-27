@@ -1,0 +1,208 @@
+#	Note	Continent	Bolster kind	Spells	Summons	Weather	Bolster extra	Profs max rarity	Custom sky
+0			0	-	-		0		
+1	Dagger Wound Island	1	AllToEqual	-	-	-	9999	80	sunsetclouds
+2	Ravenshore	1	AllToEqual	x	-	x	9999	80	
+3	Alvar	1	AllToEqual	x	-	x	9999	80	
+4	Ironsand Desert	1	AllToEqual	x	-	-	9999	80	plansky3
+5	Garrote Gorge	1	AllToEqual	x	-	x	9999	80	
+6	Shadowspire	1	AllToEqual	x	x	x	9999	80	stormclds
+7	Murmurwoods	1	AllToEqual	x	x	x	9999	80	
+8	Ravage Roaming	1	AllToEqual	x	-	x	9999	80	
+9	Plane of Air	1	AllToEqual	x	x	-	75	80	plansky1
+10	Plane of Earth	1	AllToEqual	x	x	-	75	80	
+11	Plane of Fire	1	AllToEqual	x	x	-	75	80	sunsetclouds
+12	Plane of Water	1	AllToEqual	x	x	-	75	80	
+13	Regna	1	AllToEqual	x	-	x	9999	80	
+14	Plane Between Planes	1	AllToEqual	x	x	-	9999	80	
+15	Tutorial	1	0	-	-	-	9999	80	
+16	Abandoned Temple	1	AllToEqual	x	x	-	6	80	
+17	Pirate Outpost	1	AllToEqual	x	x	-	40	80	
+18	Smuggler's Cove	1	AllToEqual	x	x	-	12	80	
+19	Dire Wolf Den	1	AllToEqual	x	-	-	14	80	
+20	Merchant House of Alvar	1	0	-	-	-	9999	80	
+21	Escaton's Crystal	1	AllToEqual	x	-	-	120	80	
+22	Wasp Nest	1	AllToEqual	x	-	-	25	80	
+23	Ogre Fortress	1	AllToEqual	x	-	-	25	80	
+24	Troll Tomb	1	AllToEqual	x	-	-	20	80	
+25	Cyclops Larder	1	AllToEqual	x	-	-	36	80	
+26	Chain of Fire	1	AllToEqual	x	-	-	40	80	
+27	Dragon Hunter's Camp	1	AllToEqual	x	-	-	30	80	
+28	Dragon Cave	1	AllToEqual	x	-	-	100	80	
+29	Naga Vault	1	AllToEqual	x	-	-	45	80	
+30	Necromancers' Guild	1	AllToEqual	x	x	-	80	80	
+31	Mad Necromancer's Lab 	1	AllToEqual	x	x	-	75	80	
+32	Vampire Crypt	1	AllToEqual	x	-	-	30	80	
+33	Temple of the Sun	1	AllToEqual	x	x	-	40	80	
+34	Druid Circle	1	AllToEqual	x	-	-	180	80	
+35	Balthazar Lair	1	AllToEqual	x	-	-	30	80	
+36	Barbarian Fortress	1	AllToEqual	x	-	-	25	80	
+37	The Crypt of Korbu	1	AllToEqual	x	-	-	65	80	
+38	Castle of Air	1	AllToEqual	x	x	-	100	80	
+39	Tomb of Lord Brinne	1	AllToEqual	x	-	-	9999	80	
+40	Castle of Fire	1	AllToEqual	x	x	-	100	80	
+41	War Camp	1	AllToEqual	x	-	-	80	80	
+42	Pirate Stronghold	1	AllToEqual	x	-	-	65	80	
+43	Abandoned Pirate Keep	1	AllToEqual	x	-	-	85	80	
+44	Passage Under Regna	1	AllToEqual	x	-	-	75	80	
+45	Small Sub Pen	1	AllToEqual	x	-	-	60	80	
+46	Escaton's Palace	1	AllToEqual	x	-	-	160	80	
+47	Prison of the Lord of Air	1	AllToEqual	x	-	-	200	80	
+48	Prison of the Lord of Fire	1	AllToEqual	x	-	-	200	80	
+49	Prison of the Lord of Water	1	AllToEqual	x	-	-	200	80	
+50	Prison of the Lord of Earth	1	AllToEqual	x	-	-	200	80	
+51	Uplifted Library	1	AllToEqual	x	x	-	30	80	
+52	Dark Dwarf Compound	1	AllToEqual	x	x	-	24	80	
+53	Arena	1	AllToEqual	x	x	-	9999	80	
+54	Ancient Troll Home	1	AllToEqual	x	-	-	28	80	
+55	Grand Temple of Eep	1	AllToEqual	x	x	-	14	80	
+56	Chapel of Eep	1	AllToEqual	x	x	-	14	80	
+57	Church of Eep	1	AllToEqual	x	x	-	14	80	
+58	Old Loeb's Cave	1	AllToEqual	x	-	-	75	80	
+59	Ilsingore's Cave	1	AllToEqual	x	-	-	75	80	
+60	Yaardrake's Cave	1	AllToEqual	x	-	-	75	80	
+61	NWC	1	0	-	-	-	9999	80	
+62	Emerald Island	2	AllToEqual	x	-	-	9999	80	
+63	Harmondale	2	AllToEqual	x	-	x	9999	80	
+64	Erathia	2	AllToEqual	x	-	x	9999	80	
+65	The Tularean Forest	2	AllToEqual	x	x	x	9999	80	
+66	Deyja	2	AllToEqual	x	x	-	9999	80	
+67	The Bracada Desert	2	AllToEqual	x	x	-	9999	80	7plansky3
+68	Evenmorn Island	2	AllToEqual	x	x	x	9999	80	
+69	Mount Nighon	2	AllToEqual	x	-	x	9999	80	
+70	The Barrow Downs	2	AllToEqual	x	-	x	9999	80	
+71	The Land of the Giants	2	AllToEqual	x	x	x	9999	80	
+72	Tatalia	2	AllToEqual	x	-	x	9999	80	
+73	Avlee	2	AllToEqual	x	-	x	9999	80	
+74	Shoals	2	AllToEqual	x	-	-	9999	80	
+75	The Erathian Sewers	2	AllToEqual	x	x	-	13	80	
+76	The Maze	2	AllToEqual	x	-	-	50	80	
+77	Castle Gloaming	2	AllToEqual	x	x	-	75	80	
+78	The Temple of Baa	2	AllToEqual	x	-	-	120	80	
+79	The Arena	2	AllToEqual	x	x	-	9999	80	
+80	The Temple of the Moon	2	AllToEqual	x	x	-	4	80	
+81	Thunderfist Mountain	2	AllToEqual	x	x	-	45	80	
+82	The Tularean Caves	2	AllToEqual	x	x	-	25	80	
+83	The Titans' Stronghold	2	AllToEqual	x	x	-	65	80	
+84	The Breeding Zone	2	AllToEqual	x	x	-	40	80	
+85	The Walls of Mist	2	AllToEqual	x	x	-	45	80	
+86	Clanker's Laboratory	2	AllToEqual	x	x	-	40	80	
+87	Zokarr's Tomb	2	AllToEqual	x	x	-	18	80	
+88	The School of Sorcery	2	AllToEqual	x	x	-	50	80	
+89	Watchtower 6	2	AllToEqual	x	x	-	60	80	
+90	The Wine Cellar	2	AllToEqual	x	-	-	80	80	
+91	The Tidewater Caverns	2	AllToEqual	x	x	-	14	80	
+92	Lord Markham's Manor	2	AllToEqual	x	-	-	50	80	
+93	Grand Temple of the Moon	2	AllToEqual	x	x	-	75	80	
+94	The Mercenary Guild	2	AllToEqual	x	x	-	80	80	
+95	White Cliff Cave	2	AllToEqual	x	x	-	15	80	
+96	The Hall under the Hill	2	AllToEqual	x	x	-	1	80	
+97	The Lincoln	2	AllToEqual	x	x	-	170	80	
+98	Stone City	2	AllToEqual	x	-	-	9999	80	
+99	Celeste	2	AllToEqual	x	x	-	100	80	
+100	The Pit	2	AllToEqual	x	x	-	100	80	
+101	Colony Zod	2	AllToEqual	x	x	-	125	80	
+102	The Dragon's Lair	2	AllToEqual	x	x	-	75	80	
+103	Castle Harmondale	2	AllToEqual	-	-	-	5	80	
+104	Castle Lambent	2	AllToEqual	x	x	-	75	80	
+105	Fort Riverstride	2	AllToEqual	x	-	-	17	80	
+106	Castle Navan	2	AllToEqual	x	-	-	24	80	
+107	Castle Gryphonheart	2	AllToEqual	x	-	-	100	80	
+108	The Red Dwarf Mines	2	AllToEqual	x	x	-	35	80	
+109	Nighon Tunnels	2	AllToEqual	x	x	-	25	80	
+110	Tunnels to Eeofol	2	AllToEqual	x	x	-	80	80	
+111	The Haunted Mansion	2	AllToEqual	x	-	-	18	80	
+112	Barrow VII	2	AllToEqual	x	-	-	18	80	
+113	Barrow IV	2	AllToEqual	x	-	-	18	80	
+114	Barrow II	2	AllToEqual	x	-	-	18	80	
+115	Barrow XIV	2	AllToEqual	x	-	-	18	80	
+116	Barrow III	2	AllToEqual	x	-	-	18	80	
+117	Barrow IX	2	AllToEqual	x	-	-	18	80	
+118	Barrow VI	2	AllToEqual	x	-	-	18	80	
+119	Barrow I	2	AllToEqual	x	-	-	18	80	
+120	Barrow VIII	2	AllToEqual	x	-	-	18	80	
+121	Barrow XIII	2	AllToEqual	x	-	-	18	80	
+122	Barrow X	2	AllToEqual	x	-	-	18	80	
+123	Barrow XII	2	AllToEqual	x	-	-	18	80	
+124	Barrow V	2	AllToEqual	x	-	-	18	80	
+125	Barrow XI	2	AllToEqual	x	-	-	18	80	
+126	Barrow XV	2	AllToEqual	x	-	-	18	80	
+127	Wromthrax's Cave	2	AllToEqual	x	-	-	75	80	
+128	William Setag's Tower	2	AllToEqual	x	-	-	50	80	
+129	The Hidden Tomb	2	AllToEqual	x	-	-	40	80	
+130	The Dragon Caves	2	AllToEqual	x	-	-	75	80	
+131	The Bandit Caves	2	AllToEqual	x	-	-	12	80	
+132	The Small House	2	AllToEqual	x	-	-	100	80	
+133	Temple of the Light	2	AllToEqual	x	x	-	100	80	
+134	Temple of the Dark	2	AllToEqual	x	x	-	100	80	
+135	Grand Temple of the Sun	2	AllToEqual	x	x	-	70	80	
+136	The Hall of the Pit	2	AllToEqual	x	x	-	17	80	
+137	Sweet Water	3	AllToEqual	x	x	-	9999	80	
+138	Paradise Valley	3	AllToEqual	x	-	-	9999	80	
+139	Hermit's Isle	3	AllToEqual	x	-	-	9999	80	
+140	Kriegspire	3	AllToEqual	x	x	-	9999	80	
+141	Blackshire	3	AllToEqual	x	-	x	9999	80	
+142	Dragonsand	3	AllToEqual	x	x	-	9999	80	
+143	Frozen Highlands	3	AllToEqual	x	-	x	9999	80	
+144	Free Haven	3	AllToEqual	-	-	x	9999	80	
+145	Mire of the Damned	3	AllToEqual	x	-	x	9999	80	
+146	Silver Cove	3	AllToEqual	x	-	x	9999	80	
+147	Bootleg Bay	3	AllToEqual	x	-	x	9999	80	
+148	Castle Ironfist	3	AllToEqual	-	-	x	9999	80	
+149	Eel Infested Waters	3	AllToEqual	x	x	x	9999	80	
+150	Misty Islands	3	AllToEqual	x	x	x	9999	80	
+151	New Sorpigal	3	AllToEqual	-	-	x	9999	80	
+152	Goblinwatch	3	AllToEqual	x	-	-	4	80	
+153	Abandoned Temple	3	AllToEqual	x	x	-	5	80	
+154	Shadow Guild Hideout	3	AllToEqual	x	x	-	13	80	
+155	Hall of the Fire Lord	3	AllToEqual	x	x	-	26	80	
+156	Snergle's Caverns	3	AllToEqual	x	x	-	25	80	
+157	Dragoons' Caverns	3	AllToEqual	x	x	-	15	80	
+158	Silver Helm Outpost	3	AllToEqual	x	x	-	22	80	
+159	Shadow Guild	3	AllToEqual	x	x	-	100	80	
+160	Snergle's Iron Mines	3	AllToEqual	x	x	-	25	80	
+161	Dragoons' Keep	3	AllToEqual	x	x	-	25	80	
+162	Corlagon's Estate	3	AllToEqual	x	x	-	14	80	
+163	Silver Helm Stronghold	3	AllToEqual	x	x	-	40	80	
+164	The Monolith	3	AllToEqual	x	x	-	25	80	
+165	Tomb of Ethric the Mad	3	AllToEqual	x	x	-	30	80	
+166	Icewind Keep	3	AllToEqual	x	x	-	25	80	
+167	Warlord's Fortress	3	AllToEqual	x	x	-	50	80	
+168	Lair of the Wolf	3	AllToEqual	x	x	-	35	80	
+169	Gharik's Forge	3	AllToEqual	x	x	-	35	80	
+170	Agar's Laboratory	3	AllToEqual	x	x	-	90	80	
+171	Caves of the Dragon Riders	3	AllToEqual	x	x	-	100	80	
+172	Temple of Baa	3	AllToEqual	x	-	-	13	80	
+173	Temple of the Fist	3	AllToEqual	x	-	-	13	80	
+174	Temple of Tsantsa	3	AllToEqual	x	-	-	14	80	
+175	Temple of the Sun	3	AllToEqual	x	x	-	22	80	
+176	Temple of the Moon	3	AllToEqual	x	x	-	23	80	
+177	Supreme Temple of Baa	3	AllToEqual	x	x	-	65	80	
+178	Superior Temple of Baa	3	AllToEqual	x	x	-	60	80	
+179	Temple of the Snake	3	AllToEqual	x	-	-	35	80	
+180	Castle Alamos	3	AllToEqual	x	x	-	74	80	
+181	Castle Darkmoor	3	AllToEqual	x	x	-	90	80	
+182	Castle Kriegspire	3	AllToEqual	x	x	-	75	80	
+183	Free Haven Sewer	3	AllToEqual	x	-	-	25	80	
+184	Tomb of VARN	3	AllToEqual	x	x	-	100	80	
+185	Oracle of Enroth	3	AllToEqual	-	-	-	9999	80	
+186	Control Center	3	AllToEqual	-	-	-	150	80	
+187	The Hive	3	AllToEqual	x	x	-	180	80	
+188	The Arena	3	AllToEqual	x	x	-	9999	80	
+189	Dragon's Lair	3	AllToEqual	x	-	-	75	80	
+190	pending	3	AllToEqual	x	-	-	9999	80	
+191	pending	3	AllToEqual	x	-	-	9999	80	
+192	pending	3	AllToEqual	x	-	-	9999	80	
+193	pending	3	AllToEqual	x	-	-	9999	80	
+194	pending	3	AllToEqual	x	-	-	9999	80	
+195	pending	3	AllToEqual	x	-	-	9999	80	
+196	pending	3	AllToEqual	x	-	-	9999	80	
+197	pending	3	AllToEqual	x	-	-	9999	80	
+198	pending	3	AllToEqual	x	-	-	9999	80	
+199	pending	3	AllToEqual	x	-	-	9999	80	
+200	pending	3	AllToEqual	x	-	-	9999	80	
+201	pending	3	AllToEqual	x	-	-	9999	80	
+202	Devil Outpost	3	AllToEqual	-	-	-	60	80	
+203	New World Computing	3	0	-	-	-	9999	80	
+204	Breach	4	AllToEqual	x	x	-	9999	80	
+205	BrAlvar	4	AllToEqual	x	x	-	9999	80	sunsetclouds
+206	BrBase	4	AllToEqual	x	x	-	9999	80	

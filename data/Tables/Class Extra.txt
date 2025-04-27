@@ -1,0 +1,123 @@
+#	Kind	Step	Alignment	Note
+0	1	0	5	Archer
+1	1	1	5	Warrior Mage
+2	1	2	5	Battle Mage
+3	0	0	5	Battle Mage 3
+4	1	2	0	Master Archer
+5	0	0	0	Master Archer 3
+6	1	2	10	Sniper
+7	0	0	10	Sniper 3
+8	2	0	5	Cleric
+9	2	1	5	Priest
+10	2	0	0	Acolyte of the Light
+11	2	1	0	Cleric of the Light
+12	2	0	10	Acolyte of the Dark
+13	2	1	10	Cleric of the Dark
+14	2	2	5	High Priest
+15	0	0	5	High Priest 3
+16	2	2	0	Priest of the Light
+17	0	0	0	Priest of the Light 3
+18	2	2	10	Priest of the Dark
+19	0	0	10	Priest of the Dark 3
+20	3	0	5	Deerslayer
+21	3	1	5	Pioneer
+22	3	2	5	Pathfinder
+23	0	0	5	Pathfinder 3
+24	0	0	0	Light Pathfinder
+25	0	0	0	Light Pathfinder 3
+26	0	0	10	Dark Pathfinder
+27	0	0	10	Dark Pathfinder 3
+28	4	0	5	Dragon
+29	4	1	5	Flight Leader
+30	4	2	5	Great Wyrm
+31	0	0	5	Great Wyrm 3
+32	0	0	0	Light Dragon 2
+33	0	0	0	Light Dragon 3
+34	0	0	10	Dark Dragon 2
+35	0	0	10	Dark Dragon 3
+36	5	0	5	Druid
+37	5	1	5	Great Druid
+38	5	2	5	Master Druid
+39	0	0	5	Master Druid 3
+40	5	2	0	Arch Druid
+41	0	0	0	Arch Druid 3
+42	5	2	10	Warlock
+43	0	0	10	Warlock 3
+44	6	0	5	Knight
+45	6	1	5	Cavalier
+46	6	2	5	Champion
+47	0	0	5	Champion 3
+48	6	2	0	Templar
+49	0	0	0	Templar 3
+50	6	2	10	Black Knight
+51	0	0	10	Black Knight 3
+52	7	0	5	Minotaur
+53	7	1	5	Minotaur Headsman
+54	7	2	5	Minotaur Lord
+55	0	0	5	Minotaur Lord 3
+56	0	0	0	Light Minotaur 2
+57	0	0	0	Light Minotaur 3
+58	0	0	10	Dark Minotaur 2
+59	0	0	10	Dark Minotaur 3
+60	8	0	5	Monk
+61	8	1	5	Initiate Monk
+62	0	0	5	Monk 2
+63	0	0	5	Monk 3
+64	8	2	0	Master Monk
+65	0	0	0	Master Monk 3
+66	8	2	10	Ninja
+67	0	0	10	Ninja 3
+68	9	0	5	Paladin
+69	9	1	5	Crusader
+70	9	2	5	Justiciar
+71	0	0	5	Paladin 3
+72	9	2	0	Hero
+73	0	0	0	Hero 3
+74	9	2	10	Villain
+75	0	0	10	Villain 3
+76	10	0	5	Ranger
+77	10	1	5	Hunter
+78	0	0	5	Ranger 2
+79	0	0	5	Ranger 3
+80	10	2	0	Ranger Lord
+81	0	0	0	Ranger Lord 3
+82	10	2	10	Bounty Hunter
+83	0	0	10	Bounty Hunter 3
+84	11	0	5	Thief
+85	11	1	5	Rogue
+86	0	0	5	Robber
+87	0	0	5	Robber 3
+88	11	2	0	Spy
+89	0	0	0	Spy 3
+90	11	2	10	Assassin
+91	0	0	10	Assassin 3
+92	12	0	5	Barbarian
+93	12	1	5	Berserker
+94	12	2	5	Warmonger
+95	0	0	5	Barbarian 3
+96	0	0	0	Light Barbarian 2
+97	0	0	0	Light Barbarian 3
+98	0	0	10	Dark Barbarian 2
+99	0	0	10	Dark Barbarian 3
+100	13	0	5	Vampire
+101	13	1	5	Elder Vampire
+102	13	2	5	Nosferatu
+103	0	0	5	Nosferatu 3
+104	0	0	0	Light Nosferatu
+105	0	0	0	Light Nosferatu 3
+106	0	0	10	Dark Nosferatu
+107	0	0	10	Dark Nosferatu 3
+108	14	0	5	Sorcerer
+109	14	1	5	Wizard
+110	14	0	0	Apprentice Mage
+111	14	1	0	Mage
+112	14	0	10	Dark Adept
+113	14	1	10	Necromancer
+114	14	2	5	Master Wizard
+115	0	0	5	Master Wizard 3
+116	14	2	0	Arch Mage
+117	0	0	0	Arch Mage 3
+118	14	2	10	Lich
+119	0	0	10	Lich 3
+120	15	0	5	Peasant
+121	0	0	5	n/u

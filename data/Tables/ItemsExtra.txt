@@ -1,0 +1,88 @@
+Id	Note	Continent	QuestItem	LostQBit	StartQBit	EndQBit	PostEnd
+516	Eclipse	1	x	283		128	
+539	Ebonest	1	x	199		71	x
+540	Sword of Whistlebone	1	x	200		86	x
+541	Axe of Balthazar	1	x	201		77	x
+544	Sword-out-of-the-Stone	1	x		291	292	
+602	False Report	1	x	282
+603	Urn of Ashes	1	x	202
+604	Nightshade Brazier	1	x	203
+605	Dragon Leader's Egg	1	x	204
+606	Heart of Fire	1	x	205		45
+607	Heart of Water	1	x	206		45
+608	Heart of Air	1	x	207		45
+609	Heart of Earth	1	x	208		45
+610	Conflux Key	1	x	209
+611	Lost Book of Khel	1	x	210		83
+612	Sarcophagus of Korbu	1	x	211		88
+613	Puzzle Box	1	x	249
+614	Vial of Grave Earth	1	x	248
+615	Drum of Victory	1	x	246
+616	Anointed Herb Potion	1	x	245
+617	Power Stone	1	x	212		1
+618	Power Stone	1	x	213		2
+619	Pirate Leader's Key	1	x	214
+623	Gem of Restoration	1	x	217
+626	Prophecies of the Sun	1	x	218		79
+627	Remains of Korbu	1	x	219		88
+629	Ring of Keys	1	x	220		228
+630	Idol of the Snake	1	x	112
+632	Naga Hide	1
+633	Dire Wolf Pelt	1
+637	Bone of Doom	1	x	247
+662	Cannonball of Dominion	1	x	224
+667	Bazalath's Egg	1	x		1720	1722	
+668	Beacon Ring	1	x		293	295	
+669	Letter to Ninegos	1	x		1729	1731	
+732	Certificate of Authentication	1	x			77
+741	Dadeross' Letter to Fellmoon	1	x	221
+742	Blackmail Letter	1	x	222
+1289	Divine Intervention	2	x	738
+1342	Lady Carmine's Dagger	2	x	725
+1344	The Perfect Bow	2	x	753
+1402	Heart of the Wood	2	x	729
+1404	Case of Soul Jars	2	x	743
+1407	Oscillation Overthruster	2	x	748
+1426	Vase	2	x	724
+1428	Zokarr IV's Skull	2	x	740
+1431	Elixir	2	x	742
+1441	Golem chest	2	x	737
+1442	Abbey Normal Golem Head	2	x	732
+1443	Golem head	2	x	731
+1444	Golem left leg	2	x	736
+1445	Golem right leg	2	x	735
+1446	Golem right arm	2	x	733
+1447	Golem left arm	2	x	734
+1449	Dragon Egg	2	x	739
+1451	Worn Belt	2	x	728
+1477	Control Cube	2	x	746
+1478	Altar Piece	2	x	744
+1479	Altar Piece	2	x	745
+1485	Map to Evenmorn Island	2	x	730
+1503	Cipher	2	x	727
+1504	Scroll of Waves	2	x	726
+2053	Hourglass of Time	3	x	1207
+2054	Sacred Chalice	3	x	1212
+2066	The Third Eye	3	x	1220
+2075	Dragon Claw	3	x	1209
+2076	Control Cube	3	x	1219
+2077	Crystal of Terrax	3	x	1210
+2081	Tanir's Bell	3	x	1221
+2106	Dragon Tower Keys	3	x	1213
+2107	Key to Gharik's Laboratory	3	x	1223
+2119	Lord Kilburn's Shield	3	x	1206
+2122	Letter from Zenofex	3	x	1214
+2125	The Letter	3	x	1205
+2126	Devil Plans	3	x	1208
+2128	Discharge Papers	3	x	1211
+2157	Captain's Code	3	x	1255
+2158	First Mate's Code	3	x	1253
+2159	Navigator's Code	3	x	1256
+2160	Communication Officer's Code	3	x	1258
+2161	Engineer's Code	3	x	1257
+2162	Doctor's Code	3	x	1254
+2164	Ritual of the Void	3	x	1222
+2170	Memory Crystal Alpha	3	x	1215
+2171	Memory Crystal Beta	3	x	1216
+2172	Memory Crystal Delta	3	x	1217
+2173	Memory Crystal Epsilon	3	x	1218
