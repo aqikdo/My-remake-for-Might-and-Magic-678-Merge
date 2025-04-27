@@ -107,6 +107,9 @@ end
 
 local function DamageMonster(mon, dmg, hit_animation)
 	if mon.HP > 0 then
+		Sleep(1)
+	end
+	if mon.HP > 0 then
 		mon.HP = math.max(0, mon.HP - dmg)
 		if mon.HP == 0 then
 			local cnt = 0
