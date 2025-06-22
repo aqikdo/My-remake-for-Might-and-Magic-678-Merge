@@ -1,5 +1,5 @@
 #	Spell	ChanceBaseNormal	ChanceFactorNormal	ChanceMaxNormal	ChanceCursedNormal	ChanceBaseExpert	ChanceFactorExpert	ChanceMaxExpert	ChanceCursedExpert	ChanceBaseMaster	ChanceFactorMaster	ChanceMaxMaster	ChanceCursedMaster	ChanceBaseGM	ChanceFactorGM	ChanceMaxGM	ChanceCursedGM	Var1	Var1Normal	Var1Expert	Var1Master	Var1GM	Var2	Var2Normal	Var2Expert	Var2Master	Var2GM	Var3	Var3Normal	Var3Expert	Var3Master	Var3GM	Var4	Var4Normal	Var4Expert	Var4Master	Var4GM
-1	Torch Light	100	0	100	50	100	0	100	50	100	0	100	50	100	0	100	50	Duration	3600	3600	3600	3600
+1	Torch Light	100	0	100	50	100	0	100	50	100	0	100	50	100	0	100	50	Duration	7257600	7257600	7257600	7257600
 2	Fire Bolt	100	0	100	50	100	0	100	50	100	0	100	50	100	0	100	50
 3	Fire Resistance	100	0	100	50	100	0	100	50	100	0	100	50	100	0	100	50	Power	1	2	3	4	Duration	3600	3600	3600	3600
 4	Fire Aura	100	0	100	50	100	0	100	50	100	0	100	50	100	0	100	50	Bonus2	10	11	12	12	Duration	3600	3600	3600	0
@@ -31,7 +31,7 @@
 30	Enchant Item	100	0	100	50	100	0	100	50	100	0	100	50	100	0	100	50
 31	Town Portal	100	0	100	50	100	0	100	50	100	0	100	50	100	0	100	50
 32	Ice Blast	100	0	100	50	100	0	100	50	100	0	100	50	100	0	100	50
-33	Lloyd's Beacon	100	0	100	50	100	0	100	50	100	0	100	50	100	0	100	50	Slots	2	3	4	5	Duration	3600	7257600	7257600	7257600
+33	Lloyd's Beacon	100	0	100	50	100	0	100	50	100	0	100	50	100	0	100	50	Slots	2	3	4	5	Duration	7257600	7257600	7257600	7257600
 34	Stun	100	0	100	50	100	0	100	50	100	0	100	50	100	0	100	50
 35	Slow	100	0	100	50	100	0	100	50	100	0	100	50	100	0	100	50	Divisor	2	2	4	8	Duration	180	300	300	300
 36	Earth Resistance	100	0	100	50	100	0	100	50	100	0	100	50	100	0	100	50	Power	1	2	3	4	Duration	3600	3600	3600	3600

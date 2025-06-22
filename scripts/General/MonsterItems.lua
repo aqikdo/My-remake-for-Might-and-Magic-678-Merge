@@ -297,7 +297,7 @@ local function SummonMonsterAdjust()
 			Party.SpellBuffs[const.PartyBuff.Invisibility].ExpireTime = 0
 			Party.SpellBuffs[const.PartyBuff.Fly].ExpireTime = 0
 			Party.SpellBuffs[const.PartyBuff.WaterWalk].ExpireTime = 0
-			MinSpeedReduce = math.max(math.min(GetOverallPartyLevel() / mon.Level, MinSpeedReduce), 0.5)
+			--MinSpeedReduce = math.max(math.min(GetOverallPartyLevel() / mon.Level, MinSpeedReduce), 0.5)
 		end
 		if vars.LastCastSpell == nil or Game.Time - vars.LastCastSpell >= const.Minute * 5 and Game.UseMonsterBolster == true then
 			mon.HP = mon.FullHP
@@ -533,6 +533,14 @@ local function MonsterBuffsAdjust()
 			mon.SpellBuffs[const.MonsterBuff.MeleeOnly].ExpireTime = 0
 			mon.SpellBuffs[const.MonsterBuff.Wander].Power = 5
 		end
+
+		if mon.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime >= Game.Time and mon.SpellBuffs[const.MonsterBuff.ShrinkingRay].Power > 10 then
+			if Party.SpellBuffs[const.PartyBuff.TorchLight].ExpireTime >= Game.Time and Party.SpellBuffs[const.PartyBuff.TorchLight].Power >= 11 and GetDist(mon,Party.X,Party.Y,Party.Z) <= Party.SpellBuffs[const.PartyBuff.TorchLight].Power * 20 then
+				mon.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime = 0
+				mon.SpellBuffs[const.MonsterBuff.ShrinkingRay].Power = 0
+				Game.ShowMonsterBuffAnim(i)
+			end
+		end
 	end
 end
 
@@ -699,6 +707,10 @@ local function SpellBuffExtraTimer()
 		if vars.SwiftPotionBuffTime and vars.SwiftPotionBuffTime >= Game.Time then
 			Spd = Spd * 1.2
 		end
+		if vars.DispelSlowExpireTime and vars.DispelSlowExpireTime >= Game.Time then
+			Spd = Spd * 0.1
+		end
+		
 		if Game.Map.Name == "elemw.odm" then
 			Spd = Spd * math.max(0.25, (0.99985 ^ (vars.ElemwFatigue or 0)))
 			SpdZ = SpdZ * math.max(0.25, (0.99985 ^ (vars.ElemwFatigue or 0)))
@@ -719,9 +731,15 @@ local function SpellBuffExtraTimer()
 		Party.SpellBuffs[const.PartyBuff.Haste].ExpireTime = Game.Time + const.Day
 	end
 
-	if Party.SpellBuffs[const.PartyBuff.WizardEye].ExpireTime > Game.Time then
-		Party.SpellBuffs[const.PartyBuff.TorchLight].ExpireTime = Party.SpellBuffs[const.PartyBuff.WizardEye].ExpireTime
+	if Party.SpellBuffs[const.PartyBuff.WizardEye].ExpireTime > Game.Time and (Party.SpellBuffs[const.PartyBuff.TorchLight].ExpireTime < Game.Time + const.Minute / 30 or Party.SpellBuffs[const.PartyBuff.TorchLight].Power <= 10)  then
+		Party.SpellBuffs[const.PartyBuff.TorchLight].ExpireTime = math.max(Party.SpellBuffs[const.PartyBuff.WizardEye].ExpireTime, Party.SpellBuffs[const.PartyBuff.TorchLight].ExpireTime)
 		Party.SpellBuffs[const.PartyBuff.TorchLight].Power = 10
+	end
+
+	if Party.SpellBuffs[const.PartyBuff.TorchLight].ExpireTime > Game.Time + const.Day * 80 then
+		local sk = math.round((Party.SpellBuffs[const.PartyBuff.TorchLight].ExpireTime - Game.Time) / (7257600 * const.Minute / 60))
+		Party.SpellBuffs[const.PartyBuff.TorchLight].ExpireTime = Game.Time + const.Minute
+		Party.SpellBuffs[const.PartyBuff.TorchLight].Power = math.round(20 - 200 / (sk + 19)) + 1
 	end
 
 	for _,pl in Party do
@@ -959,9 +977,13 @@ local function ManaRegeneration()
 		for i,v in Party do
 			if v.Dead == 0 and v.Eradicated == 0 then
 				local maxsp = v:GetFullSP()
-				v.SP = math.min(v.SP + math.max(1,maxsp*0.02),maxsp)
 				local maxhp = v:GetFullHP()
-				v.HP = math.min(v.HP + math.max(1,maxhp*0.02),maxhp)
+				if vars.BurningExpireTime and vars.BurningExpireTime >= Game.Time then
+					v.SP = math.min(v.SP + math.max(1,maxsp*0.02),maxsp)
+				else
+					v.SP = math.min(v.SP + math.max(1,maxsp*0.02),maxsp)
+					v.HP = math.min(v.HP + math.max(1,maxhp*0.02),maxhp)
+				end
 			end
 		end
 	end
@@ -987,11 +1009,34 @@ local function HealthRegeneration()
 		if v.Dead == 0 and v.Eradicated == 0 then
 			local maxhp = v:GetFullHP()
 			local sk, mas = SplitSkill(v:GetSkill(const.Skills.Regeneration))
-			local regenHP = 0
+			local regenHP = math.ceil(sk * mas * 0.25)
 			if v.SpellBuffs[const.PlayerBuff.Regeneration].ExpireTime > Game.Time then
-				regenHP = v.SpellBuffs[const.PlayerBuff.Regeneration].Power
+				regenHP = regenHP + v.SpellBuffs[const.PlayerBuff.Regeneration].Power
 			end
-			v.HP = math.min(v.HP + math.ceil(sk * mas * 0.25) + regenHP,maxhp)
+			if vars.BurningExpireTime and vars.BurningExpireTime >= Game.Time then
+				regenHP = 0
+			end
+			v.HP = math.min(v.HP + regenHP,maxhp)
+		end
+	end
+end
+
+local function InsaneTimer()
+	for i,v in Party do
+		if v.Dead == 0 and v.Eradicated == 0 and v.Insane ~= 0 then
+			local maxhp = v:GetFullHP()
+			local dmg = maxhp * 0.02
+			v.HP = v.HP - dmg
+		end
+	end
+end
+
+local function BurningTimer()
+	for i,v in Party do
+		if v.Dead == 0 and v.Eradicated == 0 then
+			if vars.BurningExpireTime and vars.BurningExpireTime >= Game.Time then
+				evt.DamagePlayer(i, const.Damage.Fire, vars.BurningPower)
+			end
 		end
 	end
 end
@@ -1100,7 +1145,8 @@ function events.AfterLoadMap()
 	Timer(NegRegen, const.Minute * 4, false)
 	Timer(MonsterRandomWalk, const.Minute / 4, false)
 	Timer(DragonMissileTimer, 1, false)
-	
+	Timer(InsaneTimer, const.Minute/8, false)
+	Timer(BurningTimer, const.Minute/4, false)
 end
 
 

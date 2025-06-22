@@ -633,25 +633,32 @@ function PrepareMapMon(mon)
 		
 		-- Spells
 		-- Monsters can not cast paralyze, replace it:
-		mon.Spell = SpellReplace[mon.Spell] or mon.Spell
-		mon.Spell2 = SpellReplace[mon.Spell2] or mon.Spell2
+		mon.Spell = SpellReplace[mon.Spell] or TxtMon.Spell
+		mon.Spell2 = SpellReplace[mon.Spell2] or TxtMon.Spell2
 
 		local NeedSpells = true
-		if mon.Spell == 0 or FixRandom(mon, 3, 5, 7, 4)<=3 then
+
+		local sk,mas = SplitSkill(TxtMon.SpellSkill)
+		mas = 4
+
+		if mon.Spell == 0 or FixRandom(mon, 3, 5, 7, 4) <= 3 then
 			mon.Spell = GenMonSpell1(mon, MonSettings, BolStep, 0)
+			mas = 3
 		end
 --		if mon.Elite~=0 then
---			mon.Spell = 67
+--			mon.Spell = 19
 --		end
 		if Game.Map.Name == "elemw.odm" then
 			mon.Spell = 26
 		end
+
 		if mon.NameId >= 1 and mon.NameId ~= 163 then
 			mon.Spell = MonsterEliteSpell[mon.NameId] or mon.Spell
+			mas = 4
 		end
-		
-		local sk,mas = SplitSkill(TxtMon.SpellSkill)
-		
+
+--		mas = 4
+
 		mon.SpellChance		= min(TxtMon.SpellChance * (1 + mon.Elite) * SpRateMulByBoost[mon.BoostType], math.min(60, 15 * (SpRateMulByStyle[Style] ^ 2) * SpRateMulByBoost[mon.BoostType]))
 	--	mon.SpellSkill 		= JoinSkill(math.min(math.max(1, sk * (1 + mon.Elite) * SpellDamageMul[mon.Spell] * (MonsterEliteDamage[mon.NameId] or 1) * MagicMulByBoost[mon.BoostType]), 1000) , mas)
 		if IsReanimated == 1 then
@@ -660,17 +667,20 @@ function PrepareMapMon(mon)
 			mon.SpellSkill = JoinSkill(math.min(math.max(1, sk * (1 + mon.Elite) * SpellDamageMul[mon.Spell] * (MonsterEliteDamage[mon.NameId] or 1) * MagicMulByBoost[mon.BoostType]), 1000) , mas)
 		end
 	--	mon.SpellChance     = 0
-		
-		if mon.Spell2 == 0 or FixRandom(mon, 173, 337, 347, 6)<=5 then
+
+		sk,mas = SplitSkill(TxtMon.Spell2Skill)
+		mas = 4
+
+		if mon.Spell2 == 0 or FixRandom(mon, 173, 337, 347, 6) <= 5 then
 			mon.Spell2 = GenMonSpell2(mon, MonSettings, BolStep)
+			mas = 3
 		end
 	--	mon.Spell2 = GenMonSpell2(mon, MonSettings, BolStep)
 	--	mon.Spell2 = 64
 		if mon.NameId >= 1 and mon.NameId ~= 163 then
 			mon.Spell2 = MonsterEliteSpell2[mon.NameId] or mon.Spell2
+			mas = 4
 		end
-		
-		sk,mas = SplitSkill(TxtMon.Spell2Skill)
 		
 		mon.Spell2Chance	= min(TxtMon.Spell2Chance * (1 + mon.Elite) * SpRateMulByBoost[mon.BoostType], math.min(100, 25 * (SpRateMulByStyle[Style] ^ 2) * SpRateMulByBoost[mon.BoostType]))
 	--	mon.Spell2Skill 	= JoinSkill(math.min(math.max(1, sk * (1 + mon.Elite) * SpellDamageMul[mon.Spell2] * (MonsterEliteDamage[mon.NameId] or 1) * MagicMulByBoost[mon.BoostType]), 1000), mas)
@@ -691,6 +701,7 @@ function PrepareMapMon(mon)
 				mon.SpellChance = 100
 			end
 		end
+		
 	end
 	
 	if mon.Id == 646 or mon.Id == 647 or mon.Id == 648 or mon.Id == 652 then

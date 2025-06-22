@@ -744,42 +744,84 @@ function events.MonsterCastSpell(t)
 	if t.Spell == 64 and t.Monster.ShowAsHostile == true and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
 		vars.MonsterAttackTime = Game.Time
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
-		local cond = math.random(0, 3)
-		local pl = {}
-		local cnt = 0
-		for i,v in Party do
-			if v.Dead == 0 then
-				cnt = cnt  + 1
-				pl[cnt] = i
-			end
-		end
-		local num = math.random(1, cnt)
-		if cond == 0 then
-			evt[pl[num]].Set("Cursed",1)
-		elseif cond == 1 then
-			evt[pl[num]].Set("Asleep",1)
-		elseif cond == 2 then
-			evt[pl[num]].Set("Afraid",1)
-		elseif cond == 3 then
-			evt[pl[num]].Set("Insane",1)
-		end
-		if Mas >= 3 then
-			local cond = math.random(0, 2)
-			local pl = {}
-			local cnt = 0
-			for i,v in Party do
-				if v.Dead == 0 then
-					cnt = cnt  + 1
-					pl[cnt] = i
+		if Mas <= 3 then
+			local cond = math.random(0, 3)
+			if cond == 3 then
+				local pl = {}
+				local cnt = 0
+				for i,v in Party do
+					if v.Dead == 0 then
+						cnt = cnt  + 1
+						pl[cnt] = i
+					end
+				end
+				local num = math.random(1, cnt)
+				evt[pl[num]].Set("Insane",1)
+			else
+				local pl = {}
+				local cnt = 0
+				for i,v in Party do
+					if v.Dead == 0 then
+						cnt = cnt  + 1
+						pl[cnt] = i
+					end
+				end
+				local num = math.random(1, cnt)
+				if cond == 0 then
+					evt[pl[num]].Set("Cursed",1)
+				elseif cond == 1 then
+					evt[pl[num]].Set("Asleep",1)
+				elseif cond == 2 then
+					evt[pl[num]].Set("Afraid",1)
+				end
+				if cnt >= 2 then
+					local num2 = math.random(1, cnt - 1)
+					if num2 >= num then
+						num2 = num2 + 1
+					end
+					if cond == 0 then
+						evt[pl[num2]].Set("Cursed",1)
+					elseif cond == 1 then
+						evt[pl[num2]].Set("Asleep",1)
+					elseif cond == 2 then
+						evt[pl[num2]].Set("Afraid",1)
+					end
 				end
 			end
-			local num = math.random(1, cnt)
-			if cond == 0 then
-				evt[pl[num]].Set("Cursed",1)
-			elseif cond == 1 then
-				evt[pl[num]].Set("Afraid",1)
-			elseif cond == 2 then
+		elseif Mas == 4 then
+			local cond = math.random(0, 3)
+			if cond == 3 then
+				local pl = {}
+				local cnt = 0
+				for i,v in Party do
+					if v.Dead == 0 then
+						cnt = cnt  + 1
+						pl[cnt] = i
+					end
+				end
+				local num = math.random(1, cnt)
 				evt[pl[num]].Set("Insane",1)
+				if cnt >= 2 then
+					local num2 = math.random(1, cnt - 1)
+					if num2 >= num then
+						num2 = num2 + 1
+					end
+					evt[pl[num2]].Set("Insane",1)
+				end
+			else
+				local pl = {}
+				local cnt = 0
+				for i,v in Party do
+					if v.Dead == 0 then
+						if cond == 0 then
+							evt[i].Set("Cursed",1)
+						elseif cond == 1 then
+							evt[i].Set("Asleep",1)
+						elseif cond == 2 then
+							evt[i].Set("Afraid",1)
+						end
+					end
+				end
 			end
 		end
 		if t.Monster.NameId == 191 then
@@ -789,6 +831,7 @@ function events.MonsterCastSpell(t)
 	
 	--Invisible
 	if t.Spell == 19 and t.Monster.ShowAsHostile == true and Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime <= Game.Time then
+		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
 		vars.MonsterAttackTime = Game.Time
 		if t.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime > Game.Time and t.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].Power >= 1000 then
 			t.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime = Game.Time + const.Year
@@ -802,6 +845,27 @@ function events.MonsterCastSpell(t)
 		t.Monster.SpellBuffs[const.MonsterBuff.Slow].ExpireTime = 0
 		t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime = 0
 		t.Monster.SpellBuffs[const.MonsterBuff.ArmorHalved].ExpireTime = 0
+		if Mas == const.GM then
+			local cnt = 0
+			for i,v in Party do
+				if v:IsConscious() then
+					cnt = cnt + 1
+				end
+			end
+			local target_pl = math.random(0, cnt - 1)
+			for i,v in Party do
+				if v:IsConscious() then
+					target_pl = target_pl - 1
+					if target_pl == 0 then
+						local mattack = t.Monster.Attack1
+						local dmg = mattack.DamageDiceCount * mattack.DamageDiceSides / 2
+						dmg = math.random(math.ceil(dmg * 0.75), math.ceil(dmg * 1.25))
+						evt.DamagePlayer(math.random(0,cnt - 1), const.Phys, dmg)
+						break
+					end
+				end
+			end
+		end
 	end
 	
 	if t.Spell == 18 and t.Monster.ShowAsHostile == true and t.Monster.NameId == 192 then
@@ -814,6 +878,64 @@ function events.MonsterCastSpell(t)
 		--local dmg = Skill * math.random(4,6)
 		--evt.DamagePlayer(tmp,const.Damage.Body,dmg)
 		--t.Monster.HP = math.min(t.Monster.FullHP, t.Monster.HP + dmg)
+	end
+
+	-- GM spell boost
+
+	-- Firebolt 2: Double damage
+	-- Haste 5: Affect all monsters
+	if t.Spell == 5 then
+		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
+		if Mas == const.GM then 
+			local x,y,z = XYZ(t.Monster)
+			local Mon = t.Monster
+			for i,v in Map.Monsters do
+				if MonCanBeAffected(v, Mon) then
+					v.SpellBuffs[const.MonsterBuff.Haste].ExpireTime = math.max(v.SpellBuffs[const.MonsterBuff.Haste].ExpireTime, Game.Time + const.Minute * 5)
+					v.SpellBuffs[const.MonsterBuff.Haste].Skill = const.GM
+					Game.ShowMonsterBuffAnim(i)
+				end
+			end
+		end
+	end
+	-- Fireball 6: Quick cast
+	if t.Spell == 6 then
+		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
+		if Mas == const.GM then 
+			t.Monster.AttackRecovery = 5
+		end
+	end
+	--Incinerate 11: continuous burn and stop regeneration 
+
+	-- Lightning Bolt 18: Paralyze and quick cast
+	if t.Spell == 18 then
+		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
+		if Mas == const.GM then 
+			Sleep(1)
+			t.Monster.AttackRecovery = t.Monster.AttackRecovery / 2
+		end
+	end
+
+	-- Invisible 19: Blink Strike
+
+	-- Ice Blast 32
+	if t.Spell == 32 then
+		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
+		if Mas == const.GM then 
+			t.ObjectType = 3090
+			vars.LastCastSpell = Game.time
+			t.CallDefault(15, JoinSkill(Skill, 1))
+
+		end
+	end
+
+	-- Curse 64: Improve effect
+	-- Dispel Magic 80: Add Slow effect
+	if t.Spell == 80 then
+		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
+		if Mas == const.GM then 
+			vars.DispelSlowExpireTime = Game.Time + 100
+		end
 	end
 	--Bless
 	--[[
