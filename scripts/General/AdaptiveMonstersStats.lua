@@ -266,6 +266,16 @@ SpellDamageMul = 	   {[0] = 0,5.0, 3.4, 3.0, 3.0, 5.0, 1.5, 1.8, 1.8, 0.8, 1.5, 
 								3.0, 1.8, 1.8, 1.5, 2.0, 1.2, 1.8, 1.0, 1.0, 1.2, 0.8,
 								4.0, 3.2, 1.8, 1.5, 1.6, 1.2, 1.0, 0.4, 0.5, 0.8, 0.8}
 
+local MonsterSpecialSpell = {
+	[16]  = {18, 50},   	-- Regnan Sorcerer: Lightning bolt 50%
+	[17]  = {24, 50},   	-- Regnan Battlemage: Poison spray 50%
+	[18]  = {6 , 50},   	-- Regnan Archmage: Fireball 50%
+	[25]  = {51, 25},   	-- Dark Elven Warrior: Heroism 25%
+	[26]  = {17, 25},   	 -- Dark Elven Defenser:	Shield 25%
+	[27]  = {86, 25}  	 	-- Dark Elven Crusader: Hour of Power 25%
+}
+
+								
 local HPMulByStyle 		= {[0] = 1.10, 1.20, 1.10, 0.90, 1.0}
 local DamageMulByStyle 	= {[0] = 0.63, 0.42, 0.56, 0.51, 1.0}
 local MagicMulByStyle   = {[0] = 0.40, 0.40, 0.52, 0.66, 1.0}
@@ -599,8 +609,9 @@ function PrepareMapMon(mon)
 		end
 		mon.FullHP = fhp
 	end
---	mon.HP = 30000
---	mon.FullHP = 30000
+
+	--mon.HP = 30000
+	--mon.FullHP = 30000
 
 	local elite_armor_add = 99.5 * math.log(2 * (mon.Elite + 1) / (mon.Elite + 2))
 	local elite_res_add = elite_armor_add
@@ -639,12 +650,23 @@ function PrepareMapMon(mon)
 		local NeedSpells = true
 
 		local sk,mas = SplitSkill(TxtMon.SpellSkill)
-		mas = 4
+		--mas = 4
+		
+		--if mon.Spell == 0 or FixRandom(mon, 3, 5, 7, 2) <= 0 then
+		mon.Spell = GenMonSpell1(mon, MonSettings, BolStep, 0)
+		mas = 3
 
-		if mon.Spell == 0 or FixRandom(mon, 3, 5, 7, 4) <= 3 then
-			mon.Spell = GenMonSpell1(mon, MonSettings, BolStep, 0)
-			mas = 3
+		if MonsterSpecialSpell[mon.Id] then
+			if FixRandom(mon, 2017, 199, 127, 100) <= MonsterSpecialSpell[mon.Id][2] then
+				mon.Spell = MonsterSpecialSpell[mon.Id][1]
+				mas = 4
+			end	
 		end
+		--end
+
+		--mas = 4
+		--mon.Spell = 65
+		
 --		if mon.Elite~=0 then
 --			mon.Spell = 19
 --		end
@@ -657,8 +679,6 @@ function PrepareMapMon(mon)
 			mas = 4
 		end
 
---		mas = 4
-
 		mon.SpellChance		= min(TxtMon.SpellChance * (1 + mon.Elite) * SpRateMulByBoost[mon.BoostType], math.min(60, 15 * (SpRateMulByStyle[Style] ^ 2) * SpRateMulByBoost[mon.BoostType]))
 	--	mon.SpellSkill 		= JoinSkill(math.min(math.max(1, sk * (1 + mon.Elite) * SpellDamageMul[mon.Spell] * (MonsterEliteDamage[mon.NameId] or 1) * MagicMulByBoost[mon.BoostType]), 1000) , mas)
 		if IsReanimated == 1 then
@@ -669,12 +689,12 @@ function PrepareMapMon(mon)
 	--	mon.SpellChance     = 0
 
 		sk,mas = SplitSkill(TxtMon.Spell2Skill)
-		mas = 4
+		--mas = 4
 
-		if mon.Spell2 == 0 or FixRandom(mon, 173, 337, 347, 6) <= 5 then
-			mon.Spell2 = GenMonSpell2(mon, MonSettings, BolStep)
-			mas = 3
-		end
+		--if mon.Spell2 == 0 or FixRandom(mon, 173, 337, 347, 6) <= 5 then
+		mon.Spell2 = GenMonSpell2(mon, MonSettings, BolStep)
+		mas = 3
+		--end
 	--	mon.Spell2 = GenMonSpell2(mon, MonSettings, BolStep)
 	--	mon.Spell2 = 64
 		if mon.NameId >= 1 and mon.NameId ~= 163 then
@@ -818,8 +838,21 @@ function PrepareMapMon(mon)
 	else
 		mon.DarkResistance = const.MonsterImmune
 	end
+
 	mon.PhysResistance = TxtMon.PhysResistance + ArmorResAddbyBoost[mon.BoostType]
-	
+	--[[
+	mon.WaterResistance = 500
+	mon.PhysResistance = 500
+	mon.FireResistance = 500
+	mon.AirResistance = 500
+	mon.EarthResistance = 500
+	mon.MindResistance = 500
+	mon.SpiritResistance = 500
+	mon.LightResistance = 500
+	mon.DarkResistance = 500
+	mon.BodyResistance = 500
+	mon.Velocity = 0
+	]]--
 	mon.BodyRadius = MonsterBodyRadius[mon.Id] or mon.BodyRadius
 	mon.Bonus = TxtMon.Bonus
 	mon.BonusMul = TxtMon.BonusMul
@@ -1218,19 +1251,23 @@ local function Init()
 	-- Arena monsters generation
 	local ArenaMonstersList, ArenaPartyLevel, ArenaMapSettings
 	function events.BeforeArenaStart(ArenaLevel)
-
+		if PartyLevelBaseSaved then
+			for i,v in Party do
+				v.LevelBase = PartyLevelBaseSaved[i]
+			end
+		end
 		local PartyLevel = GetOverallPartyLevel()
 
 		local MinLevel, MaxLevel
 		if ArenaLevel == 0 then
 			MinLevel = 0
-			MaxLevel = max(PartyLevel, 10)
+			MaxLevel = max(PartyLevel/4, 10)
 		elseif ArenaLevel == 1 then
 			MinLevel = min(ceil(PartyLevel/5), 70)
-			MaxLevel = max(PartyLevel, 10) + 5
+			MaxLevel = max(ceil(PartyLevel/3), 10) + 5
 		elseif ArenaLevel == 2 then
 			MinLevel = min(ceil(PartyLevel/3), 70)
-			MaxLevel = max(PartyLevel, 10) + 7
+			MaxLevel = max(ceil(PartyLevel/2), 10) + 7
 		elseif ArenaLevel == 3 then
 			MinLevel = min(ceil(PartyLevel/2), 70)
 			MaxLevel = max(PartyLevel, 10) + 10
@@ -1262,6 +1299,12 @@ local function Init()
 		ArenaPartyLevel = PartyLevel
 		ArenaMonstersList = List
 		ArenaMapSettings = Game.Bolster.Maps[Map.MapStatsIndex]
+
+		Sleep(1)
+		for i,v in Party do
+			v.HP = v:GetFullHP()
+			v.SP = v:GetFullSP()
+		end
 	end
 
 	function events.GenerateArenaMonster(t)
@@ -1328,6 +1371,24 @@ function events.AfterLoadMap()
 			end
 		end
 	end
+
+	if Game.Map.Name == "zarena.blv" or Game.Map.Name == "d42.blv" or Game.Map.Name == "7d05.blv" then
+		if not PartyLevelBaseSaved then
+			PartyLevelBaseSaved = {}
+			for i,v in Party do
+				PartyLevelBaseSaved[i] = v.LevelBase
+				v.LevelBase = 0
+			end
+		end
+	else
+		if PartyLevelBaseSaved then
+			for i,v in Party do
+				v.LevelBase = PartyLevelBaseSaved[i]
+			end
+		end
+		PartyLevelBaseSaved = nil
+	end
+
 	--[[
 	if Game.Map.Name == "cd1.blv" then
 		if not vars.AlamosCreatedMonster or vars.AlamosCreatedMonster == false then

@@ -196,7 +196,7 @@ function events.PlayerAttacked(t,attacker) --ï¿½ï¿½ï¿½ï¹¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï
 	local BolsterMul = Game.BolsterAmount / 100
 	vars.LastCastSpell = Game.Time
 	if attacker.Monster then
-		if attacker.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime > Game.Time and attacker.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].Power > 10 and GetDist(attacker.Monster,Party) <= 500 then
+		if attacker.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime > Game.Time and attacker.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].Power > 10 then
 			vars.InvisibleStrike = Game.Time + 1
 			vars.InvisibleStrikeMul = (attacker.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].Power - 999) * 2
 			attacker.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime = 0
@@ -212,7 +212,11 @@ function events.PlayerAttacked(t,attacker) --ï¿½ï¿½ï¿½ï¹¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï
 			--Message(tostring(attacker.Monster.AttackRecovery))
 			attacker.Monster.AttackRecovery = 0
 		elseif attacker.Monster.SpellBuffs[const.MonsterBuff.HourOfPower].ExpireTime > Game.Time then
-			attacker.Monster.AttackRecovery = math.max(0, attacker.Monster.AttackRecovery * 0.75)
+			if attacker.Monster.SpellBuffs[const.MonsterBuff.HourOfPower].Skill == 4 then
+				attacker.Monster.AttackRecovery = math.max(0, attacker.Monster.AttackRecovery * 0.5)
+			else
+				attacker.Monster.AttackRecovery = math.max(0, attacker.Monster.AttackRecovery * 0.75)
+			end
 		end
 		if attacker.Monster.SpellBuffs[const.MonsterBuff.Slow].ExpireTime > Game.Time then
 			--Message(tostring(attacker.Monster.AttackRecovery))
@@ -273,6 +277,9 @@ function events.PlayerAttacked(t,attacker) --ï¿½ï¿½ï¿½ï¹¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï
 			local dmg = mattack.DamageDiceCount * mattack.DamageDiceSides / 2
 			if attacker.Monster.SpellBuffs[const.MonsterBuff.Heroism].ExpireTime > Game.Time then
 				dmg = dmg * 1.5
+				if attacker.Monster.SpellBuffs[const.MonsterBuff.Heroism].Skill == 4 then
+					dmg = dmg * 2
+				end
 			end
 			if attacker.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime > Game.Time and attacker.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].Power <= 10 then
 				dmg = dmg * (1 - (attacker.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].Power) * 0.1)
@@ -309,9 +316,6 @@ function events.PlayerAttacked(t,attacker) --ï¿½ï¿½ï¿½ï¹¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï
 			end
 			if attacker.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime > Game.Time then
 				dmg = dmg * (1 - (attacker.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].Power) * 0.1)
-			elseif attacker.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime > Game.Time and attacker.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].Power > 10 and GetDist(attacker.Monster,Party) <= 500 then
-				dmg = dmg * 2
-				attacker.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime = 0
 			end
 			local magicmul = 1
 			if mattack.Type ~= const.Damage.Phys then
@@ -549,8 +553,13 @@ if Monster.SpellBuffs[const.MonsterBuff.StoneSkin].ExpireTime >= Game.Time then
 	hourofpowerad = 70
 end
 if Monster.SpellBuffs[const.MonsterBuff.HourOfPower].ExpireTime >= Game.Time then
-	hourofpowerad = hourofpowerad + 28.6
-	dayofprotectionad = dayofprotectionad + 28.6
+	if Monster.SpellBuffs[const.MonsterBuff.HourOfPower].Skill == 4 then
+		hourofpowerad = hourofpowerad + 69.0
+		dayofprotectionad = dayofprotectionad + 69.0
+	else
+		hourofpowerad = hourofpowerad + 28.6
+		dayofprotectionad = dayofprotectionad + 28.6
+	end
 end
 if Monster.SpellBuffs[const.MonsterBuff.Shield].ExpireTime >= Game.Time then
 	dayofprotectionad = dayofprotectionad + 10.5
@@ -779,6 +788,12 @@ function events.MonsterAttacked(t,attacker) --ï¿½ï¿½ï¿½ï±»ï¿½ï¿½ï¿½ï¿½
 			if attacker.Player.SpellBuffs[const.PlayerBuff.Misform].ExpireTime < Game.Time then
 				--Message(tostring(attacker.Object.Spell))
 				if attacker.Object.Spell == 133 then
+					if t.Monster.SpellBuffs[const.MonsterBuff.Shield].ExpireTime > Game.Time and t.Monster.SpellBuffs[const.MonsterBuff.Shield].Skill == 4 then
+						if math.random(1,5) >= 2 then
+							t.Handled = true
+							return
+						end
+					end
 					local dmg = CalcRealDamageM(CalcBowDmgAdd(attacker.Player), const.Damage.Phys, true, attacker.Player, t.Monster)
 					local itt = attacker.Player:GetActiveItem(const.ItemSlot.Bow)
 					local skt, mast = SplitSkill(attacker.Player:GetSkill(const.Skills.Bow))
@@ -1091,6 +1106,7 @@ function events.MonsterAttacked(t,attacker) --ï¿½ï¿½ï¿½ï±»ï¿½ï¿½ï¿½ï¿½
 				end
 				if it and (it:T().Skill == const.Skills.Sword or it:T().Skill == const.Skills.Dagger or it:T().Skill == const.Skills.Axe or it:T().Skill == const.Skills.Staff or it:T().Skill == const.Skills.Spear or it:T().Skill == const.Skills.Mace) then
 					if attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill >= 1 then
+						
 						if it:T().Skill == const.Skills.Staff then
 							local dmg1 = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), (vars.HammerhandDamageType or const.Damage.Body), true, attacker.Player, t.Monster) * (0.1 + attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Power * 0.0025)
 							DamageMonster(t.Monster, dmg1, false)
@@ -1103,6 +1119,33 @@ function events.MonsterAttacked(t,attacker) --ï¿½ï¿½ï¿½ï±»ï¿½ï¿½ï¿½ï¿½
 							dmg = dmg + dmg1
 						end
 						
+						--[[
+						if vars.HammerhandDamageType == const.Damage.Fire then
+							local mul = 4
+							if vars.MeleeDelay and vars.MeleeDelay[attacker.Player:GetIndex()] then
+								mul = 500 / vars.MeleeDelay[attacker.Player:GetIndex()]
+							end
+							local dmg1 = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), const.Damage.Phys, true, attacker.Player, t.Monster) * mul + dmg * (mul - 1)
+							DamageMonster(t.Monster, dmg1, false)
+							attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill = 0
+							dmg = dmg + dmg1
+						elseif vars.HammerhandDamageType == const.Damage.Water then
+							local mul = 4
+						elseif vars.HammerhandDamageType == const.Damage.Air then
+							CastSpellDirect(125, 7, 3)
+							Sleep(5)
+							CastSpellDirect(125, 7, 3)
+							Sleep(5)
+							CastSpellDirect(125, 7, 3)
+							Sleep(5)
+							CastSpellDirect(125, 7, 3)
+							Sleep(5)
+							CastSpellDirect(125, 7, 3)
+						elseif vars.HammerhandDamageType == const.Damage.Earth then
+							t.Monster.SpellBuffs[const.MonsterBuff.Paralyze].ExpireTime = Game.Time + const.Minute * 3
+							t.Monster.SpellBuffs[const.MonsterBuff.Paralyze].Power = 1
+						end
+						]]--
 					end
 				end
 				PrintDamageAdd(dmg)

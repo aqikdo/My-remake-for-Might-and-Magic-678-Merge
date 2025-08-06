@@ -146,8 +146,44 @@ local function MonCanBeHealed(Mon, ByMon)
 	return false
 end
 
+local function MonDebuffStrength(Mon)
+	local strength = 0
+	if Mon.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime > Game.Time and Mon.SpellBuffs[const.MonsterBuff.ShrinkingRay].Power <= 10 then
+		strength = strength + 1
+	end
+	if Mon.SpellBuffs[const.MonsterBuff.Paralyze].ExpireTime > Game.Time then
+		strength = strength + 1
+	end
+	if Mon.SpellBuffs[const.MonsterBuff.Stoned].ExpireTime > Game.Time then
+		strength = strength + 10
+	end
+	if Mon.SpellBuffs[const.MonsterBuff.Slow].ExpireTime > Game.Time then
+		strength = strength + 2
+	end
+	if Mon.SpellBuffs[const.MonsterBuff.MeleeOnly].ExpireTime > Game.Time then
+		strength = strength + 5
+	end
+	if Mon.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime > Game.Time then
+		strength = strength + 1
+	end
+	if Mon.SpellBuffs[const.MonsterBuff.Fate].ExpireTime > Game.Time then
+		strength = strength + 1
+	end
+	if Mon.SpellBuffs[const.MonsterBuff.Hammerhands].ExpireTime > Game.Time then
+		strength = strength + 1
+	end
+	if Mon.SpellBuffs[const.MonsterBuff.ArmorHalved].ExpireTime > Game.Time then
+		strength = strength + 1
+	end
+	if Mon.SpellBuffs[const.MonsterBuff.Charm].ExpireTime > Game.Time then
+		strength = strength + 8
+	end
+	strength = strength + math.floor((1 - Mon.HP / Mon.FullHP) * 5)
+	return strength
+end
+
 local function MonCanBeAffected(Mon, ByMon)
-	if Mon.Active and Mon.HP > 0 then
+	if (Mon.Active or Mon.SpellBuffs[const.MonsterBuff.Stoned].ExpireTime > Game.Time) and Mon.HP > 0 then
 		if (Mon.Ally == ByMon.Ally) and GetDist(Mon, XYZ(ByMon)) < 2000 then
 			return true
 		end
@@ -175,26 +211,53 @@ end
 --end
 
 function events.MonsterCastSpellM(t)
-	if t.Spell == 77 then
+	if t.Spell == 69 then
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
-		local Heal = 10 + 5 *Skill
+		local Heal = 6 * Skill
 		local x,y,z = XYZ(t.Monster)
 		local Mon = t.Monster
-		local count = 0
+		local maxdebuff = 10
+		local maxstrength = 0
+		local HealMon = Mon
+		local HealMonId = -1
+		if Mas == 4 then
+			maxdebuff = 9999
+		end
 		for i,v in Map.Monsters do
-			if MonCanBeHealed(v, Mon) then
-				v.HP = math.min(v.HP + Heal, v.FullHP)
-				Game.ShowMonsterBuffAnim(i)
-				count = count + 1
-				if count >= 5 then
-					break
+			if v == Mon and HealMonId == -1 then
+				HealMonId = i
+			end
+			if MonCanBeAffected(v, Mon) then
+				local tmpstrength = MonDebuffStrength(v)
+				if tmpstrength <= maxdebuff and tmpstrength > maxstrength then
+					maxstrength = tmpstrength
+					HealMon = v
+					HealMonId = i
 				end
 			end
 		end
+		--Message(tostring(maxstrength) .. " " .. tostring(maxdebuff) .. " " .. tostring(HealMonId))
+		HealMon.HP = math.min(HealMon.HP + Heal, HealMon.FullHP)
+
+		HealMon.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime = 0
+		HealMon.SpellBuffs[const.MonsterBuff.Paralyze].ExpireTime = 0
+		HealMon.SpellBuffs[const.MonsterBuff.Stoned].ExpireTime = 0
+		HealMon.SpellBuffs[const.MonsterBuff.Slow].ExpireTime = 0
+		HealMon.SpellBuffs[const.MonsterBuff.MeleeOnly].ExpireTime = 0
+		HealMon.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime = 0
+		HealMon.SpellBuffs[const.MonsterBuff.Fate].ExpireTime = 0
+		HealMon.SpellBuffs[const.MonsterBuff.Hammerhands].ExpireTime = 0
+		HealMon.SpellBuffs[const.MonsterBuff.ArmorHalved].ExpireTime = 0
+		HealMon.SpellBuffs[const.MonsterBuff.Charm].ExpireTime = 0
+
+		if HealMonId ~= -1 then
+			Game.ShowMonsterBuffAnim(HealMonId)
+		end
+
 	end
 	if t.Spell == 67 then
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
-		local Heal = 10 + 5 *Skill
+		local Heal = 4 * Skill * math.max(1, Mas / 2 - 0.5)
 		local x,y,z = XYZ(t.Monster)
 		local Mon = t.Monster
 		local count = 0
@@ -203,7 +266,7 @@ function events.MonsterCastSpellM(t)
 				v.HP = math.min(v.HP + Heal, v.FullHP)
 				Game.ShowMonsterBuffAnim(i)
 				count = count + 1
-				if count >= 5 then
+				if Mas <= 3 and count >= 5 then
 					break
 				end
 			end
@@ -300,42 +363,9 @@ function events.MonsterCastSpell(t)
 		local val = Mas * Skill
 		for i,v in Map.Monsters do
 			if MonCanBeAffected(v, Mon) then
-				if v.SpellBuffs[const.MonsterBuff.DayOfProtection].Power and v.SpellBuffs[const.MonsterBuff.DayOfProtection].Power~=0 then
-					v.SpellBuffs[const.MonsterBuff.DayOfProtection].Power = math.max(v.SpellBuffs[const.MonsterBuff.DayOfProtection].Power,val)
-				else
-					v.SpellBuffs[const.MonsterBuff.DayOfProtection].Power = val
-					v.SpellBuffs[const.MonsterBuff.DayOfProtection].ExpireTime = Game.Time + const.Day
-				end
-				--[[
-				if v.FireResistance < 10000 then
-					v.FireResistance = v.FireResistance + val
-				end
-				if v.AirResistance < 10000 then
-					v.AirResistance = v.AirResistance + val
-				end
-				if v.WaterResistance < 10000 then
-					v.WaterResistance = v.WaterResistance + val
-				end
-				if v.EarthResistance < 10000 then
-					v.EarthResistance = v.EarthResistance + val
-				end
-				if v.MindResistance < 10000 then
-					v.MindResistance = v.MindResistance + val
-				end
-				if v.BodyResistance < 10000 then
-					v.BodyResistance = v.BodyResistance + val
-				end
-				if v.SpiritResistance < 10000 then
-					v.SpiritResistance = v.SpiritResistance + val
-				end
-				if v.LightResistance < 10000 then
-					v.LightResistance = v.LightResistance + val
-				end
-				if v.DarkResistance < 10000 then
-					v.DarkResistance = v.DarkResistance + val
-				end
-				]]--
-				
+				v.SpellBuffs[const.MonsterBuff.DayOfProtection].Power = val
+				v.SpellBuffs[const.MonsterBuff.DayOfProtection].ExpireTime = Game.Time + const.Day
+				v.SpellBuffs[const.MonsterBuff.DayOfProtection].Skill = Skill
 				Game.ShowMonsterBuffAnim(i)
 			end
 		end
@@ -349,21 +379,9 @@ function events.MonsterCastSpell(t)
 		local val = Mas * Skill
 		for i,v in Map.Monsters do
 			if MonCanBeAffected(v, Mon) then
-				if v.SpellBuffs[const.MonsterBuff.HourOfPower].Power and v.SpellBuffs[const.MonsterBuff.HourOfPower].Power~=0 then
-					v.SpellBuffs[const.MonsterBuff.HourOfPower].Power = math.max(v.SpellBuffs[const.MonsterBuff.HourOfPower].Power,val)
-				else
-					v.SpellBuffs[const.MonsterBuff.HourOfPower].Power = val
-					v.SpellBuffs[const.MonsterBuff.HourOfPower].ExpireTime = Game.Time + const.Day
-				end
-				--[[
-				if v.ArmorClass < 10000 then
-					v.ArmorClass = v.ArmorClass + val
-				end
-				v.Attack1.DamageDiceSides = v.Attack1.DamageDiceSides + Mas
-				v.Attack1.DamageDiceCount = v.Attack1.DamageDiceCount + Mas
-				v.Attack2.DamageDiceSides = v.Attack2.DamageDiceSides + Mas
-				v.Attack2.DamageDiceCount = v.Attack2.DamageDiceCount + Mas
-				]]--
+				v.SpellBuffs[const.MonsterBuff.HourOfPower].Power = val
+				v.SpellBuffs[const.MonsterBuff.HourOfPower].ExpireTime = Game.Time + const.Day
+				v.SpellBuffs[const.MonsterBuff.HourOfPower].Skill = Mas
 				Game.ShowMonsterBuffAnim(i)
 			end
 		end
@@ -377,12 +395,10 @@ function events.MonsterCastSpell(t)
 		local val = Mas * Skill
 		for i,v in Map.Monsters do
 			if MonCanBeAffected(v, Mon) then
-				if v.SpellBuffs[const.MonsterBuff.Heroism].Power and v.SpellBuffs[const.MonsterBuff.HourOfPower].Power~=0 then
-					v.SpellBuffs[const.MonsterBuff.Heroism].Power = math.max(v.SpellBuffs[const.MonsterBuff.HourOfPower].Power,val)
-				else
-					v.SpellBuffs[const.MonsterBuff.Heroism].Power = val
-					v.SpellBuffs[const.MonsterBuff.Heroism].ExpireTime = Game.Time + const.Day
-				end
+				v.SpellBuffs[const.MonsterBuff.Heroism].Power = val
+				v.SpellBuffs[const.MonsterBuff.Heroism].ExpireTime = Game.Time + const.Day
+				v.SpellBuffs[const.MonsterBuff.Heroism].Skill = Mas
+				Game.ShowMonsterBuffAnim(i)
 			end
 		end
 	end
@@ -395,12 +411,10 @@ function events.MonsterCastSpell(t)
 		local val = Mas * Skill
 		for i,v in Map.Monsters do
 			if MonCanBeAffected(v, Mon) then
-				if v.SpellBuffs[const.MonsterBuff.Bless].Power and v.SpellBuffs[const.MonsterBuff.HourOfPower].Power~=0 then
-					v.SpellBuffs[const.MonsterBuff.Bless].Power = math.max(v.SpellBuffs[const.MonsterBuff.HourOfPower].Power,val)
-				else
-					v.SpellBuffs[const.MonsterBuff.Bless].Power = val
-					v.SpellBuffs[const.MonsterBuff.Bless].ExpireTime = Game.Time + const.Day
-				end
+				v.SpellBuffs[const.MonsterBuff.Bless].Power = val
+				v.SpellBuffs[const.MonsterBuff.Bless].ExpireTime = Game.Time + const.Day
+				v.SpellBuffs[const.MonsterBuff.Bless].Skill = Mas
+				Game.ShowMonsterBuffAnim(i)
 			end
 		end
 	end
@@ -413,12 +427,9 @@ function events.MonsterCastSpell(t)
 		local val = Mas * Skill
 		for i,v in Map.Monsters do
 			if MonCanBeAffected(v, Mon) then
-				if v.SpellBuffs[const.MonsterBuff.StoneSkin].Power and v.SpellBuffs[const.MonsterBuff.StoneSkin].Power~=0 then
-					v.SpellBuffs[const.MonsterBuff.StoneSkin].Power = math.max(v.SpellBuffs[const.MonsterBuff.StoneSkin].Power,val)
-				else
-					v.SpellBuffs[const.MonsterBuff.StoneSkin].Power = val
-					v.SpellBuffs[const.MonsterBuff.StoneSkin].ExpireTime = Game.Time + const.Day
-				end
+				v.SpellBuffs[const.MonsterBuff.Shield].Power = val
+				v.SpellBuffs[const.MonsterBuff.Shield].ExpireTime = Game.Time + const.Day
+				v.SpellBuffs[const.MonsterBuff.Shield].Skill = Mas
 				Game.ShowMonsterBuffAnim(i)
 			end
 		end
@@ -432,12 +443,9 @@ function events.MonsterCastSpell(t)
 		local val = Mas * Skill
 		for i,v in Map.Monsters do
 			if MonCanBeAffected(v, Mon) then
-				if v.SpellBuffs[const.MonsterBuff.Shield].Power and v.SpellBuffs[const.MonsterBuff.Shield].Power~=0 then
-					v.SpellBuffs[const.MonsterBuff.Shield].Power = math.max(v.SpellBuffs[const.MonsterBuff.Shield].Power,val)
-				else
-					v.SpellBuffs[const.MonsterBuff.Shield].Power = val
-					v.SpellBuffs[const.MonsterBuff.Shield].ExpireTime = Game.Time + const.Day
-				end
+				v.SpellBuffs[const.MonsterBuff.Shield].Power = val
+				v.SpellBuffs[const.MonsterBuff.Shield].ExpireTime = Game.Time + const.Day
+				v.SpellBuffs[const.MonsterBuff.Shield].Skill = Mas
 				Game.ShowMonsterBuffAnim(i)
 			end
 		end
@@ -907,6 +915,8 @@ function events.MonsterCastSpell(t)
 	end
 	--Incinerate 11: continuous burn and stop regeneration 
 
+	--Shield 17: 80% chance to block arrow
+
 	-- Lightning Bolt 18: Paralyze and quick cast
 	if t.Spell == 18 then
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
@@ -930,6 +940,21 @@ function events.MonsterCastSpell(t)
 	end
 
 	-- Curse 64: Improve effect
+
+	-- Psychic Shock 65: Control the Party for a few seconds
+	if t.Spell == 65 then
+		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)
+		if Mas == const.GM then 
+			if (not vars.DarkGraspExpireTime) or vars.DarkGraspExpireTime < Game.Time + 100 then
+				vars.DarkGraspExpireTime = Game.Time + 100
+			end
+		end
+	end
+
+	-- Power cure 67: Improve effect and no numbers limit
+
+	-- Divine Restoration 69: No debuff strength limit
+
 	-- Dispel Magic 80: Add Slow effect
 	if t.Spell == 80 then
 		local Skill, Mas = SplitSkill(t.Monster.Spell == t.Spell and t.Monster.SpellSkill or t.Monster.Spell2Skill)

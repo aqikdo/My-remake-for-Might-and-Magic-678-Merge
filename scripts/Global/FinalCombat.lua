@@ -82,7 +82,17 @@ function SummonBoss(x, y)
 end
 function StartCombat()
 	GotoMap("d42.blv")
-	Sleep(10)
+	Sleep(5)
+	if PartyLevelBaseSaved then
+		for i,v in Party do
+			v.LevelBase = PartyLevelBaseSaved[i]
+		end
+	end
+	Sleep(5)
+	for i,v in Party do
+		v.HP = v:GetFullHP()
+		v.SP = v:GetFullSP()
+	end
 	local Boss = SummonBoss(3859,7346)
 	FinalSummonMonster(111, 1495, 5267)
 	FinalSummonMonster(123, 3806, 5267)

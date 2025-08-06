@@ -422,131 +422,131 @@ end
 ]]--
 
 function events.CalcStatBonusBySkills(t)
-if t.Stat == const.Stats.MeleeAttack then -- ��ս����
+	if t.Stat == const.Stats.MeleeAttack then -- ��ս����
 
-local ac= t.Player:GetAccuracy()
-local acadj=0
-if ac <= 2 then
-	acadj = -6
-elseif ac <= 21 then
-	acadj = math.floor(ac / 2) - 6 
-elseif ac <= 40 then
-	acadj = math.floor(ac / 5)
-elseif ac <= 300 then
-	acadj = math.floor(ac / 25) + 7
-elseif ac <= 399 then
-	acadj = math.floor(ac / 50) + 13
-elseif ac <= 499 then
-	acadj = 25
-else
-	acadj = 30
-end
-t.Result = 1000 - acadj
+		local ac= t.Player:GetAccuracy()
+		local acadj=0
+		if ac <= 2 then
+			acadj = -6
+		elseif ac <= 21 then
+			acadj = math.floor(ac / 2) - 6 
+		elseif ac <= 40 then
+			acadj = math.floor(ac / 5)
+		elseif ac <= 300 then
+			acadj = math.floor(ac / 25) + 7
+		elseif ac <= 399 then
+			acadj = math.floor(ac / 50) + 13
+		elseif ac <= 499 then
+			acadj = 25
+		else
+			acadj = 30
+		end
+		t.Result = 1000 - acadj
 
-local Pl = t.Player
-local PLT = PlayerEffects[Pl]
-if PLT then
-	t.Result = t.Result + (PLT.AttackDelay[2] or 0)
-elseif Game.CurrentScreen == AdvInnScreen or PlayerInParty(t.PlayerIndex) then
-	StoreEffects(Pl)
-end
+		local Pl = t.Player
+		local PLT = PlayerEffects[Pl]
+		if PLT then
+			t.Result = t.Result + (PLT.AttackDelay[2] or 0)
+		elseif Game.CurrentScreen == AdvInnScreen or PlayerInParty(t.PlayerIndex) then
+			StoreEffects(Pl)
+		end
 
-for i,v in Pl.EquippedItems do
-	if v > Pl.Items.limit then
-		Log(Merge.Log.Error, "%s: StoreEffects: incorrect item id (%d - %d) in inventory of player #0x%X", LogId, i, v, Player["?ptr"])
-		Pl.EquippedItems[i] = 0
-	elseif v > 0 then
-		local Item = Pl.Items[v]
-		if Item.Bonus2 == 41 and (Item.BodyLocation == const.ItemSlot.MainHand + 1 or Item.BodyLocation == const.ItemSlot.ExtraHand + 1) then
+		for i,v in Pl.EquippedItems do
+			if v > Pl.Items.limit then
+				Log(Merge.Log.Error, "%s: StoreEffects: incorrect item id (%d - %d) in inventory of player #0x%X", LogId, i, v, Player["?ptr"])
+				Pl.EquippedItems[i] = 0
+			elseif v > 0 then
+				local Item = Pl.Items[v]
+				if Item.Bonus2 == 41 and (Item.BodyLocation == const.ItemSlot.MainHand + 1 or Item.BodyLocation == const.ItemSlot.ExtraHand + 1) then
+					t.Result = t.Result + 5
+				end
+			end
+		end
+		if Pl.SpellBuffs[const.PlayerBuff.Haste].ExpireTime > Game.Time or Party.SpellBuffs[const.PartyBuff.Haste].ExpireTime > Game.Time then
 			t.Result = t.Result + 5
 		end
+		local sp= t.Player:GetSpeed()
+		sp = sp - sp * sp * 0.0005
+		local it = t.Player:GetActiveItem(const.ItemSlot.MainHand)
+		local armor = t.Player:GetActiveItem(const.ItemSlot.Armor)
+		local shield = t.Player:GetActiveItem(const.ItemSlot.ExtraHand)
+		if armor and armor:T().Skill == const.Skills.Leather then
+			local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Leather))
+			if mas2 < const.Expert then
+				t.Result = t.Result - 5
+			end
+		elseif armor and armor:T().Skill == const.Skills.Chain then
+			local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Chain))
+			if mas2 < const.Expert then
+				t.Result = t.Result - 7.5
+			end
+			if mas2 < const.Master then
+				t.Result = t.Result - 7.5
+			end
+		elseif armor and armor:T().Skill == const.Skills.Plate then
+			local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Plate))
+			if mas2 < const.Expert then
+				t.Result = t.Result - 10
+			end
+			if mas2 < const.Master then
+				t.Result = t.Result - 5
+			end
+			if mas2 < const.GM then
+				t.Result = t.Result - 5
+			end
+		end
+		if shield and shield:T().Skill == const.Skills.Shield then
+			local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Shield))
+			if mas2 < const.Expert then
+				t.Result = t.Result - 5
+			end
+			if mas2 < const.GM then
+				t.Result = t.Result - 5
+			end
+		end
+		if it and it:T().Skill == const.Skills.Sword then
+			local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Sword))
+			local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
+			t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25 + 23
+			if mas >= 2 then
+				t.Result = t.Result + 5
+			end
+		elseif it and it:T().Skill == const.Skills.Dagger then
+			local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Dagger))
+			local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
+			t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25 + 54
+		elseif it and it:T().Skill == const.Skills.Axe then
+			local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Axe))
+			local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
+			t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25 - 18
+		elseif it and it:T().Skill == const.Skills.Staff then
+			local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Staff))
+			local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
+			t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25 + 18
+		elseif it and it:T().Skill == const.Skills.Mace then
+			local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Mace))
+			local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
+			t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25 + 18
+		elseif it and it:T().Skill == const.Skills.Spear then
+			local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Spear))
+			local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
+			t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25 + 23
+		elseif it and it:T().Skill == const.Skills.Blaster then
+			local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Blaster))
+			t.Result = t.Result + sk + mas * 5 + 194
+			if it.Number == 962 then
+				t.Result = t.Result + 5
+			end
+		else
+			if t.Player.Class == 28 then
+				local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.DragonAbility))
+				t.Result = t.Result + sp * 0.25 + sk * 2 + 22
+			else
+				local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Unarmed))
+				t.Result = t.Result + sp * 0.25 + sk * 2 + math.min(mas, 3) * 25
+			end
+		end
 	end
-end
-if Pl.SpellBuffs[const.PlayerBuff.Haste].ExpireTime > Game.Time or Party.SpellBuffs[const.PartyBuff.Haste].ExpireTime > Game.Time then
-	t.Result = t.Result + 5
-end
-local sp= t.Player:GetSpeed()
-sp = sp - sp * sp * 0.0005
-local it = t.Player:GetActiveItem(const.ItemSlot.MainHand)
-local armor = t.Player:GetActiveItem(const.ItemSlot.Armor)
-local shield = t.Player:GetActiveItem(const.ItemSlot.ExtraHand)
-if armor and armor:T().Skill == const.Skills.Leather then
-	local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Leather))
-	if mas2 < const.Expert then
-		t.Result = t.Result - 5
-	end
-elseif armor and armor:T().Skill == const.Skills.Chain then
-	local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Chain))
-	if mas2 < const.Expert then
-		t.Result = t.Result - 7.5
-	end
-	if mas2 < const.Master then
-		t.Result = t.Result - 7.5
-	end
-elseif armor and armor:T().Skill == const.Skills.Plate then
-	local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Plate))
-	if mas2 < const.Expert then
-		t.Result = t.Result - 10
-	end
-	if mas2 < const.Master then
-		t.Result = t.Result - 5
-	end
-	if mas2 < const.GM then
-		t.Result = t.Result - 5
-	end
-end
-if shield and shield:T().Skill == const.Skills.Shield then
-	local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Shield))
-	if mas2 < const.Expert then
-		t.Result = t.Result - 5
-	end
-	if mas2 < const.GM then
-		t.Result = t.Result - 5
-	end
-end
-if it and it:T().Skill == const.Skills.Sword then
-	local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Sword))
-	local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
-	t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25 + 23
-	if mas >= 2 then
-		t.Result = t.Result + 5
-	end
-elseif it and it:T().Skill == const.Skills.Dagger then
-	local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Dagger))
-	local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
-	t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25 + 54
-elseif it and it:T().Skill == const.Skills.Axe then
-	local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Axe))
-	local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
-	t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25 - 18
-elseif it and it:T().Skill == const.Skills.Staff then
-	local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Staff))
-	local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
-	t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25 + 18
-elseif it and it:T().Skill == const.Skills.Mace then
-	local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Mace))
-	local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
-	t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25 + 18
-elseif it and it:T().Skill == const.Skills.Spear then
-	local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Spear))
-	local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Armsmaster))
-	t.Result = t.Result + sp * 0.25 + sk + sk1 * mas1 * 0.25 + 23
-elseif it and it:T().Skill == const.Skills.Blaster then
-	local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Blaster))
-	t.Result = t.Result + sk + mas * 5 + 194
-	if it.Number == 962 then
-		t.Result = t.Result + 5
-	end
-else
-	if t.Player.Class == 28 then
-		local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.DragonAbility))
-		t.Result = t.Result + sp * 0.25 + sk * 2 + 22
-	else
-		local sk, mas = SplitSkill(t.Player:GetSkill(const.Skills.Unarmed))
-		t.Result = t.Result + sp * 0.25 + sk * 2 + math.min(mas, 3) * 25
-	end
-end
-end
 end
 
 function events.CalcStatBonusBySkills(t)
@@ -650,6 +650,8 @@ function events.GetAttackDelay(t) --����
 		t.Result = 120 * (0.99 ^ (t.Player:GetRangedAttack() - 1000))
 	else
 		t.Result = 120 * (0.99 ^ (t.Player:GetMeleeAttack() - 1000))
+		vars.MeleeDelay = vars.MeleeDelay or {}
+		vars.MeleeDelay[t.Player:GetIndex()] = t.Result
 	end
 end
 

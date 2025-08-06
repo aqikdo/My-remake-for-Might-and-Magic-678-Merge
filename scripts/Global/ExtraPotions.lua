@@ -147,6 +147,7 @@ evt.PotionEffects[32] = function(IsDrunk, Target, Power)
 			vars.DarkGraspExpireTime = 0
 			vars.StunExpireTime = 0
 			vars.SlowExpireTime = 0
+			vars.BurningExpireTime = 0
 			vars.LastDrink = Game.Time + const.Minute * 20
 		else
 			return -1

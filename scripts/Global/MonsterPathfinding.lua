@@ -17,6 +17,7 @@ local HaveMapData = false
 local MapFloors, MapAreas, NeighboursWays = {}, {}, {}
 local MonsterWays = {}
 local MonStuck = {}
+local MonCornerStuck = {}
 local IsOutdoor = false
 
 --------------------------------------------------
@@ -27,9 +28,13 @@ local function EqualCoords(a, b, Precision)
 	if not Precision then
 		return a.X == b.X and a.Y == b.Y and a.Z == b.Z
 	else
-		return	a.X > b.X - Precision and a.X < b.X + Precision and
-				a.Y > b.Y - Precision and a.Y < b.Y + Precision and
-				a.Z > b.Z - Precision and a.Z < b.Z + Precision
+		if a.X and b.X and a.Y and b.Y and a.Z and b.Z then
+			return	a.X > b.X - Precision and a.X < b.X + Precision and
+					a.Y > b.Y - Precision and a.Y < b.Y + Precision and
+					a.Z > b.Z - Precision and a.Z < b.Z + Precision
+		else 
+			return false
+		end
 	end
 end
 
@@ -796,6 +801,42 @@ local function StuckCheck(MonId, Monster)
 	return false
 end
 
+local function CornerStuckCheck(MonId, Monster)
+	if not Monster or not MonId then
+		return false
+	end
+	if not (Monster.Active and Monster.HP > 0) then
+		return false
+	end
+	--Message("?")
+
+	if AreaOfTarget(Monster) == 0 then
+		return true
+	end
+
+	MonCornerStuck[MonId] = MonCornerStuck[MonId] or {X = 0, Y = 0, Z = 0, Time = Game.Time, Stuck = 0}
+	local CornerStuckCheck = MonCornerStuck[MonId]
+	if EqualCoords(CornerStuckCheck, Monster, 25) then
+		CornerStuckCheck.Stuck = Game.Time - CornerStuckCheck.Time
+		--Message("Helloooo "..tostring(MonCornerStuck.Stuck))
+		if CornerStuckCheck.Stuck > 128 then
+			--Message("Hello")
+			CornerStuckCheck.Stuck = 0
+			CornerStuckCheck.Time = Game.Time
+			return true
+		end
+	else
+		--Message("Helloeee")
+		CornerStuckCheck.Time = Game.Time
+		CornerStuckCheck.Stuck = 0
+		CornerStuckCheck.X = Monster.X
+		CornerStuckCheck.Y = Monster.Y
+		CornerStuckCheck.Z = Monster.Z
+	end
+
+	return false
+end
+
 local function MonsterNeedsProcessing(Mon)
 	local result = true
 	if not (Mon.Active and Mon.HP > 0) then
@@ -839,7 +880,10 @@ local function ProcessNextMon()
 		NextMon = MonId + 1
 		Monster = Map.Monsters[MonId]
 
-		if MonsterNeedsProcessing(Monster) then
+		local corner_stuck = CornerStuckCheck(MonId, Monster)
+
+		if MonsterNeedsProcessing(Monster, MonId) or corner_stuck then
+			--Message("ETe")
 
 			TargetRef, Target = GetMonsterTarget(MonId)
 			-- 11 is const.PartyBuff.Invisibility
@@ -883,6 +927,38 @@ local function ProcessNextMon()
 					Monster.Z = Monster.Z + 5
 				end
 				MonWay.NeedRebuild = true
+			end
+
+			if Target == Party and corner_stuck then
+				--Message("Monster " .. tostring(MonId) .. " is corner stuck, trying to move away.")
+				local midx, midy = math.round((Monster.X + Party.X) / 2), math.round((Monster.Y + Party.Y) / 2)
+				local midz = Map.GetFloorLevel(midx, midy, math.round((Monster.Z + Party.Z) / 2)) or math.round((Monster.Z + Party.Z) / 2)
+				--Message(tostring(GetDist2(Monster, Party)))
+				if TraceMonWayAsm(MonId, Monster, Monster, {X=midx, Y=midy, Z=midz}, Monster.BodyRadius) or GetDist2(Monster, Party) >= 500 or GetDist2(Monster, Party) <= 150 then
+					-- Skip
+				else
+					--Message("Monster " .. tostring(MonId) .. " is really corner stuck, trying to move sideways.")
+					local dirToPlayer = DirectionToPoint(Monster, Party)
+					-- 随机选择左侧或右侧（90度或270度方向）
+					-- local sideDir = (dirToPlayer + 512) % 2048
+					for attempt = 1, 10 do
+						local sideDir = (dirToPlayer + random(-512, 512) + 2048) % 2048
+						local dist = Monster.BodyRadius * 2
+						local dx, dy = math.sin(rad(sideDir))*dist, math.cos(rad(sideDir))*dist
+						local nx, ny = Monster.X + dx, Monster.Y + dy
+						local nz = Map.GetFloorLevel(nx, ny, Monster.Z) or Monster.Z
+						-- 使用TraceMonWayAsm检查新位置是否可达（从当前位置到新位置
+						--Message(tostring(Monster.X).." "..tostring(Monster.Y).." "..tostring(Monster.Z).."\n"..tostring(nx).." "..tostring(ny).." "..tostring(nz))
+						if TraceMonWayAsm(MonId, Monster, Monster, {X=nx, Y=ny, Z=nz}, Monster.BodyRadius) then
+							--Message("Hello")
+							Monster.X = nx
+							Monster.Y = ny
+							Monster.Z = nz
+							break
+						end
+					end
+					MonWay.NeedRebuild = true
+				end
 			end
 
 			if not Target or MonWay.TargetInSight then
@@ -1020,6 +1096,16 @@ function events.AfterLoadMap()
 	end
 
 end
+
+--[[
+function events.PlayerAttacked(t,attacker)
+	if attacker.MonsterIndex then
+		if MonCornerStuck[attacker.MonsterIndex] then
+			MonCornerStuck[attacker.MonsterIndex].Stuck = 0
+		end
+	end
+end
+]]--
 
 ----------------------------------------------
 --					SERVICE					--

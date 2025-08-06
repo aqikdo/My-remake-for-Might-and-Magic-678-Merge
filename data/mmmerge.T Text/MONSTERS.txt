@@ -10,7 +10,7 @@ Default Monster Data					Stats								Movement and Combat					Attack 1			Attack 
 6	Lizardman Captain	Lizardmen Warrior C	6	24	10	130	1d6	1	N	Short	Aggress	2	195	80	0	0	Phys	15D16+2	0	25	Phys	15D16+2	Arrow	6	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 7	Young Couatl	Couatl (winged snake) A	1	5	0	103	5%2d5+L1GEM	0	N	Free	Aggress	3	225	80	0	Poison1x4	Phys	6D6+4	0	10	Fire	6D6+4	Fire	1	0	0	0	0	0	7	0	0	0	0	0	0	0	0
 8	Couatl	Couatl (winged snake) B	1	5	5	144	10%2d5+L1GEM	0	N	Free	Aggress	3	245	70	0	Poison1x6	Phys	6D6+4	0	10	Water	6D6+4	Water	1	0	0	0	0	10	22	10	10	10	10	10	10	5	0
-9	Winged Serpent	Couatl (winged snake) C	1	6	10	201	15%2d5+L1GEM	0	N	Free	Aggress	3	275	60	0	Poison2x6	Phys	6D6+4	0	10	Air	6D6+4	Air	1	"Lightning Bolt,N,1"	0	0	0	20	37	20	20	20	20	20	20	10	0
+9	Winged Serpent	Couatl (winged snake) C	1	6	10	201	15%2d5+L1GEM	0	N	Free	Aggress	3	275	60	0	Poison2x6	Phys	6D6+4	0	10	Air	6D6+4	Air	1	0	0	0	0	20	37	20	20	20	20	20	20	10	0
 10	Regnan Bandit	Pirate Warrior Male A	50	521	210	1095	20%5D30+L2Sword	1	N	Long	Aggress	2	220	80	0	0	Phys	44D45+39	0	0	0	0	0	50	0	0	0	49	102	102	102	49	69	102	49	49	0	0
 11	Regnan Pirate	Pirate Warrior Male B	65	593	225	1533	20%7D30+L3Sword	1	N	Long	Aggress	2	250	70	0	0	Phys	51D51+24	0	0	0	0	0	65	0	0	0	59	122	122	122	59	79	122	59	59	0	0
 12	Regnan Brigadier	Pirate Warrior Male C	84	677	240	2146	20%5D30+L4Sword	1	N	Long	Aggress	2	280	60	0	0	Phys	58D58+28	0	0	0	0	0	84	0	0	0	73	139	139	139	73	93	139	73	73	0	0
