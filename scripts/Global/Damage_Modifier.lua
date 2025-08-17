@@ -1167,7 +1167,7 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 							--PrintDamageAdd(dmg)
 						end
 					else
-						if attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill >= 1 then
+						if attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill >= 1 and attacker.Player.SpellBuffs[const.PlayerBuff.TempLuck].ExpireTime < Game.Time then
 							attacker.Player.SpellBuffs[const.PlayerBuff.Hammerhands].Skill = 10
 							dmg = CalcRealDamageM(math.random(attacker.Player:GetMeleeDamageMin(),attacker.Player:GetMeleeDamageMax()), (vars.HammerhandDamageType or const.Damage.Body), true, attacker.Player, t.Monster) * (0.1)
 							DamageMonster(t.Monster, dmg, false)
