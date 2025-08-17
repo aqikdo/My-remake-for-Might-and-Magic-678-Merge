@@ -1439,6 +1439,7 @@ Spd = 1
 local function stpoutdoorx(d)
 	if Stp == false then
 --		Party.X = d.edi
+		PartySpeedX = (d.edi - Party.X) * Spd
 		Party.X = (Party.X * (1-Spd) + d.edi * Spd)
 	end
 	--edi ebx edx
@@ -1446,11 +1447,13 @@ end
 local function stpoutdoory(d)
 	if Stp == false then
 --		Party.Y = d.ebx
+		PartySpeedY = (d.ebx - Party.Y) * Spd
 		Party.Y = (Party.Y * (1-Spd) + d.ebx * Spd)
 	end
 end
 local function stpoutdoorz(d)
 	if Stp == false then
+		PartySpeedZ = (d.edx - Party.Z) * Spd
 		Party.Z = (Party.Z * (1-SpdZ) + d.edx * SpdZ)
 	end
 end

@@ -668,14 +668,14 @@ local function SortQueue()
 			if Map.Monsters[v.MonId].Fly == 1 then
 				v.Dist = v.Dist + 10
 			end
-			v.Dist = v.Dist + v.MonWay.FailCount*10
+			v.Dist = v.Dist + v.MonWay.FailCount * 10
 		else
 			Mon = Map.Monsters[v.MonId]
 			v.Dist = GetDist2(Mon, v.Target)
 			if Map.Monsters[v.MonId].Fly == 1 then
 				v.Dist = v.Dist + 1000
 			end
-			v.Dist = v.Dist + v.MonWay.FailCount*1000
+			v.Dist = v.Dist + v.MonWay.FailCount * 1000
 		end
 	end
 	table.sort(AStarQueue, AStarQueueSort)

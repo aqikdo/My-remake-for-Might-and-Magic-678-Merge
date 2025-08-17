@@ -710,6 +710,9 @@ local function SpellBuffExtraTimer()
 		if vars.DispelSlowExpireTime and vars.DispelSlowExpireTime >= Game.Time then
 			Spd = Spd * 0.1
 		end
+		if vars.AirShotBuffTime and vars.AirShotBuffTime >= Game.Time then
+			Spd = Spd * (1 + vars.AirShotBuffPower / 100)
+		end
 		
 		if Game.Map.Name == "elemw.odm" then
 			Spd = Spd * math.max(0.25, (0.99985 ^ (vars.ElemwFatigue or 0)))
@@ -788,6 +791,43 @@ local function SpellBuffExtraTimer()
 		end
 		if pl.SpellBuffs[const.PlayerBuff.Glamour].ExpireTime > Game.Time then
 			pl.SpellBuffs[const.PlayerBuff.Glamour].ExpireTime = Game.Time + const.Minute
+		end
+		if pl.SpellBuffs[const.PlayerBuff.Hammerhands].Skill >= 1 then
+			pl.SpellBuffs[const.PlayerBuff.TempEndurance].ExpireTime = Game.Time + const.Minute * 10
+		else
+			pl.SpellBuffs[const.PlayerBuff.TempEndurance].ExpireTime = 0
+		end
+		for i,pl in Party do
+			if vars.HammerhandDamageType == const.Damage.Fire then
+				pl.SpellBuffs[const.PlayerBuff.FireResistance].ExpireTime = Game.Time + const.Minute * 10
+			else
+				pl.SpellBuffs[const.PlayerBuff.FireResistance].ExpireTime = 0
+			end
+			if vars.HammerhandDamageType == const.Damage.Air then
+				pl.SpellBuffs[const.PlayerBuff.AirResistance].ExpireTime = Game.Time + const.Minute * 10
+			else
+				pl.SpellBuffs[const.PlayerBuff.AirResistance].ExpireTime = 0
+			end
+			if vars.HammerhandDamageType == const.Damage.Water then
+				pl.SpellBuffs[const.PlayerBuff.WaterResistance].ExpireTime = Game.Time + const.Minute * 10
+			else
+				pl.SpellBuffs[const.PlayerBuff.WaterResistance].ExpireTime = 0
+			end
+			if vars.HammerhandDamageType == const.Damage.Earth then
+				pl.SpellBuffs[const.PlayerBuff.EarthResistance].ExpireTime = Game.Time + const.Minute * 10
+			else
+				pl.SpellBuffs[const.PlayerBuff.EarthResistance].ExpireTime = 0
+			end
+			if vars.HammerhandDamageType == const.Damage.Body then
+				pl.SpellBuffs[const.PlayerBuff.BodyResistance].ExpireTime = Game.Time + const.Minute * 10
+			else
+				pl.SpellBuffs[const.PlayerBuff.BodyResistance].ExpireTime = 0
+			end
+			if vars.HammerhandDamageType == const.Damage.Mind then
+				pl.SpellBuffs[const.PlayerBuff.MindResistance].ExpireTime = Game.Time + const.Minute * 10
+			else
+				pl.SpellBuffs[const.PlayerBuff.MindResistance].ExpireTime = 0
+			end
 		end
 	end
 	
@@ -868,8 +908,6 @@ local function SpellBuffExtraTimer()
 	if vars.LastCastSpell == nil or Game.Time - vars.LastCastSpell >= const.Minute * 5 then
 		vars.EnterCombatTime = Game.Time
 		for _,pl in Party do
-			pl.SpellBuffs[const.PlayerBuff.Hammerhands].Skill = 0
-			pl.SpellBuffs[const.PlayerBuff.Hammerhands].Power = 0
 			pl.SpellBuffs[const.PlayerBuff.PainReflection].ExpireTime = math.min(pl.SpellBuffs[const.PlayerBuff.PainReflection].ExpireTime, Game.Time + const.Minute * 10)
 			pl.Weak = 0
 		end
@@ -891,6 +929,8 @@ local function SpellBuffExtraTimer()
 			end
 		end
 	end
+
+	
 
 end
 

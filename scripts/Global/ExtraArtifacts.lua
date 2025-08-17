@@ -473,35 +473,26 @@ function events.CalcStatBonusBySkills(t)
 		if armor and armor:T().Skill == const.Skills.Leather then
 			local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Leather))
 			if mas2 < const.Expert then
-				t.Result = t.Result - 5
+				t.Result = t.Result - 10
 			end
 		elseif armor and armor:T().Skill == const.Skills.Chain then
 			local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Chain))
 			if mas2 < const.Expert then
-				t.Result = t.Result - 7.5
-			end
-			if mas2 < const.Master then
-				t.Result = t.Result - 7.5
+				t.Result = t.Result - 15
 			end
 		elseif armor and armor:T().Skill == const.Skills.Plate then
 			local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Plate))
 			if mas2 < const.Expert then
-				t.Result = t.Result - 10
-			end
-			if mas2 < const.Master then
-				t.Result = t.Result - 5
-			end
-			if mas2 < const.GM then
-				t.Result = t.Result - 5
+				t.Result = t.Result - 20
 			end
 		end
 		if shield and shield:T().Skill == const.Skills.Shield then
 			local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Shield))
 			if mas2 < const.Expert then
-				t.Result = t.Result - 5
+				t.Result = t.Result - 10
 			end
 			if mas2 < const.GM then
-				t.Result = t.Result - 5
+				t.Result = t.Result - 10
 			end
 		end
 		if it and it:T().Skill == const.Skills.Sword then
@@ -601,35 +592,26 @@ local shield = t.Player:GetActiveItem(const.ItemSlot.ExtraHand)
 if armor and armor:T().Skill == const.Skills.Leather then
 	local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Leather))
 	if mas2 < const.Expert then
-		t.Result = t.Result - 5
+		t.Result = t.Result - 10
 	end
 elseif armor and armor:T().Skill == const.Skills.Chain then
 	local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Chain))
 	if mas2 < const.Expert then
-		t.Result = t.Result - 7.5
-	end
-	if mas2 < const.Master then
-		t.Result = t.Result - 7.5
+		t.Result = t.Result - 15
 	end
 elseif armor and armor:T().Skill == const.Skills.Plate then
 	local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Plate))
 	if mas2 < const.Expert then
-		t.Result = t.Result - 10
-	end
-	if mas2 < const.Master then
-		t.Result = t.Result - 5
-	end
-	if mas2 < const.GM then
-		t.Result = t.Result - 5
+		t.Result = t.Result - 20
 	end
 end
 if shield and shield:T().Skill == const.Skills.Shield then
 	local sk2, mas2 = SplitSkill(t.Player:GetSkill(const.Skills.Shield))
 	if mas2 < const.Expert then
-		t.Result = t.Result - 5
+		t.Result = t.Result - 10
 	end
 	if mas2 < const.GM then
-		t.Result = t.Result - 5
+		t.Result = t.Result - 10
 	end
 end
 it = t.Player:GetActiveItem(const.ItemSlot.Bow)
