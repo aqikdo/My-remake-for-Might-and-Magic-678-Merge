@@ -69,12 +69,82 @@ function events.GameInitialized2()
 		X = 69, Y = 422}
 
 	---- first page creation ----
+	
+	local BolsterCX, BolsterCY = 103, 220
+
+	-- Bolster amount text representation
+	Game.BolsterAmount = Game.BolsterAmount or 100
+	local BolAmText = CustomUI.CreateText{
+		Text = tostring(Game.BolsterAmount) .. "%",
+		Layer 	= 0,
+		Screen	= ExSetScr,
+		Width = 60,	Height = 10,
+		X = BolsterCX + 40, Y = BolsterCY}
+	if Game.BolsterAmount < 50 then
+		BolAmText.R = 255
+		BolAmText.G = 55
+		BolAmText.B = 200
+	elseif Game.BolsterAmount < 100 then
+		BolAmText.R = 255
+		BolAmText.G = 15
+		BolAmText.B = 240
+	elseif Game.BolsterAmount < 200 then
+		BolAmText.R = 255
+		BolAmText.G = 5
+		BolAmText.B = 0
+	elseif Game.BolsterAmount < 300 then
+		BolAmText.R = 255
+		BolAmText.G = 10
+		BolAmText.B = 245
+	else
+		BolAmText.R = 255
+		BolAmText.G = 0
+		BolAmText.B = 0
+	end
 
 	-- simplify tumbler creation
 	local Tumblers = {}
 	local function ToggleTumbler(Tumbler)
 		Tumbler.IUpSrc, Tumbler.IDwSrc = Tumbler.IDwSrc, Tumbler.IUpSrc
 		Tumbler.IUpPtr, Tumbler.IDwPtr = Tumbler.IDwPtr, Tumbler.IUpPtr
+		
+		if Tumbler.VarName == "UseMonsterBolster" then
+			if not Game[Tumbler.VarName] then
+				Game.BolsterAmount = 425
+				BolAmText.Text = tostring(Game.BolsterAmount) .. "%"
+				BolAmText.R = 255
+				BolAmText.G = 0
+				BolAmText.B = 5
+			else
+				Game.BolsterAmount = math.min(Game.BolsterAmount, 400)
+				BolAmText.Text = tostring(Game.BolsterAmount) .. "%"
+				if Game.BolsterAmount < 50 then
+					BolAmText.R = 255
+					BolAmText.G = 55
+					BolAmText.B = 200
+				elseif Game.BolsterAmount < 100 then
+					BolAmText.R = 255
+					BolAmText.G = 15
+					BolAmText.B = 240
+				elseif Game.BolsterAmount < 200 then
+					BolAmText.R = 255
+					BolAmText.G = 5
+					BolAmText.B = 0
+				elseif Game.BolsterAmount < 300 then
+					BolAmText.R = 255
+					BolAmText.G = 10
+					BolAmText.B = 245
+				elseif Game.BolsterAmount <= 400 then
+					BolAmText.R = 255
+					BolAmText.G = 0
+					BolAmText.B = 0
+				else
+					BolAmText.R = 255
+					BolAmText.G = 0
+					BolAmText.B = 5
+				end
+			end
+		end
 
 		Game.NeedRedraw = true
 		Game[Tumbler.VarName] = Tumbler.IUpSrc == "TmblrOn"
@@ -152,60 +222,34 @@ function events.GameInitialized2()
 	OnOffTumbler(95, 288, VarsToStore[4])
 	OnOffTumbler(95, 326, VarsToStore[5])
 
-	local BolsterCX, BolsterCY = 103, 220
-
-	-- Bolster amount text representation
-	Game.BolsterAmount = Game.BolsterAmount or 100
-	local BolAmText = CustomUI.CreateText{
-		Text = tostring(Game.BolsterAmount) .. "%",
-		Layer 	= 0,
-		Screen	= ExSetScr,
-		Width = 60,	Height = 10,
-		X = BolsterCX + 40, Y = BolsterCY}
-	if Game.BolsterAmount < 50 then
-		BolAmText.R = 255
-		BolAmText.G = 55
-		BolAmText.B = 200
-	elseif Game.BolsterAmount < 100 then
-		BolAmText.R = 255
-		BolAmText.G = 15
-		BolAmText.B = 240
-	elseif Game.BolsterAmount < 200 then
-		BolAmText.R = 255
-		BolAmText.G = 5
-		BolAmText.B = 0
-	elseif Game.BolsterAmount < 300 then
-		BolAmText.R = 255
-		BolAmText.G = 10
-		BolAmText.B = 245
-	else
-		BolAmText.R = 255
-		BolAmText.G = 0
-		BolAmText.B = 0
-	end
+	
 	
 	function events.AfterLoadMap()
 		if Game.BolsterAmount < 50 then
-		BolAmText.R = 255
-		BolAmText.G = 55
-		BolAmText.B = 200
-	elseif Game.BolsterAmount < 100 then
-		BolAmText.R = 255
-		BolAmText.G = 15
-		BolAmText.B = 240
-	elseif Game.BolsterAmount < 200 then
-		BolAmText.R = 255
-		BolAmText.G = 5
-		BolAmText.B = 0
-	elseif Game.BolsterAmount < 300 then
-		BolAmText.R = 255
-		BolAmText.G = 10
-		BolAmText.B = 245
-	else
-		BolAmText.R = 255
-		BolAmText.G = 0
-		BolAmText.B = 0
-	end
+			BolAmText.R = 255
+			BolAmText.G = 55
+			BolAmText.B = 200
+		elseif Game.BolsterAmount < 100 then
+			BolAmText.R = 255
+			BolAmText.G = 15
+			BolAmText.B = 240
+		elseif Game.BolsterAmount < 200 then
+			BolAmText.R = 255
+			BolAmText.G = 5
+			BolAmText.B = 0
+		elseif Game.BolsterAmount < 300 then
+			BolAmText.R = 255
+			BolAmText.G = 10
+			BolAmText.B = 245
+		elseif Game.BolsterAmount <= 400 then
+			BolAmText.R = 255
+			BolAmText.G = 0
+			BolAmText.B = 0
+		else
+			BolAmText.R = 255
+			BolAmText.G = 0
+			BolAmText.B = 5
+		end
 	end
 
 	-- Decrease bolster
@@ -215,29 +259,31 @@ function events.GameInitialized2()
 		IconMouseOver 	= "ar_lt_ht",
 		Action = function(t)
 			Game.PlaySound(24)
-			Game.BolsterAmount = math.max(Game.BolsterAmount - 5, 0)
-			if Game.BolsterAmount < 50 then
-				BolAmText.R = 255
-				BolAmText.G = 55
-				BolAmText.B = 200
-			elseif Game.BolsterAmount < 100 then
-				BolAmText.R = 255
-				BolAmText.G = 15
-				BolAmText.B = 240
-			elseif Game.BolsterAmount < 200 then
-				BolAmText.R = 255
-				BolAmText.G = 5
-				BolAmText.B = 0
-			elseif Game.BolsterAmount < 300 then
-				BolAmText.R = 255
-				BolAmText.G = 10
-				BolAmText.B = 245
-			else
-				BolAmText.R = 255
-				BolAmText.G = 0
-				BolAmText.B = 0
+			if not Game.UseMonsterBolster then
+				Game.BolsterAmount = math.min(math.max(Game.BolsterAmount - 5, 0), 400)
+				if Game.BolsterAmount < 50 then
+					BolAmText.R = 255
+					BolAmText.G = 55
+					BolAmText.B = 200
+				elseif Game.BolsterAmount < 100 then
+					BolAmText.R = 255
+					BolAmText.G = 15
+					BolAmText.B = 240
+				elseif Game.BolsterAmount < 200 then
+					BolAmText.R = 255
+					BolAmText.G = 5
+					BolAmText.B = 0
+				elseif Game.BolsterAmount < 300 then
+					BolAmText.R = 255
+					BolAmText.G = 10
+					BolAmText.B = 245
+				else
+					BolAmText.R = 255
+					BolAmText.G = 0
+					BolAmText.B = 0
+				end
+				BolAmText.Text = tostring(Game.BolsterAmount) .. "%"
 			end
-			BolAmText.Text = tostring(Game.BolsterAmount) .. "%"
 		end,
 		Layer 	= 0,
 		Screen 	= ExSetScr,
@@ -251,29 +297,31 @@ function events.GameInitialized2()
 		IconMouseOver 	= "ar_rt_ht",
 		Action = function(t)
 			Game.PlaySound(23)
-			Game.BolsterAmount = math.min(Game.BolsterAmount + 5, 400)
-			if Game.BolsterAmount < 50 then
-				BolAmText.R = 255
-				BolAmText.G = 55
-				BolAmText.B = 200
-			elseif Game.BolsterAmount < 100 then
-				BolAmText.R = 255
-				BolAmText.G = 15
-				BolAmText.B = 240
-			elseif Game.BolsterAmount < 200 then
-				BolAmText.R = 255
-				BolAmText.G = 5
-				BolAmText.B = 0
-			elseif Game.BolsterAmount < 300 then
-				BolAmText.R = 255
-				BolAmText.G = 10
-				BolAmText.B = 245
-			else
-				BolAmText.R = 255
-				BolAmText.G = 0
-				BolAmText.B = 0
+			if not Game.UseMonsterBolster then
+				Game.BolsterAmount = math.min(Game.BolsterAmount + 5, 400)
+				if Game.BolsterAmount < 50 then
+					BolAmText.R = 255
+					BolAmText.G = 55
+					BolAmText.B = 200
+				elseif Game.BolsterAmount < 100 then
+					BolAmText.R = 255
+					BolAmText.G = 15
+					BolAmText.B = 240
+				elseif Game.BolsterAmount < 200 then
+					BolAmText.R = 255
+					BolAmText.G = 5
+					BolAmText.B = 0
+				elseif Game.BolsterAmount < 300 then
+					BolAmText.R = 255
+					BolAmText.G = 10
+					BolAmText.B = 245
+				else
+					BolAmText.R = 255
+					BolAmText.G = 0
+					BolAmText.B = 0
+				end
+				BolAmText.Text = tostring(Game.BolsterAmount) .. "%"
 			end
-			BolAmText.Text = tostring(Game.BolsterAmount) .. "%"
 		end,
 		
 		Layer 	= 0,

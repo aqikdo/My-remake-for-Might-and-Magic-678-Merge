@@ -208,7 +208,7 @@ function events.PlayerAttacked(t,attacker) --ï¿½ï¿½ï¿½ï¹¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï
 		end
 	elseif not it then
 		local sk4, mas4 = SplitSkill(t.Player:GetSkill(const.Skills.Dodging))
-		if not(it2 and it2:T().Skill == const.Skills.Shield) then
+		if mas4 == const.GM and not(it2 and it2:T().Skill == const.Skills.Shield) then
 			dodge_prob = 50
 		end
 	end
@@ -1679,7 +1679,7 @@ function events.CalcStatBonusBySkills(t)
 		if it and it:T().Skill == const.Skills.Leather then
 			local sk1, mas1 = SplitSkill(t.Player:GetSkill(const.Skills.Leather))
 			local sk4, mas4 = SplitSkill(t.Player:GetSkill(const.Skills.Dodging))
-			t.Result = t.Result + sk1
+			--t.Result = t.Result + sk1
 			if mas1 >= const.Master then
 				t.Result = t.Result + sk1 * 2
 			end
@@ -1698,7 +1698,7 @@ function events.CalcStatBonusBySkills(t)
 		else
 			local sk4, mas4 = SplitSkill(t.Player:GetSkill(const.Skills.Dodging))
 			if not(it2 and it2:T().Skill == const.Skills.Shield) then
-				t.Result = t.Result + sk4
+				--t.Result = t.Result + sk4
 				if mas4 == const.Expert then
 					t.Result = t.Result + sk4
 				end
@@ -1927,7 +1927,7 @@ end
 
 -------------------------------------------------------------------------------
 function events.CanSaveGame(t)
-	if Game.UseMonsterBolster == true and vars.LastCastSpell ~= nil and Game.Time - vars.LastCastSpell < const.Minute * 5 then
+	if Game.UseMonsterBolster == true and ((vars.LastCastSpell ~= nil and Game.Time - vars.LastCastSpell < const.Minute * 5) or Monsters_prevent_save == true) then
 		t.Result = false
 		Game.ShowStatusText("You cannot save in combat.")
 	end

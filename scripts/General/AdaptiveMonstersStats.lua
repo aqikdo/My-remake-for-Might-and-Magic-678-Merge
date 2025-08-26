@@ -270,9 +270,44 @@ local MonsterSpecialSpell = {
 	[16]  = {18, 50},   	-- Regnan Sorcerer: Lightning bolt 50%
 	[17]  = {24, 50},   	-- Regnan Battlemage: Poison spray 50%
 	[18]  = {6 , 50},   	-- Regnan Archmage: Fireball 50%
+	[46]  = {78, 50},   	-- Acolyte of the Sun: Light Bolt 50%
+	[47]  = {87, 50},   	-- Cleric of the Sun: Sunray 50%
+	[48]  = {87, 75},  	 	-- Priest of the Sun: Sunray 75%
+	[52]  = {78, 50},   	-- Vampire Minion: Mind Blast 50%
+	[53]  = {70, 50},   	-- Vampire: Harm 50%
+	[54]  = {52, 50},  	 	-- Greater Vampire: Spirit Lash 50%
+	[55]  = {90, 50},   	-- Dark Path Journeymann: Toxic Cloud 50%
+	[56]  = {93, 50},   	-- Necromancer: Sharpmetal 50%
+	[57]  = {97, 50},  	 	-- Master Necromancer: Dragon Breath 50%
+	[70]  = {2 , 50},   	-- Dragon: Firebolt 50%
+	[71]  = {26, 50},   	-- Dragon Flightleader: Ice Bolt 50%
+	[72]  = {18, 50},  	 	-- Great Wyrm: Lightning Bolt 50%
+	[73]  = {5 , 30},   	-- Lesser Fire Elemental: Haste 30%
+	[74]  = {6 , 50},   	-- Fire Elemental: Fireball 50%
+	[75]  = {11, 50},  	 	-- Greater Fire Elemental: Incinerate 50%
+	[76]  = {26, 30},   	-- Lesser Water Elemental: Ice Bolt 30%
+	[77]  = {29, 50},   	-- Water Elemental: Acid Burst 50%
+	[78]  = {32, 50},  	 	-- Greater Water Elemental: Ice Blast 50%
+	[79]  = {37, 50},   	-- Lesser Earth Elemental: Deadly Swarm 50%
+	[80]  = {39, 50},   	-- Earth Elemental: Blade 50%
+	[81]  = {34, 30},  	 	-- Greater Earth Elemental: Stun 30%
+}
+
+local MonsterSpecialSpell2 = {
 	[25]  = {51, 25},   	-- Dark Elven Warrior: Heroism 25%
-	[26]  = {17, 25},   	 -- Dark Elven Defenser:	Shield 25%
-	[27]  = {86, 25}  	 	-- Dark Elven Crusader: Hour of Power 25%
+	[26]  = {17, 25},   	-- Dark Elven Defenser: Shield 25%
+	[27]  = {86, 25},  	 	-- Dark Elven Crusader: Hour of Power 25%
+	[46]  = {78, 13},   	-- Acolyte of the Sun: Heal 13%
+	[47]  = {68, 25},   	-- Cleric of the Sun: Heal 25%
+	[48]  = {77, 25},  	 	-- Priest of the Sun: Power Cure 25%
+	[52]  = {38, 25},   	-- Vampire Minion: Stone Skin 25%
+	[53]  = {51, 25},   	-- Vampire: Heroism 25%
+	[54]  = {95, 25},  	 	-- Greater Vampire: Pain Reflection 25%
+	[57]  = {97, 25},  	 	-- Master Necromancer: Pain Reflection 25%
+	[64]  = {46, 25},   	-- Minotaur Guard: Bless 25%
+	[65]  = {51, 25},   	-- Minotaur Warrior: Heroism 25%
+	[66]  = {86, 25},  	 	-- Minotaur Battleleader: Hour of Power 25%
+	[72]  = {80, 25},  	 	-- Great Wyrm: Dispel Magic 25%
 }
 
 								
@@ -284,10 +319,10 @@ local SpeedMulByStyle   = {[0] = 1.00, 0.90, 1.35, 0.90, 1.0}
 local SpMasMulByStyle   = {[0] = 2   , 2   , 3   , 4   , 1  }
 local ArmorResAddbyStyle= {[0] = 0   , 30  , 0   , 0   , 0  }
 
-MagicMulByBoost   		= {[0] = 1.00, 1.00, 1.00, 2.00, 1.0}
-local SpRateMulByBoost  = {[0] = 1.00, 1.00, 1.00, 2.00, 1.0}
-DamageMulByBoost 		= {[0] = 2.00, 1.00, 1.00, 1.00, 1.0}
-local ArmorResAddbyBoost= {[0] = 0   , 50  , 0   , 0   , 0  }
+MagicMulByBoost   		= {[0] = 1.00, 1.00, 1.00, 3.00, 1.0}
+local SpRateMulByBoost  = {[0] = 0.50, 1.00, 1.00, 3.00, 1.0}
+DamageMulByBoost 		= {[0] = 3.00, 1.00, 1.00, 1.00, 1.0}
+local ArmorResAddbyBoost= {[0] = 0   , 70  , 0   , 0   , 0  }
 
 --ReanimateHP			= {[0] = 1.00, 0.25}
 --ReanimateDmg			= {[0] = 1.00, 0.80}
@@ -694,6 +729,14 @@ function PrepareMapMon(mon)
 		--if mon.Spell2 == 0 or FixRandom(mon, 173, 337, 347, 6) <= 5 then
 		mon.Spell2 = GenMonSpell2(mon, MonSettings, BolStep)
 		mas = 3
+
+		if MonsterSpecialSpell2[mon.Id] then
+			if FixRandom(mon, 137, 131, 139, 100) <= MonsterSpecialSpell2[mon.Id][2] then
+				mon.Spell2 = MonsterSpecialSpell2[mon.Id][1]
+				mas = 4
+			end	
+		end
+
 		--end
 	--	mon.Spell2 = GenMonSpell2(mon, MonSettings, BolStep)
 	--	mon.Spell2 = 64

@@ -86,7 +86,7 @@ evt.PotionEffects[3] = function(IsDrunk, Target, Power)
 		PSet.UsedPotions[PlayerId] = PSet.UsedPotions[PlayerId] or {}
 		local t = PSet.UsedPotions[PlayerId]
 		if t[0] == nil or Game.Time >= t[0] then
---			Target.SP = math.min(Target.SP + Power + 5, Target:GetFullSP())
+			Target.SP = math.min(Target.SP + Power * 4 - 10, Target:GetFullSP())
 			t[0] = Game.Time + const.Minute * 10
 		else
 			return -1
@@ -101,8 +101,57 @@ evt.PotionEffects[2] = function(IsDrunk, Target, Power)
 		PSet.UsedPotions[PlayerId] = PSet.UsedPotions[PlayerId] or {}
 		local t = PSet.UsedPotions[PlayerId]
 		if t[1] == nil or Game.Time >= t[1] then
---			Target.HP = math.min(Target.HP + Power + 5, Target:GetFullHP())
+			Target.HP = math.min(Target.HP + Power * 4 - 10, Target:GetFullHP())
 			t[1] = Game.Time + const.Minute * 10
+		else
+			return -1
+		end
+	end
+end
+
+-- Cure Weakness & Potion of raise dead
+evt.PotionEffects[4] = function(IsDrunk, Target, Power)
+	if IsDrunk then
+		if Target.Dead ~= 0 then
+			Target.HP = 1
+			Target.SP = 0
+			Target.Dead = 0
+			Target:SetRecoveryDelayRaw(const.Minute * 10)
+			--Target.Weak = Game.Time
+		end
+	end
+end
+
+-- Cure Disease & Divine Restoration
+evt.PotionEffects[5] = function(IsDrunk, Target, Power)
+	if IsDrunk then
+		if vars.LastDrink == nil or Game.Time >= vars.LastDrink then
+			Target.Poison1 = 0
+			Target.Poison2 = 0
+			Target.Poison3 = 0
+			Target.Disease1 = 0
+			Target.Disease2 = 0
+			Target.Disease3 = 0
+			vars.LloydEffectTime = 0
+			vars.DarkGraspExpireTime = 0
+			vars.StunExpireTime = 0
+			vars.SlowExpireTime = 0
+			vars.BurningExpireTime = 0
+			vars.LastDrink = Game.Time + const.Minute * 20
+		else
+			return -1
+		end
+	end
+end
+
+-- Cure Poison & Swift potion
+evt.PotionEffects[6] = function(IsDrunk, Target, Power)
+	if IsDrunk then
+		if vars.LastDrinkSwift == nil or Game.Time >= vars.LastDrinkSwift then
+			vars.SwiftPotionBuffTime = Game.Time + const.Minute * 5
+			vars.LastDrinkSwift = Game.Time + const.Minute * 20
+			vars.SlowExpireTime = 0
+			return true
 		else
 			return -1
 		end

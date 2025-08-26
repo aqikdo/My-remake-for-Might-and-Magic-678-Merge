@@ -83,6 +83,9 @@ function events.PickCorpse(t)
 	--	evt.Add("Exp",math.random(mon.Level , mon.Level * 2) * 100)
 	--	evt.Add(math.random(32,38),1)
 	end
+	if Game.UseMonsterBolster == true then
+		mon.AIState = const.AIState.Removed
+	end
 end
 
 -- Make monsters in indoor maps active once party sees them.
@@ -292,14 +295,17 @@ local function SummonMonsterAdjust()
 	local AnimateList = {}
 	local nomon = 1
 	local MinSpeedReduce = 1
+	local one_Monsters_prevent_save = false
 	for i,mon in Map.Monsters do
 		if Map:IsOutdoor() and mon.ShowAsHostile == true and mon.HP > 0 and GetDist(mon,Party.X,Party.Y,Party.Z) <= 25000 * ((mon.Level / GetOverallPartyLevel()) ^ 2) and Game.UseMonsterBolster == true and (Party.EnemyDetectorRed or Party.EnemyDetectorYellow) then
 			Party.SpellBuffs[const.PartyBuff.Invisibility].ExpireTime = 0
 			Party.SpellBuffs[const.PartyBuff.Fly].ExpireTime = 0
 			Party.SpellBuffs[const.PartyBuff.WaterWalk].ExpireTime = 0
-			--MinSpeedReduce = math.max(math.min(GetOverallPartyLevel() / mon.Level, MinSpeedReduce), 0.5)
+			one_Monsters_prevent_save = true
+			--mon.SpellBuffs[const.MonsterBuff.Haste].ExpireTime = Game.Time + const.Minute / 4
+			--MinSpeedReduce = math.max(math.min(math.max(GetOverallPartyLevel() / mon.Level, GetDist(mon,Party.X,Party.Y,Party.Z) / 5000), MinSpeedReduce), 0.5)
 		end
-		if vars.LastCastSpell == nil or Game.Time - vars.LastCastSpell >= const.Minute * 5 and Game.UseMonsterBolster == true then
+		if vars.LastCastSpell == nil or Game.Time - vars.LastCastSpell >= const.Minute * 5 and Game.UseMonsterBolster == true and mon.HP ~= 0 and mon.ShowAsHostile == true then
 			mon.HP = mon.FullHP
 		end
 		local TxtMon = Game.MonstersTxt[mon.Id]
@@ -400,6 +406,7 @@ local function SummonMonsterAdjust()
 		vars.LastCastSpell = Game.Time - const.Minute * 5
 	end
 	vars.PartySpeedReduceByMonster = MinSpeedReduce
+	Monsters_prevent_save = one_Monsters_prevent_save
 end
 
 local function MonsterBuffsAdjust()
@@ -910,6 +917,11 @@ local function SpellBuffExtraTimer()
 		for _,pl in Party do
 			pl.SpellBuffs[const.PlayerBuff.PainReflection].ExpireTime = math.min(pl.SpellBuffs[const.PlayerBuff.PainReflection].ExpireTime, Game.Time + const.Minute * 10)
 			pl.Weak = 0
+		end
+		for i,v in Party do
+			if v.SpellBuffs[const.PlayerBuff.TempLuck] and v.SpellBuffs[const.PlayerBuff.TempLuck].ExpireTime > Game.Time then
+				v.SpellBuffs[const.PlayerBuff.TempLuck].ExpireTime = v.SpellBuffs[const.PlayerBuff.TempLuck].ExpireTime - 7
+			end
 		end
 	else
 		Party.SpellBuffs[const.PartyBuff.ProtectionFromMagic].ExpireTime = 0

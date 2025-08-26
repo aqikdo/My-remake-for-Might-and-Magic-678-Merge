@@ -853,7 +853,12 @@ function events.MonsterCastSpell(t)
 		t.Monster.SpellBuffs[const.MonsterBuff.Slow].ExpireTime = 0
 		t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime = 0
 		t.Monster.SpellBuffs[const.MonsterBuff.ArmorHalved].ExpireTime = 0
+		t.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].Skill = 0
 		if Mas == const.GM then
+			--[[
+			t.Monster.SpellBuffs[const.MonsterBuff.ShrinkingRay].Skill = 4
+			t.Monster.BodyRadius = 1
+			]]--
 			local cnt = 0
 			for i,v in Party do
 				if v:IsConscious() then
