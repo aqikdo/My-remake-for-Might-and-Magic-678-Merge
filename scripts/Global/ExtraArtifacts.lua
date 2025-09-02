@@ -1834,11 +1834,20 @@ OnHitEffects[529] = {
 OnHitEffects[570] = {
 	Special = function(t)
 		t.Monster.HP = math.max(t.Monster.HP - 5, 0)
-		t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime = Game.Time + const.Minute
-		t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].Skill = 5
-		t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].Power = 20
-		t.Monster.SpellBuffs[const.MonsterBuff.Slow].ExpireTime = Game.Time + const.Minute
-		t.Monster.SpellBuffs[const.MonsterBuff.Slow].Power = 2
+		if t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime > Game.Time then
+			t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime = math.max(t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime, Game.Time + const.Minute)
+			t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].Power = t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].Power + 1
+		else
+			t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime = Game.Time + const.Minute
+			t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].Skill = 5
+			t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].Power = 1
+		end
+		if t.Monster.SpellBuffs[const.MonsterBuff.Slow].ExpireTime > Game.Time then
+			t.Monster.SpellBuffs[const.MonsterBuff.Slow].ExpireTime = math.max(t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime, Game.Time + const.Minute)
+		else
+			t.Monster.SpellBuffs[const.MonsterBuff.Slow].ExpireTime = Game.Time + const.Minute
+			t.Monster.SpellBuffs[const.MonsterBuff.Slow].Power = 2
+		end
 	end}
 
 -- Judicious Measure

@@ -541,6 +541,12 @@ local function MonsterBuffsAdjust()
 			mon.SpellBuffs[const.MonsterBuff.Wander].Power = 5
 		end
 
+		if mon.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime > Game.Time then
+			if mon.SpellBuffs[const.MonsterBuff.DamageHalved].Skill <= 4 then
+				mon.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime = 0
+			end
+		end
+
 		if mon.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime >= Game.Time and mon.SpellBuffs[const.MonsterBuff.ShrinkingRay].Power > 10 then
 			if Party.SpellBuffs[const.PartyBuff.TorchLight].ExpireTime >= Game.Time and Party.SpellBuffs[const.PartyBuff.TorchLight].Power >= 11 and GetDist(mon,Party.X,Party.Y,Party.Z) <= Party.SpellBuffs[const.PartyBuff.TorchLight].Power * 20 then
 				mon.SpellBuffs[const.MonsterBuff.ShrinkingRay].ExpireTime = 0
