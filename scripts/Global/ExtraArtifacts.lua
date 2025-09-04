@@ -1843,7 +1843,7 @@ OnHitEffects[570] = {
 			t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].Power = 1
 		end
 		if t.Monster.SpellBuffs[const.MonsterBuff.Slow].ExpireTime > Game.Time then
-			t.Monster.SpellBuffs[const.MonsterBuff.Slow].ExpireTime = math.max(t.Monster.SpellBuffs[const.MonsterBuff.DamageHalved].ExpireTime, Game.Time + const.Minute)
+			t.Monster.SpellBuffs[const.MonsterBuff.Slow].ExpireTime = math.max(t.Monster.SpellBuffs[const.MonsterBuff.Slow].ExpireTime, Game.Time + const.Minute)
 		else
 			t.Monster.SpellBuffs[const.MonsterBuff.Slow].ExpireTime = Game.Time + const.Minute
 			t.Monster.SpellBuffs[const.MonsterBuff.Slow].Power = 2
