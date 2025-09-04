@@ -1245,16 +1245,17 @@ function events.MonsterAttacked(t,attacker) --���ﱻ����
 							for i,v in Party do
 								v.SpellBuffs[const.PlayerBuff.TempAccuracy].ExpireTime = Game.Time + const.Minute * 10
 							end
-							
-							CastSpellDirect(125, 7, 3)
-							Sleep(5)
-							CastSpellDirect(125, 7, 3)
-							Sleep(5)
-							CastSpellDirect(125, 7, 3)
-							Sleep(5)
-							CastSpellDirect(125, 7, 3)
-							Sleep(5)
-							CastSpellDirect(125, 7, 3)
+							if it:T().Skill == const.Skills.Sword then
+								CastSpellDirect(125, 7, 3)
+								Sleep(5)
+								CastSpellDirect(125, 7, 3)
+								Sleep(5)
+								CastSpellDirect(125, 7, 3)
+								Sleep(5)
+								CastSpellDirect(125, 7, 3)
+								Sleep(5)
+								CastSpellDirect(125, 7, 3)
+							end
 							attacker.Player.SpellBuffs[const.PlayerBuff.TempLuck].ExpireTime = Game.Time + const.Minute * 30
 						elseif vars.HammerhandDamageType == const.Damage.Earth then
 							t.Monster.SpellBuffs[const.MonsterBuff.Paralyze].ExpireTime = Game.Time + const.Minute * 6
