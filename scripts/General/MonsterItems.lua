@@ -723,8 +723,14 @@ local function SpellBuffExtraTimer()
 		if vars.DispelSlowExpireTime and vars.DispelSlowExpireTime >= Game.Time then
 			Spd = Spd * 0.1
 		end
-		if vars.AirShotBuffTime and vars.AirShotBuffTime >= Game.Time then
-			Spd = Spd * (1 + vars.AirShotBuffPower / 100)
+		--if vars.AirShotBuffTime and vars.AirShotBuffTime >= Game.Time then
+		--	Spd = Spd * (1 + vars.AirShotBuffPower / 100)
+		--end
+		for i,v in Party do
+			if v.SpellBuffs[const.PlayerBuff.TempAccuracy].ExpireTime > Game.Time then
+				Spd = Spd * 1.4
+				break
+			end
 		end
 		
 		if Game.Map.Name == "elemw.odm" then
@@ -842,6 +848,20 @@ local function SpellBuffExtraTimer()
 				pl.SpellBuffs[const.PlayerBuff.MindResistance].ExpireTime = 0
 			end
 		end
+		
+		if not vars.RecoveryDelayModified then
+			vars.RecoveryDelayModified = {[0] = 0, 0, 0, 0, 0}
+		end
+
+		if pl.SpellBuffs[const.PlayerBuff.TempAccuracy].ExpireTime > Game.Time and pl.RecoveryDelay > 1 then
+			if vars.RecoveryDelayModified[_] == nil or vars.RecoveryDelayModified[_] < pl.RecoveryDelay then
+				pl.RecoveryDelay = math.floor(pl.RecoveryDelay / 2)
+				vars.RecoveryDelayModified[_] = pl.RecoveryDelay
+			else
+				vars.RecoveryDelayModified[_] = pl.RecoveryDelay
+			end
+		end
+		
 	end
 	
 	for _,pl in Party do
@@ -1074,6 +1094,9 @@ local function HealthRegeneration()
 			if vars.BurningExpireTime and vars.BurningExpireTime >= Game.Time then
 				regenHP = 0
 			end
+			if v.SpellBuffs[const.PlayerBuff.TempSpeed].ExpireTime > Game.Time then
+				regenHP = regenHP - v.SpellBuffs[const.PlayerBuff.TempSpeed].Power
+			end
 			v.HP = math.min(v.HP + regenHP,maxhp)
 		end
 	end
@@ -1196,7 +1219,7 @@ function events.AfterLoadMap()
 	Timer(HealthRegeneration, const.Minute/4, false)
 	Timer(FatigueTimer, const.Minute/4, false)
 	Timer(PoisonTimer, const.Minute/8, false)
-	Timer(StuckDetect, const.Minute/8, false)
+	--Timer(StuckDetect, const.Minute/8, false)
 	Timer(ArmageddonTimer, const.Minute/8, false)
 	Timer(MonsterBuffsAdjust, 4, false)
 	--Timer(ImmolationTimer, const.Minute, false)
